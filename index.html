@@ -1,0 +1,1939 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verzilveren — vergelijkingstool | NVHP</title>
+<meta name="description" content="Overwaarde opnemen zonder te verhuizen: alle hypotheken voor senioren in Nederland vergeleken, met filters en een vergelijking naast elkaar.">
+<meta name="theme-color" content="#fbf9f4">
+<link rel="canonical" href="https://www.bijmij.nl/verzilveren.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Verzilveren — vergelijkingstool | NVHP">
+<meta property="og:description" content="Overwaarde opnemen zonder te verhuizen: alle hypotheken voor senioren in Nederland naast elkaar.">
+<meta property="og:url" content="https://www.bijmij.nl/verzilveren.html">
+<meta name="robots" content="index,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&amp;family=Ruda:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1D2632;--navy2:#2A3646;--geel:#FFCD00;--wit:#fff;--bg:#F4F5F7;--lijn:#DDE1E7;--tekst:#1D2632;--grijs:#5B6675;--groen:#1E7B4C;--oranje:#B26A00;--rood:#B3261E}
+*{box-sizing:border-box}
+body{margin:0;font-family:Metropolis,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--tekst);background:var(--bg);font-size:15px;line-height:1.5}
+header{background:var(--navy);color:var(--wit);padding:28px 32px 22px;border-bottom:6px solid var(--geel)}
+header .label{color:var(--geel);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:12px}
+header h1{margin:6px 0 4px;font-size:30px;line-height:1.2}
+header p{margin:0;color:#C9D0DA}
+header .meta{margin-top:10px;font-size:13px;color:#C9D0DA}
+header .meta b{color:var(--wit)}
+.balk{position:sticky;top:0;z-index:5;background:var(--wit);border-bottom:1px solid var(--lijn);padding:10px 32px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.balk input[type=search]{flex:1 1 220px;min-width:180px;padding:8px 12px;border:1px solid var(--lijn);border-radius:6px;font:inherit}
+.balk select{padding:8px 10px;border:1px solid var(--lijn);border-radius:6px;font:inherit;background:var(--wit)}
+button{font:inherit;font-weight:600;border:1px solid var(--navy);background:var(--wit);color:var(--navy);padding:8px 14px;border-radius:6px;cursor:pointer}
+button:hover{background:#EEF0F3}
+button.primair{background:var(--geel);border-color:var(--geel)}
+button.primair:hover{background:#E6B900}
+button.aan{background:var(--navy);color:var(--wit)}
+button.klein{padding:3px 9px;font-size:12px}
+button.gevaar{border-color:var(--rood);color:var(--rood)}
+main{max-width:1560px;margin:0 auto;padding:24px 20px 60px}
+section{margin-bottom:34px}
+h2{font-size:21px;margin:0 0 4px;display:flex;align-items:center;gap:10px}
+h2 .code{background:var(--navy);color:var(--geel);border-radius:6px;padding:2px 9px;font-size:15px}
+.uitleg{color:var(--grijs);margin:0 0 14px;max-width:900px}
+.paneel{background:var(--wit);border:1px solid var(--lijn);border-radius:10px;padding:18px 22px}
+.kern{border-left:6px solid var(--geel)}
+.paneel ul{margin:6px 0 0;padding-left:20px}
+.paneel li{margin-bottom:7px}
+.tegels{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:16px}
+.tegel{background:var(--navy);color:var(--wit);border-radius:10px;padding:14px 16px}
+.tegel b{display:block;font-size:28px;color:var(--geel);line-height:1.1}
+.tegel span{font-size:13px;color:#C9D0DA}
+.kaarten{display:grid;grid-template-columns:repeat(auto-fill,minmax(420px,1fr));gap:16px}
+.kaart{background:var(--wit);border:1px solid var(--lijn);border-top:5px solid var(--navy);border-radius:10px;padding:16px 18px;display:flex;flex-direction:column}
+.kaart.verifieren{border-top-color:#9AA3AF;background:#FBFBFC}
+.kaart h3{margin:0;font-size:18px}
+.kaart .product{color:var(--grijs);margin-bottom:8px}
+.pillen{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.pil{font-size:11.5px;font-weight:700;border-radius:20px;padding:2px 10px;border:1px solid transparent}
+.pil.actief{background:#E3F4EA;color:var(--groen)}
+.pil.verifieren{background:#FFF1D6;color:var(--oranje)}
+.pil.gestopt{background:#FBE4E2;color:var(--rood)}
+.pil.z{background:#EEF0F3;color:var(--grijs)}
+dl{margin:0;display:grid;grid-template-columns:118px 1fr;gap:5px 12px}
+dt{font-weight:700;font-size:12.5px;color:var(--grijs);text-transform:uppercase;letter-spacing:.03em;padding-top:2px}
+dd{margin:0}
+details{margin-top:10px;border-top:1px dashed var(--lijn);padding-top:8px}
+summary{cursor:pointer;font-weight:700;color:var(--navy)}
+.tweekolom{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+.vak{border-radius:8px;padding:9px 11px;font-size:14px}
+.vak.wel{background:#E3F4EA}.vak.niet{background:#FBE4E2}
+.vak b{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.03em;margin-bottom:2px}
+.docs{margin-top:10px;font-size:13.5px}.docs ul{margin:4px 0 0;padding-left:18px}.docs a{color:var(--navy)}details.acc dl{grid-template-columns:150px 1fr}details.acc summary{color:var(--navy)}details.acc{background:#FAFBFC;border:1px solid var(--lijn);border-radius:8px;padding:8px 10px}
+.bron{font-size:12.5px;color:var(--grijs);margin-top:8px}
+.bron a{color:var(--navy)}
+.ebl{background:var(--navy);color:var(--wit);border-radius:8px;padding:9px 12px;margin-bottom:10px}.ebl.nee{background:#7A4A00}.ebl .eblkop{color:var(--geel);font-weight:700;font-size:11.5px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}.ebl dt{color:#C9D0DA}.ebl dl{grid-template-columns:150px 1fr}body.bewerk .ebl [data-f]{color:var(--tekst)}
+.wlink{color:var(--navy);font-weight:600;overflow-wrap:anywhere}.wdl{margin-bottom:10px}
+.kc{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}.kcv{background:#F4F5F7;border-left:4px solid var(--geel);border-radius:6px;padding:7px 10px;font-size:14px}.kcv.breed{grid-column:1/-1}.kcv b{display:block;font-size:11.5px;text-transform:uppercase;letter-spacing:.03em;color:var(--grijs)}
+.tabelwrap{overflow-x:auto;background:var(--wit);border:1px solid var(--lijn);border-radius:10px}
+table{border-collapse:separate;border-spacing:0;width:100%;min-width:1180px;font-size:12.5px;table-layout:fixed}
+th{background:var(--navy);color:var(--wit);text-align:left;padding:9px 10px;position:sticky;top:0}
+td{padding:8px 10px;border-top:1px solid var(--lijn);vertical-align:top;overflow-wrap:anywhere}
+tr.catrij td{background:#FFF7CC;font-weight:700}
+table.ctx{min-width:900px;table-layout:auto}table.ctx th{position:static}table.ctx th.rk{background:#EEF0F3;color:var(--navy);width:240px;border-top:1px solid var(--lijn)}table.ctx td a{color:var(--navy)}h3.tussen{font-size:16px;margin:18px 0 8px}
+#matrix td.banken{background:#fff;border-top:3px solid var(--navy);border-bottom:3px solid var(--navy)}.bankgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}.bank{border:1px solid var(--lijn);border-left:4px solid var(--rood);border-radius:6px;padding:7px 10px}.bank b{display:block}.bmeta{font-size:11.5px;color:var(--grijs);margin-top:3px}.bmeta a{color:var(--navy)}#matrix tr.bankrij th.rk{border-top:3px solid var(--navy);border-bottom:3px solid var(--navy)}
+.aanbodgrid{display:grid;grid-template-columns:270px 1fr;gap:16px;align-items:start}
+@media (max-width:900px){.aanbodgrid{grid-template-columns:1fr}}
+.facetten{padding:12px 14px;position:sticky;top:64px}
+.facet{border-top:1px solid var(--lijn);padding:9px 0}.facet:first-child{border-top:0;padding-top:0}
+.facet h4{margin:0 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--grijs)}
+.facet label{display:flex;align-items:center;gap:8px;font-size:14px;padding:3px 0;cursor:pointer}
+.facet label span.n{margin-left:auto;color:var(--grijs);font-size:12px}
+.facet input{width:17px;height:17px;accent-color:var(--navy)}
+.telbalk{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.rij{background:#fff;border:1px solid var(--lijn);border-left:8px solid var(--navy);border-radius:10px;padding:12px 16px;margin-bottom:10px;display:grid;grid-template-columns:230px 1fr 190px;gap:14px}
+.rij.B{border-left-color:var(--geel)}.rij.uit{border-left-color:#9AA3AF;background:#F4F5F7;color:#4A5361}
+.rij.t-af{opacity:.75}
+@media (max-width:1100px){.rij{grid-template-columns:1fr}}
+.rij h3{margin:0;font-size:17px}.rij .sub{color:var(--grijs);font-size:13px;margin-bottom:6px}
+.rij .feiten{display:grid;grid-template-columns:repeat(4,1fr);gap:6px 14px;font-size:13px}
+.rij .feiten b{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--grijs)}
+.rij .acties{display:flex;flex-direction:column;gap:6px;font-size:13px}.rij .acties a{color:var(--navy);font-weight:600}
+.rij .uitslag{font-weight:700;margin-top:6px}.rij .uitslag.past{color:var(--groen)}.rij .uitslag.letop{color:var(--oranje)}.rij .uitslag.af{color:var(--rood)}
+.rij details{grid-column:1/-1;margin:0;border-top:1px dashed var(--lijn)}
+.rij details h4{margin:8px 0 2px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--grijs)}.rij details ul{margin:0;padding-left:18px;font-size:13.5px}
+.gv{grid-column:1/-1;background:#F6F8FB;border:1px solid var(--lijn);border-radius:8px;padding:10px 12px}.rij.B .gv{background:#FFFBEA}.gv h4{margin:0 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--navy)}.gv table{min-width:0;width:100%;font-size:13.5px;table-layout:auto}.gv td{border-top:1px solid var(--lijn);padding:4px 6px}.gv td:last-child{text-align:right;font-weight:700;white-space:nowrap}.gv tr.kop td{border-top:2px solid var(--navy)}.gv .noot{font-size:12px;color:var(--grijs);margin-top:6px}
+.verfijn{margin-top:14px;background:#fff;border:1px solid var(--lijn);border-radius:10px;padding:10px 14px}.verfijn>summary{font-size:15px}
+.leeg2{background:#fff;border:1px dashed var(--lijn);border-radius:10px;padding:18px;color:var(--grijs)}
+.selform{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.selform fieldset{border:1px solid var(--lijn);border-radius:8px;padding:10px 12px;margin:0;display:flex;flex-direction:column;gap:8px}
+.selform legend{font-weight:700;color:var(--navy);padding:0 6px}
+.selform label{display:flex;flex-direction:column;gap:3px;font-size:13px;font-weight:600}
+.selform label.chk{flex-direction:row;align-items:center;gap:8px;font-weight:400}
+.selform fieldset{min-width:0}.aanbodgrid>div{min-width:0}.rij>div,.rij .feiten>div{min-width:0;overflow-wrap:anywhere}@media (max-width:900px){.facetten{position:static}.rij .feiten{grid-template-columns:repeat(2,1fr)}}
+.selform input[type=number],.selform select{width:100%;box-sizing:border-box;min-width:0;padding:7px 9px;border:1px solid var(--lijn);border-radius:6px;font:inherit;font-weight:400}
+.selknoppen{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.selres{display:grid;grid-template-columns:repeat(auto-fill,minmax(400px,1fr));gap:14px;margin-top:14px}
+.sr{background:#fff;border:1px solid var(--lijn);border-left:8px solid #9AA3AF;border-radius:10px;padding:12px 16px}
+.sr.past{border-left-color:var(--groen)}.sr.letop{border-left-color:#E0A000}.sr.af{border-left-color:var(--rood);background:#FBFBFC}
+.sr h3{margin:0;font-size:17px}.sr .sub{color:var(--grijs);font-size:13px;margin-bottom:6px}
+.sr .uitslag{font-weight:700;margin:6px 0}.sr.past .uitslag{color:var(--groen)}.sr.letop .uitslag{color:var(--oranje)}.sr.af .uitslag{color:var(--rood)}
+.sr h4{margin:8px 0 2px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--grijs)}
+.sr ul{margin:0;padding-left:18px;font-size:13.5px}.sr li{margin-bottom:3px}
+.grp{display:inline-block;font-size:11px;font-weight:700;border-radius:4px;padding:1px 7px;margin-left:6px;vertical-align:middle}.grp.A{background:var(--navy);color:#fff}.grp.B{background:var(--geel);color:var(--navy)}
+.pub{--navy:#1F2D3A;--navy2:#2C3E50;--geel:#E3B23C;--bg:#fbf9f4}
+#sitenav{background:#fff;border-bottom:1px solid var(--lijn);padding:12px 32px;display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center;justify-content:space-between}
+#sitenav .merk{font-weight:800;font-size:18px;color:var(--navy);text-decoration:none}
+#sitenav .menu{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center}#sitenav .menu a{color:var(--tekst);text-decoration:none;font-weight:600;font-size:14px}#sitenav .menu a.actief{border-bottom:3px solid var(--geel)}
+a.navknop{background:var(--navy);color:#fff!important;padding:9px 16px;border-radius:6px;text-decoration:none;font-weight:700;white-space:nowrap}
+.ctab{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;border-left:6px solid var(--geel)}
+#contactvoet{margin-top:10px;font-weight:600;color:var(--tekst)}
+.pub header{border-bottom-color:var(--geel)}
+.legenda{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px}.lg{font-weight:700;font-size:13px;border-radius:6px;padding:5px 12px}.lg.a{background:var(--navy);color:var(--wit)}.lg.b{background:var(--geel);color:var(--navy)}
+#matrix th.hoek{width:150px;left:0;z-index:4;background:var(--navy2)}
+#matrix th.groep{text-align:center;font-size:15px;padding:10px;top:0}
+#matrix th.groep.gA{background:var(--navy);color:var(--wit)}
+#matrix th.groep.gB{background:var(--geel);color:var(--navy)}
+#matrix th.kol{position:static;vertical-align:top;font-weight:400}
+#matrix th.kol.gA{background:#2A3646;color:var(--wit)}
+#matrix th.kol.gB{background:#FFE680;color:var(--navy)}
+#matrix th.kol .kn{font-weight:700;font-size:15px}#matrix th.kol .kp{margin-bottom:6px}
+#matrix th.rk{overflow-wrap:anywhere;hyphens:auto;font-size:11.5px!important;position:sticky;left:0;z-index:3;background:#EEF0F3;color:var(--navy);border-top:1px solid var(--lijn);vertical-align:top;font-size:12.5px;text-transform:uppercase;letter-spacing:.03em}
+#matrix td.gA{background:#F6F8FB}#matrix td.gB{background:#FFFBEA}
+#matrix td.eerste,#matrix th.eerste{border-left:4px solid var(--navy)}
+#matrix td.gB.eerste,#matrix th.gB.eerste{border-left:6px solid var(--geel)}
+#matrix tr.renterij td.gA{background:var(--navy);color:var(--wit)}
+#matrix tr.renterij td.gB{background:var(--geel);color:var(--navy)}
+.uitband{background:var(--rood);color:#fff;font-weight:700;border-radius:6px;padding:7px 10px;margin-bottom:10px;font-size:13.5px}
+.kaart.gestopt{border-top-color:var(--rood);background:#FAFAFA}
+#matrix th.kol.uit{background:#5B6675;color:#fff}#matrix .uitkop{background:var(--rood);color:#fff;font-weight:700;border-radius:4px;padding:3px 8px;margin-bottom:6px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;display:inline-block}
+#matrix td.uit{background:#F0F1F3;color:#4A5361}#matrix tr.renterij td.uit{background:#5B6675;color:#fff}
+body.bewerk #matrix tr.renterij td [data-f],body.bewerk .uitband[data-f]{color:var(--tekst)}
+.gestoptlijst .rij{display:grid;grid-template-columns:260px 190px 1fr;gap:12px;padding:9px 0;border-top:1px solid var(--lijn)}
+.gestoptlijst .rij:first-child{border-top:0}
+.leeg{color:var(--grijs);font-style:italic}
+footer{color:var(--grijs);font-size:12.5px;max-width:1280px;margin:0 auto;padding:0 32px 40px}
+[hidden]{display:none!important}
+body.bewerk [data-f],body.bewerk [data-l]{outline:1px dashed #9AA3AF;outline-offset:2px;border-radius:3px;background:#FFFDE8;min-width:30px;min-height:1.2em}
+body.bewerk [data-f]:focus,body.bewerk [data-l]:focus{outline:2px solid var(--geel)}
+body.bewerk [data-f]:empty::before{content:"(leeg)";color:#9AA3AF}
+.alleenbewerk{display:none}
+body.bewerk .alleenbewerk{display:inline-flex}
+body.bewerk .kaart .alleenbewerk.blok{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;align-items:center}
+.melding{background:#FFF7CC;border:1px solid var(--geel);border-radius:8px;padding:10px 14px;margin-bottom:18px}
+@media (max-width:700px){header,.balk,main,footer{padding-left:16px;padding-right:16px}.kaarten{grid-template-columns:1fr}.tweekolom{grid-template-columns:1fr}table.ctx{min-width:900px;table-layout:auto}table.ctx th{position:static}table.ctx th.rk{background:#EEF0F3;color:var(--navy);width:240px;border-top:1px solid var(--lijn)}table.ctx td a{color:var(--navy)}h3.tussen{font-size:16px;margin:18px 0 8px}
+#matrix td.banken{background:#fff;border-top:3px solid var(--navy);border-bottom:3px solid var(--navy)}.bankgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}.bank{border:1px solid var(--lijn);border-left:4px solid var(--rood);border-radius:6px;padding:7px 10px}.bank b{display:block}.bmeta{font-size:11.5px;color:var(--grijs);margin-top:3px}.bmeta a{color:var(--navy)}#matrix tr.bankrij th.rk{border-top:3px solid var(--navy);border-bottom:3px solid var(--navy)}
+.aanbodgrid{display:grid;grid-template-columns:270px 1fr;gap:16px;align-items:start}
+@media (max-width:900px){.aanbodgrid{grid-template-columns:1fr}}
+.facetten{padding:12px 14px;position:sticky;top:64px}
+.facet{border-top:1px solid var(--lijn);padding:9px 0}.facet:first-child{border-top:0;padding-top:0}
+.facet h4{margin:0 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--grijs)}
+.facet label{display:flex;align-items:center;gap:8px;font-size:14px;padding:3px 0;cursor:pointer}
+.facet label span.n{margin-left:auto;color:var(--grijs);font-size:12px}
+.facet input{width:17px;height:17px;accent-color:var(--navy)}
+.telbalk{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.rij{background:#fff;border:1px solid var(--lijn);border-left:8px solid var(--navy);border-radius:10px;padding:12px 16px;margin-bottom:10px;display:grid;grid-template-columns:230px 1fr 190px;gap:14px}
+.rij.B{border-left-color:var(--geel)}.rij.uit{border-left-color:#9AA3AF;background:#F4F5F7;color:#4A5361}
+.rij.t-af{opacity:.75}
+@media (max-width:1100px){.rij{grid-template-columns:1fr}}
+.rij h3{margin:0;font-size:17px}.rij .sub{color:var(--grijs);font-size:13px;margin-bottom:6px}
+.rij .feiten{display:grid;grid-template-columns:repeat(4,1fr);gap:6px 14px;font-size:13px}
+.rij .feiten b{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--grijs)}
+.rij .acties{display:flex;flex-direction:column;gap:6px;font-size:13px}.rij .acties a{color:var(--navy);font-weight:600}
+.rij .uitslag{font-weight:700;margin-top:6px}.rij .uitslag.past{color:var(--groen)}.rij .uitslag.letop{color:var(--oranje)}.rij .uitslag.af{color:var(--rood)}
+.rij details{grid-column:1/-1;margin:0;border-top:1px dashed var(--lijn)}
+.rij details h4{margin:8px 0 2px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--grijs)}.rij details ul{margin:0;padding-left:18px;font-size:13.5px}
+.gv{grid-column:1/-1;background:#F6F8FB;border:1px solid var(--lijn);border-radius:8px;padding:10px 12px}.rij.B .gv{background:#FFFBEA}.gv h4{margin:0 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--navy)}.gv table{min-width:0;width:100%;font-size:13.5px;table-layout:auto}.gv td{border-top:1px solid var(--lijn);padding:4px 6px}.gv td:last-child{text-align:right;font-weight:700;white-space:nowrap}.gv tr.kop td{border-top:2px solid var(--navy)}.gv .noot{font-size:12px;color:var(--grijs);margin-top:6px}
+.verfijn{margin-top:14px;background:#fff;border:1px solid var(--lijn);border-radius:10px;padding:10px 14px}.verfijn>summary{font-size:15px}
+.leeg2{background:#fff;border:1px dashed var(--lijn);border-radius:10px;padding:18px;color:var(--grijs)}
+.selform{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.selform fieldset{border:1px solid var(--lijn);border-radius:8px;padding:10px 12px;margin:0;display:flex;flex-direction:column;gap:8px}
+.selform legend{font-weight:700;color:var(--navy);padding:0 6px}
+.selform label{display:flex;flex-direction:column;gap:3px;font-size:13px;font-weight:600}
+.selform label.chk{flex-direction:row;align-items:center;gap:8px;font-weight:400}
+.selform input[type=number],.selform select{padding:7px 9px;border:1px solid var(--lijn);border-radius:6px;font:inherit;font-weight:400}
+.selknoppen{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+.selres{display:grid;grid-template-columns:repeat(auto-fill,minmax(400px,1fr));gap:14px;margin-top:14px}
+.sr{background:#fff;border:1px solid var(--lijn);border-left:8px solid #9AA3AF;border-radius:10px;padding:12px 16px}
+.sr.past{border-left-color:var(--groen)}.sr.letop{border-left-color:#E0A000}.sr.af{border-left-color:var(--rood);background:#FBFBFC}
+.sr h3{margin:0;font-size:17px}.sr .sub{color:var(--grijs);font-size:13px;margin-bottom:6px}
+.sr .uitslag{font-weight:700;margin:6px 0}.sr.past .uitslag{color:var(--groen)}.sr.letop .uitslag{color:var(--oranje)}.sr.af .uitslag{color:var(--rood)}
+.sr h4{margin:8px 0 2px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--grijs)}
+.sr ul{margin:0;padding-left:18px;font-size:13.5px}.sr li{margin-bottom:3px}
+.grp{display:inline-block;font-size:11px;font-weight:700;border-radius:4px;padding:1px 7px;margin-left:6px;vertical-align:middle}.grp.A{background:var(--navy);color:#fff}.grp.B{background:var(--geel);color:var(--navy)}
+.legenda{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px}.lg{font-weight:700;font-size:13px;border-radius:6px;padding:5px 12px}.lg.a{background:var(--navy);color:var(--wit)}.lg.b{background:var(--geel);color:var(--navy)}
+#matrix th.hoek{width:150px;left:0;z-index:4;background:var(--navy2)}
+#matrix th.groep{text-align:center;font-size:15px;padding:10px;top:0}
+#matrix th.groep.gA{background:var(--navy);color:var(--wit)}
+#matrix th.groep.gB{background:var(--geel);color:var(--navy)}
+#matrix th.kol{position:static;vertical-align:top;font-weight:400}
+#matrix th.kol.gA{background:#2A3646;color:var(--wit)}
+#matrix th.kol.gB{background:#FFE680;color:var(--navy)}
+#matrix th.kol .kn{font-weight:700;font-size:15px}#matrix th.kol .kp{margin-bottom:6px}
+#matrix th.rk{overflow-wrap:anywhere;hyphens:auto;font-size:11.5px!important;position:sticky;left:0;z-index:3;background:#EEF0F3;color:var(--navy);border-top:1px solid var(--lijn);vertical-align:top;font-size:12.5px;text-transform:uppercase;letter-spacing:.03em}
+#matrix td.gA{background:#F6F8FB}#matrix td.gB{background:#FFFBEA}
+#matrix td.eerste,#matrix th.eerste{border-left:4px solid var(--navy)}
+#matrix td.gB.eerste,#matrix th.gB.eerste{border-left:6px solid var(--geel)}
+#matrix tr.renterij td.gA{background:var(--navy);color:var(--wit)}
+#matrix tr.renterij td.gB{background:var(--geel);color:var(--navy)}
+.uitband{background:var(--rood);color:#fff;font-weight:700;border-radius:6px;padding:7px 10px;margin-bottom:10px;font-size:13.5px}
+.kaart.gestopt{border-top-color:var(--rood);background:#FAFAFA}
+#matrix th.kol.uit{background:#5B6675;color:#fff}#matrix .uitkop{background:var(--rood);color:#fff;font-weight:700;border-radius:4px;padding:3px 8px;margin-bottom:6px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;display:inline-block}
+#matrix td.uit{background:#F0F1F3;color:#4A5361}#matrix tr.renterij td.uit{background:#5B6675;color:#fff}
+body.bewerk #matrix tr.renterij td [data-f],body.bewerk .uitband[data-f]{color:var(--tekst)}
+.gestoptlijst .rij{grid-template-columns:1fr}dl{grid-template-columns:1fr}}
+#mxbalk{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center;margin-bottom:10px}
+#mxbalk .mxl{font-weight:700;font-size:13px;color:var(--grijs);text-transform:uppercase;letter-spacing:.04em;flex-basis:100%}
+.chip{border:2px solid var(--navy);border-radius:999px;padding:5px 13px;font:inherit;font-weight:700;font-size:13px;cursor:pointer;background:#fff;color:var(--navy);line-height:1.2}
+.chip.gB{border-color:var(--geel)}
+.chip.aan.gA{background:var(--navy);color:#fff}.chip.aan.gB{background:var(--geel);color:var(--navy)}
+.chip.uit{border-style:dashed;color:var(--grijs);font-weight:600}
+.chip.dicht::after{content:" · gesloten";font-weight:400}
+.mxopt{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;flex-basis:100%;font-size:13.5px}
+.mxopt label{display:inline-flex;gap:6px;align-items:center;cursor:pointer;font-weight:600}
+.mxopt .tel{color:var(--grijs)}
+.mxopt .pijlen{margin-left:auto;display:flex;gap:6px}
+.mxopt button.pijl{border:1px solid var(--lijn);background:#fff;border-radius:6px;width:36px;height:32px;font-size:18px;line-height:1;cursor:pointer;color:var(--navy)}
+.mxopt button.tekstknop{border:0;background:none;text-decoration:underline;cursor:pointer;font:inherit;font-weight:600;color:var(--navy);padding:0}
+.tabelwrap{overflow:auto;max-height:82vh;container-type:inline-size;scroll-padding-left:170px}
+#matrix{--lab:170px;--kw:230px;min-width:0;width:100%;width:max(100%,calc(var(--lab) + var(--n,1)*var(--kw)));font-size:13px;table-layout:fixed}
+#matrix.smal{--lab:0px;--kw:47cqw}
+#matrix th.hoek{width:var(--lab);position:sticky;top:0;left:0;z-index:6;background:var(--navy2);vertical-align:bottom}
+#matrix th.kol{position:sticky;top:0;z-index:4;vertical-align:top;font-weight:400;padding:0 0 9px;border-left:1px solid rgba(255,255,255,.25)}
+#matrix th.kol>*{margin-left:10px;margin-right:10px}
+#matrix th.kol .band{display:flex;justify-content:space-between;align-items:center;margin:0 0 7px;padding:4px 6px 4px 10px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+#matrix th.kol.gA .band{background:var(--navy);color:#fff}#matrix th.kol.gB .band{background:var(--geel);color:var(--navy)}
+#matrix th.kol .band button{border:0;background:none;color:inherit;font-size:16px;line-height:1;cursor:pointer;padding:2px 6px;border-radius:4px}
+#matrix th.kol .kn{font-size:15px;font-weight:700}#matrix th.kol .kp{margin-bottom:6px;font-size:12.5px}
+#matrix th.rk{width:var(--lab);position:sticky;left:0;z-index:3}
+#matrix td{border-left:1px solid var(--lijn)}
+#matrix tr.mxgrp th{position:static;background:var(--navy2);color:#fff;padding:0;border-top:2px solid #fff}
+#matrix tr.mxgrp button{position:sticky;left:0;border:0;background:none;color:inherit;font:inherit;font-weight:700;font-size:13.5px;padding:8px 12px;cursor:pointer;text-align:left}
+#matrix tr.mxlab th{position:static;background:#EEF0F3;color:var(--navy);padding:0;border-top:1px solid var(--lijn)}
+#matrix tr.mxlab span{position:sticky;left:0;display:inline-block;padding:6px 10px;font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.03em}
+#matrix .bankvast{position:sticky;left:calc(var(--lab) + 10px);width:calc(100cqw - var(--lab) - 24px);max-width:100%}
+#matrix.smal .bankgrid{grid-template-columns:1fr}
+#matrix td.leeg{padding:18px}
+#matrix th.rk .rkt{position:sticky;top:calc(var(--kop,130px) + 8px);display:block}
+#matrix th.kol .pil{font-size:11px}
+@media (max-width:760px){.tabelwrap{max-height:76vh;scroll-padding-left:0}#matrix{font-size:12.5px}#matrix th.kol .kn{font-size:13.5px}.mxopt .pijlen{margin-left:0}}
+@media print{#mxbalk{display:none}.tabelwrap{max-height:none;overflow:visible}#matrix th.kol,#matrix th.hoek,#matrix th.rk{position:static}}
+.rij details.meer{grid-column:1/-1;margin:0;border-top:1px dashed var(--lijn);padding-top:8px}
+.rij details.meer>summary{cursor:pointer;font-weight:700;color:var(--navy);font-size:14px}
+.meerin{display:grid;grid-template-columns:1fr 1fr;gap:6px 28px;margin-top:6px}
+.mblok{min-width:0}.mblok h4{margin:10px 0 4px;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--navy);border-bottom:2px solid var(--geel);padding-bottom:3px}
+.mblok dl{display:grid;grid-template-columns:150px 1fr;gap:4px 12px;margin:0;font-size:13.5px}.mblok dt{color:var(--grijs);font-weight:600;font-size:12.5px}.mblok dd{margin:0;overflow-wrap:anywhere}
+.mblok ul{margin:0;padding-left:18px;font-size:13.5px}.mblok a{color:var(--navy)}
+.vglkies{display:inline-flex;gap:7px;align-items:center;font-weight:600;font-size:13px;cursor:pointer;margin-top:4px;border:1px solid var(--lijn);border-radius:6px;padding:4px 9px;align-self:flex-start;background:transparent;color:var(--tekst)}.vglkies:hover{border-color:#9AA3AF}.vglkies:has(input:checked){border-color:var(--navy);background:#F4F6F9}
+.vglkies.vol{opacity:.45;cursor:not-allowed}.vglkies input{width:16px;height:16px;margin:0}
+#vglbalk{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--navy);color:#fff;padding:10px 20px;display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;justify-content:center;box-shadow:0 -4px 14px rgba(0,0,0,.18);font-size:14px}
+#vglbalk .vk{background:var(--geel);border-color:var(--geel);color:var(--navy);font-weight:700}#vglbalk .vk:disabled{opacity:.6;cursor:default}
+#vglbalk .vw{background:none;border-color:rgba(255,255,255,.5);color:#fff}
+#matrix{--kw:300px}
+@media (max-width:900px){.meerin{grid-template-columns:1fr}}
+@media (max-width:1150px){#matrix{--kw:250px}}
+@media (max-width:760px){.mblok dl{grid-template-columns:1fr;gap:0 0}.mblok dd{margin-bottom:6px}#matrix{--kw:230px}#matrix.smal{--kw:47cqw}}
+@media print{#vglbalk,.vglkies{display:none!important}.rij details.meer{display:block}}
+.facetten{max-height:calc(100vh - 84px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.fkolom{align-self:stretch}
+#ftoggle{display:none}
+@media (max-width:900px){.facetten{position:static!important;max-height:none!important;display:none}.facetten.open{display:block}#ftoggle{display:block;width:100%;margin-bottom:10px;font-weight:700}}
+@media print{#ftoggle{display:none!important}}
+.facet.lft label{display:block;font-size:13px;font-weight:600;margin-bottom:4px}#facetten .facet.lft input[type=number]{width:100%;height:38px;padding:7px 9px;border:1px solid var(--lijn);border-radius:6px;font:inherit;box-sizing:border-box}.lftnoot{font-size:12px;color:var(--grijs);margin-top:5px;line-height:1.35}
+#vglbalk.weg{display:none}
+.indic{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) auto;gap:10px 16px;align-items:end;margin:0 0 16px;border-left:6px solid var(--geel)}
+.indic .indkop{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline}.indic .indkop b{font-size:16px}.indic .indkop span{color:var(--grijs);font-size:13.5px}
+.indic label{display:block;font-size:13px;font-weight:600;min-width:0}.indic input{display:block;width:100%;box-sizing:border-box;margin-top:4px;height:38px;padding:7px 9px;border:1px solid var(--lijn);border-radius:6px;font:inherit}
+.indic .indnoot{grid-column:1/-1;margin:0;font-size:12px;color:var(--grijs);line-height:1.4}
+.indres{grid-column:1/-1;border-radius:8px;padding:9px 12px;font-size:13.5px;background:#F1F7F2;border:1px solid #CFE3D3}.indres.kanniet{background:#F6F6F6;border-color:var(--lijn);color:#4A5361}
+.indres .ik{display:block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--grijs)}.indres b{font-size:19px;display:block;margin:1px 0 3px}.indres .in{font-size:12.5px;line-height:1.4}
+.voorbehoud{background:#FFF4DC;border:1px solid #E9C77A;border-radius:6px;padding:7px 10px;font-size:13px;margin:8px 0 2px}
+.leegcel{color:var(--grijs);font-style:italic}
+details.meerfilters{border-top:1px solid var(--lijn);padding-top:10px;margin-top:4px}details.meerfilters>summary{cursor:pointer;font-weight:700;font-size:13.5px;color:var(--navy);margin-bottom:6px}
+details.ctxklap>summary{cursor:pointer;list-style-position:outside}details.ctxklap>summary h2{display:inline;margin:0}details.ctxklap[open]>summary{margin-bottom:10px}
+@media (max-width:760px){.indic{grid-template-columns:1fr}}
+@media print{.indic input{border:0}#i_wis{display:none}}
+.mxnav{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.mxpag{border:1px solid var(--lijn);background:#fff;color:var(--navy);border-radius:6px;padding:6px 12px;font:inherit;font-size:13px;font-weight:600;cursor:pointer}.mxpag.aan{background:var(--navy);color:#fff;border-color:var(--navy)}
+.mxopt button.pijl:disabled{opacity:.35;cursor:default}
+#matrix .greep{display:inline-flex;align-items:center;gap:1px;margin-right:6px;vertical-align:middle;white-space:nowrap}
+#matrix .greep .hv{cursor:grab;font-size:15px;line-height:1;color:var(--grijs);padding:2px 3px;user-select:none}
+#matrix .greep .stapk{border:0;background:none;padding:1px 2px;font-size:9px;line-height:1;color:var(--grijs);cursor:pointer;border-radius:3px}#matrix .greep .stapk:hover{background:#D9DEE5;color:var(--navy)}
+#matrix th.rk .rkt{display:flex;align-items:flex-start}#matrix th.rk .rkn{min-width:0;overflow-wrap:anywhere}
+#matrix tr[draggable=true]{cursor:default}#matrix tr.sleept{opacity:.4}
+#matrix tr.dropboven>*{box-shadow:inset 0 3px 0 var(--geel)}#matrix tr.droponder>*{box-shadow:inset 0 -3px 0 var(--geel)}
+#matrix{--lab:200px;max-width:calc(var(--lab) + var(--n,3)*460px)}#matrix.smal{--lab:0px;max-width:none}
+#matrix.smal tr.mxlab .hv{display:none}#matrix.smal .greep .stapk{font-size:13px;padding:5px 8px}
+@media print{#matrix .greep{display:none}}
+.mxtel{font-weight:700;color:var(--tekst)!important;padding:0 6px}
+.bronn{font-weight:400;color:var(--grijs);font-size:.8em}
+@media print{#bronklap>div{display:block}}
+/* neutrale weergave: geen kleuronderscheid tussen proposities */
+#matrix th.kol,#matrix th.kol.gA,#matrix th.kol.gB,#matrix th.kol.uit{background:var(--navy2);color:#fff;padding:10px 0 9px;border-left:1px solid rgba(255,255,255,.25)}
+#matrix td,#matrix td.gA,#matrix td.gB,#matrix td.uit{background:#fff;color:var(--tekst)}
+#matrix td.eerste,#matrix th.eerste,#matrix td.gB.eerste,#matrix th.gB.eerste{border-left:1px solid var(--lijn)}
+#matrix th.eerste,#matrix th.gB.eerste{border-left:1px solid rgba(255,255,255,.25)}
+#matrix .uitkop{background:none;color:#fff;border:1px solid rgba(255,255,255,.6);font-weight:600}
+#matrix th.kol .kolx{float:right;margin:-4px 4px 0 0}#matrix th.kol .kolx button{border:0;background:none;color:#fff;font-size:18px;line-height:1;cursor:pointer;padding:2px 6px;border-radius:4px}
+.rij,.rij.A,.rij.B,.rij.uit{border-left:8px solid var(--navy);background:#fff;color:var(--tekst)}
+.grp,.grp.A,.grp.B{background:#EEF0F3;color:var(--navy)}
+.pil.actief,.pil.gestopt,.pil.verifieren{background:#EEF0F3;color:var(--navy);border-color:transparent}
+#matrix th.rk .rknr{flex:none;min-width:1.9em;font-variant-numeric:tabular-nums}
+#matrix{--lab:225px}#matrix.smal{--lab:0px}
+#matrix{--lab:190px}#matrix.smal{--lab:0px}
+.facet label.nul{color:#8A93A0}
+@media print{.balk,.alleenbewerk{display:none!important}body{background:#fff}details{display:block}details>*{display:block}.kaart{break-inside:avoid}}
+
+/* ================= BijMij huisstijl (gelijk aan index.html) ================= */
+:root,.pub{
+--bg:#fbf9f4;--bg-alt:#f3efe6;--card:#ffffff;--navy:#16233b;--navy-soft:#33425d;--navy2:#33425d;
+--gold:#b7893a;--gold-text:#8a6420;--gold-soft:#c99b4c;--gold-tint:#f4ecdb;
+--ink:#1c2536;--ink-soft:#5c6577;--line:#e7e0d3;--line-soft:#efe9dd;
+--radius:16px;--maxw:1140px;--hh:66px;
+--shadow:0 20px 50px -28px rgba(22,35,59,.28);--shadow-sm:0 8px 24px -14px rgba(22,35,59,.22);
+--geel:#b7893a;--wit:#fff;--lijn:#e7e0d3;--tekst:#1c2536;--grijs:#5c6577;--groen:#1E7B4C;--oranje:#8a6420;--rood:#B3261E
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:clip}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.15;letter-spacing:-.01em;color:var(--navy)}
+a{color:inherit}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+/* ---- Site-header ---- */
+#sitenav{display:block;padding:0;position:sticky;top:0;z-index:50;background:rgba(251,249,244,.9);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:var(--hh)}
+.brand{display:flex;align-items:baseline;gap:2px;font-family:'Fraunces',serif;font-size:1.5rem;font-weight:600;letter-spacing:-.02em;text-decoration:none}
+.brand b{color:var(--navy);font-weight:600}
+.brand span{color:var(--gold)}
+.brand small{font-family:'Inter',sans-serif;font-size:.66rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);margin-left:9px;transform:translateY(-3px)}
+#sitenav .menu{display:none;position:absolute;top:var(--hh);left:0;right:0;flex-direction:column;flex-wrap:nowrap;align-items:stretch;gap:16px;background:#fff;padding:20px;border-bottom:1px solid var(--line);box-shadow:var(--shadow-sm);font-size:1.02rem;font-weight:500}
+#sitenav .menu.open{display:flex}
+#sitenav .menu a{color:var(--ink-soft);padding:10px 2px;text-decoration:none;font-weight:500;font-size:inherit;border-bottom:0;transition:color .2s}
+#sitenav .menu a:hover,#sitenav .menu a.actief{color:var(--navy)}
+#sitenav .menu a.actief{font-weight:600}
+.nav-toggle,.nav-toggle:hover{display:inline-flex;align-items:center;justify-content:center;background:none;border:none;color:var(--navy);cursor:pointer;width:44px;height:44px;min-height:44px;padding:0;margin-right:-8px;border-radius:0}
+.nav-toggle svg{width:26px;height:26px}
+
+/* ---- Paginakop (hero) ---- */
+header{position:relative;background:none;color:var(--ink);padding:44px 0 36px;border-bottom:0;overflow:hidden}
+header::before{content:"";position:absolute;inset:0;z-index:0;background:radial-gradient(120% 90% at 84% -10%,rgba(183,137,58,.12),transparent 55%),radial-gradient(90% 80% at -5% 15%,rgba(243,239,230,.9),transparent 60%)}
+header .wrap{position:relative;z-index:1}
+header .label{font-size:.76rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-text);display:inline-flex;align-items:center;gap:10px;margin-bottom:16px}
+header .label::before{content:"";width:24px;height:1px;background:var(--gold);display:inline-block}
+header h1{font-size:clamp(2.05rem,8vw,3.4rem);margin:0 0 18px;line-height:1.15}
+header p{font-size:1.08rem;color:var(--ink-soft);max-width:56ch;margin:0}
+header .meta{margin-top:22px;font-size:.86rem;color:var(--ink-soft);max-width:70ch}
+header .meta b{color:var(--navy);font-weight:600}
+
+/* ---- Layout ---- */
+main{max-width:var(--maxw);margin:0 auto;padding:8px 20px 56px}
+section{margin-bottom:52px}
+h2{font-size:clamp(1.5rem,5vw,2.1rem);margin:0 0 12px;display:block}
+.uitleg{color:var(--ink-soft);font-size:1.02rem;margin:0 0 22px;max-width:640px}
+#selectie>.uitleg{max-width:none}
+header p.kopfeit{margin-bottom:14px}
+header p,header .meta{max-width:none}
+@media (min-width:901px){#facetten{position:static;max-height:none;overflow:visible}}
+.vm{display:none}@media (max-width:760px){.vd{display:none}.vm{display:inline}}
+.paneel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px 24px;box-shadow:var(--shadow-sm)}
+.paneel.kern{border-left:1px solid var(--line);position:relative;overflow:hidden}
+.paneel.kern::after{content:"";position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg,var(--gold),transparent)}
+.paneel ul{margin:10px 0 0;padding-left:20px}
+.paneel li{margin-bottom:10px;color:var(--ink-soft)}
+.paneel li::marker{color:var(--gold)}
+.paneel a,.bron a,.docs a,.wlink,table.ctx td a,.bmeta a,.mblok a{color:var(--gold-text)}
+.tegels{gap:16px;margin-bottom:20px}
+.tegel{background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow-sm)}
+.tegel b{font-family:'Fraunces',serif;font-weight:500;font-size:2rem;color:var(--gold);line-height:1;margin-bottom:6px}
+.tegel span{font-size:.86rem;color:var(--ink-soft)}
+
+/* ---- Knoppen ---- */
+button{font-family:inherit;font-weight:600;font-size:.92rem;border:1px solid var(--line);background:transparent;color:var(--navy);padding:10px 20px;min-height:44px;border-radius:100px;cursor:pointer;transition:border-color .2s,color .2s,background .2s}
+button:hover{background:transparent;border-color:var(--gold);color:var(--gold-text)}
+button.primair{background:var(--gold);border-color:var(--gold);color:#fff}
+button.primair:hover{background:var(--gold-soft);border-color:var(--gold-soft);color:#fff}
+button.aan{background:var(--navy);border-color:var(--navy);color:#fff}
+button.klein{padding:6px 14px;min-height:36px;font-size:.82rem}
+button.gevaar{border-color:var(--rood);color:var(--rood)}
+button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible,.tabelwrap:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+/* ---- Zoekbalk ---- */
+.balk{position:static;background:rgba(255,255,255,.96);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-sm);padding:10px 12px;gap:10px;margin-bottom:28px}
+.balk input[type=search]{flex:1 1 220px;min-width:0;padding:12px 15px;min-height:44px;background:var(--bg);border:1px solid var(--line);border-radius:11px;color:var(--ink);font-family:inherit;font-size:1rem;transition:border-color .2s,box-shadow .2s}
+.balk input[type=search]:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(183,137,58,.12)}
+
+/* ---- Filters ---- */
+.aanbodgrid{gap:22px}
+.facetten{padding:20px 20px;top:calc(var(--hh) + 16px);max-height:calc(100vh - var(--hh) - 32px);overflow:auto}
+.facet{border-top:1px solid var(--line-soft);padding:12px 0}
+.facet h4{margin:0 0 6px;font-size:.74rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.facet label{font-size:.92rem;padding:4px 0;color:var(--ink)}
+.facet label span.n{font-size:.82rem;color:var(--ink-soft)}
+.facet input{width:18px;height:18px;accent-color:var(--gold)}
+.facet.lft label{font-size:.88rem;font-weight:600}
+#facetten .facet.lft input[type=number]{height:44px;padding:10px 12px;background:var(--bg);border:1px solid var(--line);border-radius:11px;color:var(--ink);font-size:1rem}
+.lftnoot{font-size:.8rem;color:var(--ink-soft);line-height:1.45}
+details.meerfilters{border-top:1px solid var(--line-soft);padding-top:12px;margin-top:4px}
+details.meerfilters>summary{font-size:.92rem;font-weight:600;color:var(--navy);margin-bottom:6px}
+.telbalk{margin-bottom:14px;gap:10px;flex-wrap:wrap}
+.telbalk b{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;color:var(--navy)}
+
+/* ---- Indicatieblok ---- */
+.indic{border-left:1px solid var(--line);gap:12px 18px;margin:0 0 22px}
+.indic .indkop b{font-family:'Fraunces',serif;font-weight:500;font-size:1.2rem;color:var(--navy)}
+.indic .indkop span{color:var(--ink-soft);font-size:.9rem}
+.indic label{font-size:.88rem}
+.indic input{height:44px;padding:10px 12px;background:var(--bg);border:1px solid var(--line);border-radius:11px;color:var(--ink);font-size:1rem}
+.indic .indnoot{font-size:.8rem;color:var(--ink-soft)}
+.indres{border-radius:12px;padding:12px 14px;font-size:.9rem;background:#eef5f0;border:1px solid #d3e4d8}
+.indres.kanniet{background:var(--bg-alt);border-color:var(--line);color:var(--ink-soft)}
+.indres .ik{font-size:.74rem;font-weight:600;letter-spacing:.08em;color:var(--ink-soft)}
+.indres b{font-family:'Fraunces',serif;font-weight:500;font-size:1.35rem;color:var(--navy)}
+.indres .in{font-size:.84rem}
+.voorbehoud{background:var(--gold-tint);border:1px solid var(--line);border-radius:10px;padding:9px 12px;font-size:.86rem;color:var(--ink)}
+.leegcel{color:var(--ink-soft)}
+
+/* ---- Propositiekaarten ---- */
+.rij{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--navy);border-radius:var(--radius);box-shadow:var(--shadow-sm);padding:22px 24px;margin-bottom:16px;grid-template-columns:1fr;gap:16px 22px}
+.rij.B{border-left-color:var(--gold)}
+.rij.uit{border-left-color:#b9b2a3;background:var(--bg-alt);color:var(--ink-soft);box-shadow:none}
+.rij h3{font-size:1.3rem;margin:0 0 4px}
+.rij .sub{color:var(--ink-soft);font-size:.9rem;margin-bottom:10px}
+.rij .feiten{gap:14px 18px;font-size:.9rem;line-height:1.5}
+.rij .feiten b{font-size:.74rem;font-weight:600;letter-spacing:.06em;color:var(--ink-soft);margin-bottom:2px;overflow-wrap:normal;hyphens:manual}
+.rij .acties{grid-column:1/-1;flex-direction:row;flex-wrap:wrap;align-items:center;gap:6px 22px;font-size:.88rem;padding-top:14px;border-top:1px solid var(--line-soft)}
+.rij .acties a{color:var(--gold-text);font-weight:600;text-decoration:none}
+.rij .acties a:hover{text-decoration:underline}
+.rij details,.rij details.meer{border-top:1px solid var(--line-soft);padding-top:10px}
+.rij details.meer>summary{font-size:.95rem;font-weight:600;color:var(--navy)}
+.rij details h4,.sr h4,.gv h4{font-size:.74rem;font-weight:600;letter-spacing:.1em;color:var(--ink-soft)}
+.meerin{gap:6px 32px;margin-top:8px}
+.mblok h4{margin:14px 0 8px;font-size:.74rem;font-weight:600;letter-spacing:.1em;color:var(--navy);border-bottom:1px solid var(--gold);padding-bottom:6px}
+.mblok dl{font-size:.9rem;gap:6px 14px;line-height:1.5}
+.mblok dt{font-size:.82rem;font-weight:600;letter-spacing:0;text-transform:none;color:var(--ink-soft);padding-top:0}
+.mblok ul{font-size:.9rem}
+.vglkies{margin:0 0 0 auto;font-size:.88rem;font-weight:600;color:var(--navy);border:1px solid var(--line);border-radius:100px;padding:8px 16px;min-height:40px;align-self:center;transition:border-color .2s}
+.vglkies:hover{border-color:var(--gold)}
+.vglkies:has(input:checked){border-color:var(--navy);background:var(--bg)}
+.vglkies input{width:18px;height:18px;accent-color:var(--gold)}
+.pil{font-size:.75rem;font-weight:600;border-radius:100px;padding:4px 11px}
+.pil.actief{background:#e6f2ea;color:var(--groen)}
+.pil.verifieren{background:var(--gold-tint);color:var(--gold-text)}
+.pil.gestopt{background:#f7e4e1;color:var(--rood)}
+.pil.z{background:var(--gold-tint);color:var(--navy-soft)}
+.grp{font-size:.75rem;font-weight:600;border-radius:100px;padding:4px 11px;margin-left:4px}
+.grp.A{background:var(--navy);color:#fff}
+.grp.B{background:var(--gold-tint);color:var(--gold-text);border:1px solid var(--line)}
+.gv{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.rij.B .gv{background:#fdf9ef}
+.gv tr.kop td{border-top:2px solid var(--navy)}
+.leeg2{background:var(--card);border:1px dashed var(--line);border-radius:var(--radius);color:var(--ink-soft)}
+.uitband{background:#f7e4e1;color:var(--rood);border-radius:10px;font-size:.86rem;font-weight:600}
+.melding{background:var(--gold-tint);border:1px solid var(--line);border-radius:12px}
+summary{color:var(--navy);font-weight:600}
+details{border-top:1px solid var(--line-soft)}
+details.ctxklap{border-top:0;margin-top:0;padding-top:0}
+details.ctxklap>summary h2{font-size:clamp(1.3rem,4.4vw,1.7rem)}
+
+/* ---- Detailkaarten ---- */
+.kaarten{gap:18px}
+.kaart{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--navy);border-radius:var(--radius);box-shadow:var(--shadow-sm);padding:24px 24px}
+.kaart.verifieren{border-top-color:#b9b2a3;background:var(--card)}
+.kaart.gestopt{border-top-color:var(--rood);background:var(--bg-alt)}
+.kaart h3{font-size:1.3rem}
+.kaart .product{color:var(--ink-soft)}
+dt{font-size:.78rem;font-weight:600;letter-spacing:.06em;color:var(--ink-soft)}
+.kcv{background:var(--bg);border-left:3px solid var(--gold);border-radius:10px;padding:10px 12px;font-size:.9rem}
+.kcv b{font-size:.74rem;font-weight:600;letter-spacing:.08em;color:var(--ink-soft)}
+details.acc{background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.vak{border-radius:12px}.vak.wel{background:#e6f2ea}.vak.niet{background:#f7e4e1}
+.bron,.docs{font-size:.84rem;color:var(--ink-soft)}
+h3.tussen{font-size:1.15rem}
+
+/* ---- Vergelijken ---- */
+#mxbalk{gap:10px 10px;margin-bottom:14px}
+#mxbalk .mxl{font-size:.74rem;font-weight:600;letter-spacing:.1em;color:var(--ink-soft)}
+.chip,.chip:hover{border:1px solid var(--navy);border-radius:100px;padding:8px 16px;min-height:40px;font-size:.86rem;font-weight:600;background:var(--card);color:var(--navy)}
+.chip.gB,.chip.gB:hover{border-color:var(--gold);color:var(--gold-text)}
+.chip.aan.gA,.chip.aan.gA:hover{background:var(--navy);color:#fff}
+.chip.aan.gB,.chip.aan.gB:hover{background:var(--gold);border-color:var(--gold);color:#fff}
+.chip.uit,.chip.uit:hover{border-style:dashed;border-color:#b9b2a3;color:var(--ink-soft)}
+.mxopt{font-size:.9rem;gap:8px 16px}
+.mxopt label{color:var(--ink)}
+.mxopt input{width:18px;height:18px;accent-color:var(--gold)}
+.mxopt .tel{color:var(--ink-soft)}
+.mxopt button.pijl,.mxopt button.pijl:hover{border:1px solid var(--line);background:var(--card);border-radius:100px;width:44px;height:44px;min-height:44px;padding:0;color:var(--navy)}
+.mxopt button.pijl:hover{border-color:var(--gold);color:var(--gold-text)}
+.mxopt button.tekstknop,.mxopt button.tekstknop:hover{border:0;background:none;min-height:0;padding:0;border-radius:0;color:var(--gold-text);font-size:inherit}
+.tabelwrap{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-sm)}
+table{font-size:.84rem;line-height:1.5}
+th{background:var(--navy);color:#fff;padding:11px 12px;font-weight:600}
+td{padding:10px 12px;border-top:1px solid var(--line-soft)}
+tr.catrij td{background:var(--gold-tint)}
+table.ctx th.rk{background:var(--bg-alt);color:var(--navy)}
+#matrix{font-size:.86rem}
+#matrix th.hoek{background:var(--navy-soft)}
+#matrix th.kol{padding:0 0 11px}
+#matrix th.kol.gA{background:var(--navy-soft);color:#fff}
+#matrix th.kol.gB{background:var(--gold-tint);color:var(--navy)}
+#matrix th.kol.gA .band{background:var(--navy);color:#fff}
+#matrix th.kol.gB .band{background:var(--gold);color:#fff}
+#matrix th.kol .band button,#matrix th.kol .band button:hover{border:0;background:none;color:inherit;min-height:32px;min-width:32px;padding:2px 8px;border-radius:6px}
+#matrix th.kol .kn{font-family:'Fraunces',serif;font-weight:500;font-size:1.05rem;line-height:1.25}
+#matrix th.kol .kp{font-size:.82rem}
+#matrix th.rk{background:var(--bg-alt);color:var(--navy);border-top:1px solid var(--line);font-size:.74rem!important;font-weight:600;letter-spacing:.06em}
+#matrix td{border-left:1px solid var(--line-soft)}
+#matrix td.gA{background:#f7f8fa}
+#matrix td.gB{background:#fdf9ef}
+#matrix td.eerste,#matrix th.eerste{border-left:3px solid var(--navy)}
+#matrix td.gB.eerste,#matrix th.gB.eerste{border-left:3px solid var(--gold)}
+#matrix tr.renterij td.gA{background:var(--navy);color:#fff}
+#matrix tr.renterij td.gB{background:var(--gold-tint);color:var(--navy);font-weight:600}
+#matrix tr.mxgrp th{background:var(--navy);color:#fff;border-top:0}
+#matrix tr.mxgrp button,#matrix tr.mxgrp button:hover{border:0;background:none;color:#fff;border-radius:0;min-height:44px;padding:8px 14px;font-family:'Fraunces',serif;font-weight:500;font-size:1rem}
+#matrix tr.mxlab th{background:var(--bg-alt);color:var(--navy);border-top:1px solid var(--line)}
+#matrix tr.mxlab span{font-size:.74rem;font-weight:600;letter-spacing:.06em}
+#matrix td.banken{background:var(--card);border-top:2px solid var(--navy);border-bottom:2px solid var(--navy)}
+#matrix tr.bankrij th.rk{border-top:2px solid var(--navy);border-bottom:2px solid var(--navy)}
+.bank{border:1px solid var(--line);border-left:3px solid var(--rood);border-radius:10px;padding:10px 12px}
+.bmeta{font-size:.78rem;color:var(--ink-soft)}
+#matrix th.kol.uit{background:var(--ink-soft);color:#fff}
+#matrix .uitkop{border-radius:100px;padding:3px 10px;font-size:.72rem}
+#matrix td.uit{background:var(--bg-alt);color:var(--ink-soft)}
+#matrix tr.renterij td.uit{background:var(--ink-soft);color:#fff}
+#matrix td.leeg{color:var(--ink-soft);font-style:normal;padding:22px}
+
+/* ---- Vergelijkbalk onderaan ---- */
+#vglbalk{background:var(--navy);color:#fff;padding:12px 20px;padding-bottom:calc(12px + env(safe-area-inset-bottom,0px));gap:8px 14px;font-size:.92rem;box-shadow:0 -10px 30px -14px rgba(22,35,59,.45)}
+#vglbalk button{min-height:40px;padding:8px 18px}
+#vglbalk .vk,#vglbalk .vk:hover{background:var(--gold);border-color:var(--gold);color:#fff}
+#vglbalk .vw,#vglbalk .vw:hover{background:none;border-color:rgba(255,255,255,.45);color:#fff}
+
+/* ---- Niet meer verkrijgbaar ---- */
+.gestoptlijst .rij{background:none;border:0;border-top:1px solid var(--line-soft);border-radius:0;box-shadow:none;margin:0;padding:14px 0;grid-template-columns:260px 190px 1fr}
+
+/* ---- Disclaimer + site-footer ---- */
+.voetnoot{font-size:.84rem;color:var(--ink-soft);border-top:1px solid var(--line);padding-top:22px;max-width:80ch}
+#contactvoet{margin-top:10px;font-weight:600;color:var(--navy-soft)}
+footer{max-width:none;margin:0;padding:48px 0 30px;background:var(--navy);border-top:1px solid var(--line);font-size:1rem;color:#fff}
+footer .brand b{color:#fff}
+footer .brand span{color:var(--gold-soft)}
+.foot-grid{display:grid;grid-template-columns:1fr;gap:30px;margin-bottom:36px}
+.foot-brand .brand{margin-bottom:14px}
+.foot-brand p{font-size:.92rem;color:rgba(255,255,255,.62);max-width:38ch;margin:0}
+.foot-col h4{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-soft);margin:0 0 16px;font-family:'Inter',sans-serif;font-weight:600}
+.foot-col a,.foot-col p{display:block;font-size:.92rem;color:rgba(255,255,255,.62);margin:0 0 11px;text-decoration:none;transition:color .2s}
+.foot-col a:hover{color:#fff}
+.foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);font-size:.82rem;color:rgba(255,255,255,.55)}
+.socials{display:flex;gap:12px}
+.socials a{width:44px;height:44px;border-radius:10px;border:1px solid rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);transition:border-color .2s,color .2s}
+.socials a:hover{border-color:var(--gold-soft);color:var(--gold-soft)}
+.socials svg{width:18px;height:18px}
+
+/* ---- Breakpoints (gelijk aan index.html) ---- */
+@media(min-width:640px){.foot-grid{grid-template-columns:1fr 1fr}.foot-brand{grid-column:1 / -1}section{margin-bottom:64px}}
+@media(min-width:900px){
+:root{--hh:74px}
+.wrap{padding:0 24px}
+main{padding:8px 24px 72px}
+.brand{font-size:1.6rem}
+header{padding:72px 0 52px}
+.paneel{padding:30px 30px}
+.foot-grid{grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+.foot-brand{grid-column:auto}
+}
+@media(min-width:1100px){
+.nav-toggle,.nav-toggle:hover{display:none}
+#sitenav .menu{display:flex;position:static;flex-direction:row;align-items:center;gap:18px;background:none;padding:0;border:none;box-shadow:none;font-size:.92rem}
+#sitenav .menu a.actief{box-shadow:inset 0 -2px 0 var(--gold)}
+}
+@media(max-width:1100px){.rij{grid-template-columns:1fr}}
+@media(max-width:900px){
+.facetten{position:static;max-height:none;overflow:visible}
+#ftoggle{display:inline-flex;align-items:center;justify-content:center;width:100%;margin-bottom:14px}
+.rij .feiten{grid-template-columns:repeat(2,1fr)}
+.gestoptlijst .rij{grid-template-columns:1fr}
+.vglkies{margin-left:0}
+}
+@media(max-width:760px){
+.tabelwrap{max-height:78vh}
+#matrix{font-size:14px}
+#matrix th.kol .kn{font-size:1rem}
+.mblok dl{grid-template-columns:1fr;gap:0}
+.mblok dd{margin-bottom:10px}
+.mxopt .pijlen{margin-left:auto}
+.indic{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+.balk{position:static}
+.balk button{flex:1 1 auto}
+.rij{padding:20px 18px}
+.paneel{padding:22px 18px}
+#vglbalk{justify-content:space-between;padding-left:16px;padding-right:16px}
+#vglbalk button{flex:1 1 auto}
+body[style*="padding-bottom"]{padding-bottom:116px!important}
+}
+@media(max-width:900px){
+/* leesbaarheid: niets kleiner dan 13px, klikvlakken minimaal 44px */
+.rij .feiten b,.facet h4,.kcv b,dt,.pil,.grp,.bmeta,#matrix th.rk,#matrix .uitkop,#matrix tr.mxlab span,#mxbalk .mxl,.indres .ik,.mblok h4,.rij details h4,.sr h4,.gv h4,.facet label span.n,.foot-col h4,.foot-bottom,header .label,.brand small{font-size:13px!important;letter-spacing:.04em}
+table,.voetnoot,.bron,.docs,.gv .noot,header .meta,.rij .sub,.tegel span,.lg,.lftnoot,.indic .indnoot,.indres .in,#matrix th.kol .kp{font-size:14px}
+.rij .feiten,.rij .acties,.facet label,.mblok dl,.mblok ul,.mblok dt{font-size:15px}
+button.klein{min-height:44px;padding:8px 16px;font-size:.88rem}
+.facet label{min-height:44px;padding:0}
+.facet.lft label{min-height:0;padding:0 0 4px}
+.facet input{width:22px;height:22px}
+.rij .acties{flex-direction:column;align-items:stretch;gap:0}
+.rij .acties a,.paneel li a,.foot-col a,.mblok li a{display:flex;align-items:center;min-height:44px}
+.vglkies{min-height:44px;margin-top:8px;justify-content:center}
+.chip{min-height:44px}
+.paneel li{margin-bottom:4px}
+summary{padding:11px 0}
+details.ctxklap>summary{padding:6px 0}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{#sitenav,#ftoggle,footer .socials,#vglbalk{display:none!important}#facetten{display:block}body{padding-bottom:0!important}}
+
+/* ---- Aanvulling versie 7: neutrale weergave (geen kleuronderscheid tussen hypotheken) ---- */
+.rij,.rij.A,.rij.B,.rij.uit{border-left:4px solid var(--navy);background:var(--card);color:var(--ink);box-shadow:var(--shadow-sm)}
+.rij.B .gv{background:var(--bg)}
+.grp,.grp.A,.grp.B{background:var(--bg-alt);color:var(--navy);border:0}
+.pil.actief,.pil.gestopt,.pil.verifieren{background:var(--bg-alt);color:var(--navy)}
+#matrix th.kol,#matrix th.kol.gA,#matrix th.kol.gB,#matrix th.kol.uit{background:var(--navy-soft);color:#fff;padding:12px 0 11px;border-left:1px solid rgba(255,255,255,.25)}
+#matrix td,#matrix td.gA,#matrix td.gB,#matrix td.uit{background:var(--card);color:var(--ink)}
+#matrix td.eerste,#matrix td.gB.eerste{border-left:1px solid var(--line-soft)}
+#matrix th.eerste,#matrix th.gB.eerste{border-left:1px solid rgba(255,255,255,.25)}
+#matrix .uitkop{background:none;color:#fff;border:1px solid rgba(255,255,255,.6);font-weight:600}
+#matrix th.kol .kolx button,#matrix th.kol .kolx button:hover{border:0;background:none;color:#fff;min-height:32px;min-width:32px;padding:2px 8px;border-radius:6px}
+/* ---- Aanvulling versie 7: bladeren in de vergelijking ---- */
+.mxnav{gap:8px}
+.mxtel{color:var(--navy)!important;font-weight:600;padding:0 6px}
+.mxopt button.pijl:disabled{opacity:.35;cursor:default;border-color:var(--line);color:var(--navy)}
+.bronn{font-family:'Inter',sans-serif;font-weight:400;color:var(--ink-soft);font-size:.6em;letter-spacing:0}
+.facet label.nul{color:#8f8a7e}
+details.ctxklap>summary{cursor:pointer}
+details.ctxklap>summary{list-style-position:inside}
+/* vergelijking past altijd binnen het kader: drie kolommen op desktop en tablet, twee op mobiel */
+@media(min-width:761px){#matrix{width:100%}}
+@media(min-width:761px) and (max-width:1000px){#matrix{--lab:150px}}
+
+/* ================= NVHP-huisstijl override (hypothecairplanner.nl) ================= */
+:root,.pub{
+--bg:#ffffff;--bg-alt:#f2f6f5;--card:#ffffff;--navy:#234765;--navy-soft:#3d607e;--navy2:#3d607e;
+--gold:#234765;--gold-text:#234765;--gold-soft:#3d607e;--gold-tint:#eef5f1;
+--ink:#212529;--ink-soft:#5b6670;--line:#dfe4e8;--line-soft:#eceff2;
+--radius:8px;
+--geel:#234765;--wit:#fff;--lijn:#dfe4e8;--tekst:#212529;--grijs:#5b6670;--groen:#2f8f5b;--oranje:#9a6a00;--rood:#b3261e;
+--accent:#80c7a4;--accent-text:#1f6b48
+}
+body{font-family:'Ruda','Ginter','Inter','Helvetica Neue',sans-serif;font-weight:300}
+h1,h2,h3{font-family:'League Spartan',sans-serif;font-weight:500;color:var(--navy);letter-spacing:0}
+.brand{font-family:'League Spartan',sans-serif}
+button,.vglkies,.chip,.mxpag{border-radius:4px}
+button.primair{background:var(--accent);border-color:var(--accent);color:#fff}
+button.primair:hover{background:#6bb492;border-color:#6bb492}
+.tegel b{color:var(--navy)}
+.pil.actief{background:var(--gold-tint);color:var(--accent-text)}
+#matrix th.kol.gB,#matrix th.kol.gB .band{background:var(--navy);color:#fff}
+#matrix td.gB,#matrix tr.renterij td.gB{background:var(--gold-tint);color:var(--tekst)}
+.grp.B{background:var(--gold-tint);color:var(--navy);border:1px solid var(--line)}
+#sitenav{background:rgba(255,255,255,.95)}
+.paneel,.tegel,.rij,.kaart,.indic,.gv,.leeg2,.tabelwrap,details.acc{border-radius:8px}
+footer{background:var(--navy)}
+footer .foot-col h4{color:#9fd4bd}
+</style>
+</head>
+<body>
+<noscript><p style="max-width:720px;margin:40px auto;padding:0 20px;font:16px/1.5 Arial,sans-serif">Deze pagina heeft JavaScript nodig om het overzicht te tonen. Zet JavaScript aan in je browser en laad de pagina opnieuw.</p></noscript>
+<script id="data" type="application/json">{
+ "meta": {
+  "titel": "Verzilveren",
+  "subtitel": "De overwaarde van je woning opnemen zonder te verhuizen: alle hypotheken voor senioren in Nederland naast elkaar",
+  "peildatum": "22 november 2026",
+  "versie": "7.4",
+  "label": "BijMij Hypotheek & Advies",
+  "footer": "Deze pagina is bedoeld als informatie en is geen advies. Voorwaarden kunnen veranderen; de offerte en de voorwaarden van de geldverstrekker zijn leidend.",
+  "publiek": true,
+  "titelTab": "Verzilveren | BijMij Hypotheek & Advies",
+  "site": "https://www.bijmij.nl",
+  "merk": "BijMij Hypotheek & Advies",
+  "menu": [
+   {
+    "t": "Diensten",
+    "u": "https://www.bijmij.nl/#diensten"
+   },
+   {
+    "t": "Werkwijze",
+    "u": "https://www.bijmij.nl/#aanpak"
+   },
+   {
+    "t": "Leidraad",
+    "u": "https://www.bijmij.nl/#leidraad"
+   },
+   {
+    "t": "Over Dennes",
+    "u": "https://www.bijmij.nl/#over"
+   },
+   {
+    "t": "Innovatie",
+    "u": "https://www.bijmij.nl/#innovatie"
+   },
+   {
+    "t": "Keurmerken",
+    "u": "https://www.bijmij.nl/#keurmerken"
+   },
+   {
+    "t": "Verzilveren",
+    "u": "verzilveren.html",
+    "actief": true
+   },
+   {
+    "t": "Plan een gesprek",
+    "u": "https://www.bijmij.nl/#contact"
+   }
+  ],
+  "contact": "BijMij · Spoorpad 3, 7251 JA Vorden · 06 51 11 78 93 · bijmijfd@gmail.com · KvK 83202072"
+ },
+ "kern": [],
+ "categorieen": [
+  {
+   "id": "A",
+   "naam": "Lening, rente betalen",
+   "uitleg": "Aflossingsvrije hypotheek met levenslang vaste rente. Maandlast: ja. De schuld blijft gelijk of daalt. De toets gaat uit van de werkelijke maandlast."
+  },
+  {
+   "id": "B",
+   "naam": "Lening, rente bijschrijven",
+   "uitleg": "Verzilverhypotheek of opeethypotheek. Geen maandlast. De schuld groeit door rente op rente. De overwaarde bepaalt wat je kunt opnemen."
+  }
+ ],
+ "proposities": [
+  {
+   "id": "asr",
+   "cat": "A",
+   "status": "actief",
+   "aanbieder": "a.s.r.",
+   "product": "Levensrente hypotheek",
+   "opname": "Bedrag ineens",
+   "restschuld": "Geen garantie",
+   "bijzonder": "De toets gaat uit van de werkelijke maandlast (alleen rente). Het geld mag niet worden belegd of in een onderneming gestoken. Een schuldenaar toevoegen of vervangen kan niet. Ook mogelijk voor oversluiten zonder opname en voor de aankoop van een woning.",
+   "passend": "Je ontvangt AOW, hebt aan maximaal 50% van de marktwaarde genoeg, kunt de maandlast dragen en wilt weten wat er overblijft voor je erfgenamen",
+   "nietPassend": "Je hebt geen ruimte voor een maandlast, je hebt meer dan 50% van de marktwaarde nodig of je wilt nog verhuizen",
+   "docs": [
+    {
+     "t": "Productpagina Levensrente hypotheek (asr.nl)",
+     "u": "https://www.asr.nl/hypotheek/levensrente-hypotheek"
+    },
+    {
+     "t": "Hypotheekgids a.s.r. mei 2026 (pdf)",
+     "u": "https://downloads.asr.nl/pdf/53880.pdf"
+    }
+   ],
+   "minLeeftijd": "AOW-leeftijd, alle aanvragers",
+   "maxBedrag": "€ 500.000",
+   "rentevast": "Levenslang vast",
+   "verhuis": "Nee: aflossen bij verkoop",
+   "overlijden": "Eerste overlijden: lening loopt door; de achterblijver kan binnen 12 maanden zonder vergoeding aflossen of omzetten. Langstlevende: aflossen uit de verkoop.",
+   "rang": "Wordt afgelost",
+   "rangToel": "Wordt afgelost (alleen 1e hypotheek)",
+   "gestoptSinds": "",
+   "website": "https://www.asr.nl/hypotheek/levensrente-hypotheek",
+   "websiteAdv": "",
+   "tool": "",
+   "regels": {
+    "aow": true,
+    "minL": null,
+    "maxL": null
+   },
+   "facet": {
+    "rente": "betalen",
+    "opname": [
+     "ineens"
+    ],
+    "rentevast": [
+     "levenslang"
+    ],
+    "rang": "1e",
+    "verhuis": "nee",
+    "restschuld": "nee",
+    "aankoop": "ja",
+    "verhogen": "ja",
+    "ltv": "50",
+    "minbedrag": "onbekend",
+    "maxbedrag": "500"
+   },
+   "erfpacht": "Niet bekend",
+   "boetevrij": "Niet bekend",
+   "aflosvorm": "Aflossingsvrij",
+   "aankoop": "Ja: aankoop en oversluiten",
+   "verhogen": "Ja, vanaf € 10.000",
+   "nieuwePartner": "Kan niet worden toegevoegd",
+   "zorg": "Niet apart geregeld",
+   "maxLtv": "50% van de marktwaarde",
+   "renteToel": "",
+   "inkomenstoets": "Ja: het inkomen bepaalt mede het maximum"
+  },
+  {
+   "id": "munt",
+   "cat": "A",
+   "status": "actief",
+   "aanbieder": "MUNT Hypotheken",
+   "product": "Levenslang Zeker Hypotheek",
+   "opname": "Bedrag ineens",
+   "restschuld": "Geen garantie",
+   "bijzonder": "De toets gaat uit van je werkelijke maandlast, omgerekend naar een bruto last. Heb je al een MUNT-hypotheek, dan moet je via de notaris oversluiten. Annuleren na een getekend aanbod kost € 750.",
+   "passend": "Je ontvangt AOW, hebt een stabiel levenslang inkomen en hebt meer dan 50% van de marktwaarde nodig, of je wilt nog kunnen verhuizen",
+   "nietPassend": "Je hebt geen ruimte voor een maandlast, je zoekt een maandelijkse aanvulling, of je verwacht dat een latere partner moet meetekenen",
+   "docs": [
+    {
+     "t": "Productpagina Levenslang Zeker Hypotheek",
+     "u": "https://www.munthypotheken.nl/levenslang-zeker-hypotheek/"
+    },
+    {
+     "t": "Voorwaarden Levenslang Zeker Hypotheek (pdf)",
+     "u": "https://www.munthypotheken.nl/site/assets/files/39953/voorwaarden_levenslang_zeker_hypotheek.pdf"
+    },
+    {
+     "t": "Q&A Levenslang Zeker Hypotheek (pdf)",
+     "u": "https://www.munthypotheken.nl/site/assets/files/39953/q_a_levenslang_zeker_hypotheek-1.pdf"
+    },
+    {
+     "t": "MUNT Hypotheekgids 2026 (pdf)",
+     "u": "https://www.munthypotheken.nl/site/assets/files/2893/munt_hypotheekgids_2026-2.pdf"
+    },
+    {
+     "t": "MUNT: rekentool Levenslang Zeker Hypotheek",
+     "u": "https://www.munthypotheken.nl/downloads/tools/rekentool-levenslang-zeker-hypotheek/"
+    }
+   ],
+   "minLeeftijd": "AOW-leeftijd, alle aanvragers",
+   "maxBedrag": "€ 1.000.000 (minimaal € 75.000)",
+   "rentevast": "Levenslang vast",
+   "verhuis": "Ja: rente mee naar de volgende woning, mits binnen 3 maanden na aflossing aangevraagd",
+   "overlijden": "Niet geregeld in de voorwaarden",
+   "rang": "Wordt afgelost",
+   "rangToel": "Wordt afgelost (alleen 1e hypotheek)",
+   "gestoptSinds": "",
+   "website": "https://www.munthypotheken.nl/levenslang-zeker-hypotheek/",
+   "websiteAdv": "",
+   "tool": "",
+   "regels": {
+    "aow": true,
+    "minL": null,
+    "maxL": null
+   },
+   "facet": {
+    "rente": "betalen",
+    "opname": [
+     "ineens"
+    ],
+    "rentevast": [
+     "levenslang"
+    ],
+    "rang": "1e",
+    "verhuis": "ja",
+    "restschuld": "nee",
+    "aankoop": "ja",
+    "verhogen": "ja",
+    "ltv": "70",
+    "minbedrag": "hoog",
+    "maxbedrag": "meer"
+   },
+   "erfpacht": "Niet bekend",
+   "boetevrij": "Niet bekend",
+   "aflosvorm": "Aflossingsvrij tot 50% van de marktwaarde; daarboven annuïtair of lineair in maximaal 30 jaar",
+   "aankoop": "Ja: aankoop en oversluiten",
+   "verhogen": "Ja, vanaf € 10.000",
+   "nieuwePartner": "Kan niet worden toegevoegd (ook niet na een huwelijk of bij verhuizing)",
+   "zorg": "Niet bekend",
+   "maxLtv": "70% van de marktwaarde (50% aflossingsvrij; tot 80% voor energiebesparing)",
+   "renteToel": "",
+   "toolAdv": "https://www.munthypotheken.nl/downloads/tools/rekentool-levenslang-zeker-hypotheek/",
+   "inkomenstoets": "Ja: het inkomen bepaalt mede het maximum (alleenstaanden kunnen onder voorwaarden tot € 17.000 extra lenen)"
+  },
+  {
+   "id": "vandaag",
+   "cat": "A",
+   "status": "actief",
+   "aanbieder": "Vandaag Hypotheken",
+   "product": "Vandaag Hypotheek (levensbestendige hypotheek)",
+   "opname": "Bedrag ineens",
+   "restschuld": "Garantie onder voorwaarden (periodieke vragenlijst over de woning)",
+   "bijzonder": "De toets kijkt alleen naar de rentelast en gaat uit van het laagste jaarinkomen over de hele looptijd. Na overlijden van een van beiden, of bij achterstand door langdurige zorgkosten, kan de rente onder voorwaarden worden bijgeschreven. Een tweede hypotheek op de woning is niet toegestaan. Geen afsluitprovisie en geen annuleringskosten. Alleen via een adviseur.",
+   "passend": "Je bent 57 jaar of ouder (ook vóór je AOW), kunt de rentelast dragen en wilt zekerheid als je inkomen terugvalt",
+   "nietPassend": "Je hebt geen ruimte voor een maandlast, je wilt nog verhuizen of je zoekt een maandelijkse opname",
+   "docs": [
+    {
+     "t": "Hypotheekgids Vandaag Hypotheken mei 2026 (pdf)",
+     "u": "https://www.vandaaghypotheken.nl/uploads/hypotheekgids-vandaag-hypotheken-mei-2026.pdf"
+    },
+    {
+     "t": "Productkaart juli 2025 (pdf)",
+     "u": "https://www.vandaaghypotheken.nl/uploads/productkaart-vh-juli-2025-1.pdf"
+    },
+    {
+     "t": "Algemene Voorwaarden maart 2025 (pdf)",
+     "u": "https://www.vandaaghypotheken.nl/uploads/Algemene-voorwaarden-Vandaag-Hypotheken_maart-2025.pdf"
+    },
+    {
+     "t": "Onderscheidende kenmerken april 2025 (pdf)",
+     "u": "https://www.vandaaghypotheken.nl/uploads/Onderscheidende-kenmerken-VH_april-2025.pdf"
+    },
+    {
+     "t": "Adviseurspagina",
+     "u": "https://www.vandaaghypotheken.nl/adviseurs/"
+    }
+   ],
+   "minLeeftijd": "57 jaar, alle aanvragers (maximaal 84 jaar bij aanvraag)",
+   "maxBedrag": "€ 750.000 (minimaal € 50.000)",
+   "rentevast": "Levenslang vast",
+   "verhuis": "Nee: aflossen bij verkoop",
+   "overlijden": "Eerste overlijden: lening loopt door; rente bijschrijven kan onder voorwaarden. Langstlevende: aflossen binnen 12 maanden.",
+   "rang": "Wordt afgelost",
+   "rangToel": "Wordt afgelost (alleen 1e hypotheek)",
+   "gestoptSinds": "",
+   "website": "https://www.vandaaghypotheken.nl/",
+   "websiteAdv": "https://www.vandaaghypotheken.nl/adviseurs/",
+   "tool": "https://www.vandaaghypotheken.nl/calculator/",
+   "regels": {
+    "aow": false,
+    "minL": 57,
+    "maxL": 84
+   },
+   "facet": {
+    "rente": "betalen",
+    "opname": [
+     "ineens"
+    ],
+    "rentevast": [
+     "levenslang"
+    ],
+    "rang": "1e",
+    "verhuis": "nee",
+    "restschuld": "ja",
+    "aankoop": "ja",
+    "verhogen": "nee",
+    "ltv": "65",
+    "minbedrag": "hoog",
+    "maxbedrag": "meer"
+   },
+   "erfpacht": "Alleen van overheid of semioverheid; particuliere erfpacht niet",
+   "boetevrij": "10% van de oorspronkelijke hoofdsom per jaar; altijd bij verkoop, overlijden en vertrek naar een zorginstelling",
+   "aflosvorm": "Aflossingsvrij",
+   "aankoop": "Ja: aankoop en oversluiten",
+   "verhogen": "Nee",
+   "nieuwePartner": "Kan niet worden toegevoegd (hertrouwen in gemeenschap van goederen kan tot aflossing leiden)",
+   "zorg": "Aflossen na vertrek, zonder vergoeding",
+   "maxLtv": "65% van de marktwaarde (60% als de achterblijvende partner de last beperkt kan dragen)",
+   "renteToel": "Bijschrijven kan alleen na overlijden van een van beiden of bij langdurige zorgkosten",
+   "toolAdv": "https://adviseur.vandaaghypotheken.nl/login",
+   "inkomenstoets": "Ja: het inkomen bepaalt mede het maximum"
+  },
+  {
+   "id": "abn1",
+   "cat": "B",
+   "status": "actief",
+   "aanbieder": "ABN AMRO",
+   "product": "Overwaarde Hypotheek, eenmalige opname",
+   "opname": "Bedrag ineens",
+   "restschuld": "Garantie onder voorwaarden (verkoop tegen marktwaarde, woning onderhouden)",
+   "bijzonder": "Alleen met hypotheekadvies. Een hypotheek bij een andere geldverstrekker moet naar ABN AMRO; de oversluitkosten moeten in verhouding staan tot de opname. Je hebt 14 kalenderdagen bedenktijd na het bindend aanbod. Omzetten naar een andere hypotheekvorm kan, met een inkomenstoets.",
+   "passend": "Je bent 67 jaar of ouder, hebt veel overwaarde en weinig inkomen, en wilt blijven wonen",
+   "nietPassend": "Je wilt nog verhuizen of iets nalaten, je hebt minder dan € 35.000 nodig, de oversluitkosten zijn hoog of je hebt een spaar- of levenhypotheek bij ABN AMRO",
+   "docs": [
+    {
+     "t": "Intermediairpagina Overwaarde Hypotheek",
+     "u": "https://intermediair.abnamro.nl/overwaarde-hypotheek"
+    },
+    {
+     "t": "Productwijzer (download)",
+     "u": "https://intermediair.abnamro.nl/download-document/524/Overwaarde%20Hypotheek%20-%20Productwijzer"
+    },
+    {
+     "t": "Checklist doelgroepbepaling (download)",
+     "u": "https://intermediair.abnamro.nl/download-document/616/Overwaarde%20Hypotheek%20-%20Checklist%20doelgroepbepaling"
+    },
+    {
+     "t": "Rekentool",
+     "u": "https://intermediair.abnamro.nl/rekentool-overwaarde-hypotheek"
+    },
+    {
+     "t": "Vraag en antwoord",
+     "u": "https://intermediair.abnamro.nl/vraag-antwoord-overwaarde-hypotheek"
+    },
+    {
+     "t": "Wijzigingen tijdens looptijd",
+     "u": "https://intermediair.abnamro.nl/overwaarde-hypotheek-wijzigingen-tijdens-looptijd"
+    }
+   ],
+   "minLeeftijd": "62 jaar, alle aanvragers",
+   "maxBedrag": "€ 300.000 (minimaal € 35.000)",
+   "rentevast": "10, 15 of 20 jaar vast (van 62 tot 67 jaar: 15 of 20 jaar)",
+   "verhuis": "Nee: aflossen bij verkoop",
+   "overlijden": "Eerste overlijden: lening loopt door. Langstlevende: aflossen binnen 12 maanden.",
+   "rang": "Wordt overgesloten naar ABN AMRO",
+   "rangToel": "Wordt overgesloten naar ABN AMRO (alleen 1e hypotheek); een bestaande ABN AMRO-hypotheek mag blijven tot € 350.000",
+   "gestoptSinds": "",
+   "website": "https://www.abnamro.nl/nl/prive/hypotheken/overwaarde/overwaarde-hypotheek.html",
+   "websiteAdv": "https://intermediair.abnamro.nl/overwaarde-hypotheek",
+   "tool": "https://www.abnamro.nl/nl/prive/hypotheken/overwaarde/orientatietool.html",
+   "regels": {
+    "aow": false,
+    "minL": 62,
+    "maxL": null
+   },
+   "facet": {
+    "rente": [
+     "bijschrijven",
+     "betalen"
+    ],
+    "opname": [
+     "ineens"
+    ],
+    "rentevast": [
+     "10",
+     "15",
+     "20"
+    ],
+    "rang": "1e",
+    "verhuis": "nee",
+    "restschuld": "ja",
+    "aankoop": "nee",
+    "verhogen": "nee",
+    "ltv": "onbekend",
+    "minbedrag": "midden",
+    "maxbedrag": "300"
+   },
+   "erfpacht": "Niet bekend",
+   "boetevrij": "Niet bekend",
+   "aflosvorm": "Aflossingsvrij",
+   "aankoop": "Nee: alleen overwaarde opnemen",
+   "verhogen": "Nee",
+   "nieuwePartner": "Kan niet worden toegevoegd en kan de lening niet voortzetten",
+   "zorg": "Aflossen binnen 12 maanden na vertrek",
+   "maxLtv": "Geen vast percentage (hangt af van leeftijd en marktwaarde; eigen rekenregel van de bank)",
+   "variant": "eenmalige opname",
+   "renteToel": "Bijgeschreven per maand; zelf betalen kan geheel of deels",
+   "inkomenstoets": "Nee: het bedrag volgt uit leeftijd en marktwaarde (wel een toets of een bestaande hypotheek betaalbaar blijft)"
+  },
+  {
+   "id": "abn2",
+   "cat": "B",
+   "status": "actief",
+   "aanbieder": "ABN AMRO",
+   "product": "Overwaarde Hypotheek, maandelijkse opname",
+   "opname": "Maandelijkse uitkering, 2 tot 240 maanden",
+   "restschuld": "Garantie onder voorwaarden (verkoop tegen marktwaarde, woning onderhouden)",
+   "bijzonder": "Alleen met hypotheekadvies. Een hypotheek bij een andere geldverstrekker moet naar ABN AMRO; de oversluitkosten moeten in verhouding staan tot de opname. Je hebt 14 kalenderdagen bedenktijd na het bindend aanbod. Omzetten naar een andere hypotheekvorm kan, met een inkomenstoets.",
+   "passend": "Je bent 67 jaar of ouder, hebt veel overwaarde en weinig inkomen, en wilt blijven wonen",
+   "nietPassend": "Je wilt nog verhuizen of iets nalaten, je hebt minder dan € 35.000 nodig, de oversluitkosten zijn hoog of je hebt een spaar- of levenhypotheek bij ABN AMRO",
+   "docs": [
+    {
+     "t": "Intermediairpagina Overwaarde Hypotheek",
+     "u": "https://intermediair.abnamro.nl/overwaarde-hypotheek"
+    },
+    {
+     "t": "Productwijzer (download)",
+     "u": "https://intermediair.abnamro.nl/download-document/524/Overwaarde%20Hypotheek%20-%20Productwijzer"
+    },
+    {
+     "t": "Checklist doelgroepbepaling (download)",
+     "u": "https://intermediair.abnamro.nl/download-document/616/Overwaarde%20Hypotheek%20-%20Checklist%20doelgroepbepaling"
+    },
+    {
+     "t": "Rekentool",
+     "u": "https://intermediair.abnamro.nl/rekentool-overwaarde-hypotheek"
+    },
+    {
+     "t": "Vraag en antwoord",
+     "u": "https://intermediair.abnamro.nl/vraag-antwoord-overwaarde-hypotheek"
+    },
+    {
+     "t": "Wijzigingen tijdens looptijd",
+     "u": "https://intermediair.abnamro.nl/overwaarde-hypotheek-wijzigingen-tijdens-looptijd"
+    }
+   ],
+   "minLeeftijd": "62 jaar, alle aanvragers",
+   "maxBedrag": "€ 300.000 (minimaal € 35.000)",
+   "rentevast": "10 of 15 jaar vast (van 62 tot 67 jaar: 15 jaar)",
+   "verhuis": "Nee: aflossen bij verkoop",
+   "overlijden": "Eerste overlijden: lening loopt door. Langstlevende: aflossen binnen 12 maanden.",
+   "rang": "Wordt overgesloten naar ABN AMRO",
+   "rangToel": "Wordt overgesloten naar ABN AMRO (alleen 1e hypotheek); een bestaande ABN AMRO-hypotheek mag blijven tot € 350.000",
+   "gestoptSinds": "",
+   "website": "https://www.abnamro.nl/nl/prive/hypotheken/overwaarde/overwaarde-hypotheek.html",
+   "websiteAdv": "https://intermediair.abnamro.nl/overwaarde-hypotheek",
+   "tool": "https://www.abnamro.nl/nl/prive/hypotheken/overwaarde/orientatietool.html",
+   "regels": {
+    "aow": false,
+    "minL": 62,
+    "maxL": null
+   },
+   "facet": {
+    "rente": [
+     "bijschrijven",
+     "betalen"
+    ],
+    "opname": [
+     "maandelijks"
+    ],
+    "rentevast": [
+     "10",
+     "15"
+    ],
+    "rang": "1e",
+    "verhuis": "nee",
+    "restschuld": "ja",
+    "aankoop": "nee",
+    "verhogen": "nee",
+    "ltv": "onbekend",
+    "minbedrag": "midden",
+    "maxbedrag": "300"
+   },
+   "erfpacht": "Niet bekend",
+   "boetevrij": "Niet bekend",
+   "aflosvorm": "Aflossingsvrij",
+   "aankoop": "Nee: alleen overwaarde opnemen",
+   "verhogen": "Nee (maandelijkse uitkering stopzetten kan, aanpassen niet)",
+   "nieuwePartner": "Kan niet worden toegevoegd en kan de lening niet voortzetten",
+   "zorg": "Aflossen binnen 12 maanden na vertrek",
+   "maxLtv": "Geen vast percentage (hangt af van leeftijd en marktwaarde; eigen rekenregel van de bank)",
+   "variant": "maandelijkse opname",
+   "renteToel": "Bijgeschreven per maand; zelf betalen kan geheel of deels",
+   "inkomenstoets": "Nee: het bedrag volgt uit leeftijd en marktwaarde (wel een toets of een bestaande hypotheek betaalbaar blijft)"
+  },
+  {
+   "id": "onderlinge",
+   "cat": "B",
+   "status": "actief",
+   "aanbieder": "Onderlinge Nederland",
+   "product": "ZilverHuis Hypotheek",
+   "opname": "Maandelijkse uitkering, 24 tot 240 maanden; daarnaast een bedrag ineens tot € 30.000 mogelijk",
+   "restschuld": "Garantie onder voorwaarden (marktconform verkocht, woning onderhouden en verzekerd, op tijd afgelost)",
+   "bijzonder": "Een eerste hypotheek bij een andere geldverstrekker mag blijven tot € 80.000. Andere geregistreerde schulden mogen samen maximaal € 5.000 zijn.",
+   "passend": "Je bent 72 jaar of ouder, hebt AOW of een klein pensioen, zoekt een maandelijkse aanvulling en wilt blijven wonen",
+   "nietPassend": "Je hebt voldoende pensioen of vermogen, je zoekt een groot bedrag ineens, je wilt nog verhuizen of je wilt iets nalaten",
+   "docs": [
+    {
+     "t": "Productkaart ZilverHuis Hypotheek 12.2025 (pdf)",
+     "u": "https://cms-backup.onderlingenederland.nl/api/assets/og-website/5f7efce9-bac6-4954-b12e-ce0ab4bb2fe7/productkaart-zilverhuis-hypotheek.pdf?version=0"
+    },
+    {
+     "t": "Brochure ZilverHuis Hypotheek 05.2026 (pdf)",
+     "u": "https://cms-backup.onderlingenederland.nl/api/assets/og-website/b070ec11-19c0-41f2-90c5-3e70ab6e1e79/brochure-zhh-0526.pdf?version=0"
+    },
+    {
+     "t": "Informatie voor de hypotheekadviseur",
+     "u": "https://www.onderlingenederland.nl/adviseur/informatie-voor-de-hypotheekadviseur"
+    },
+    {
+     "t": "Kredietgids versie 2024-10 (kopie bij derde)",
+     "u": "https://hypotheekcompany.nl/wp-content/uploads/2025/02/Kredietgids-ZilverHuis-Hypotheek.pdf"
+    }
+   ],
+   "minLeeftijd": "72 jaar, alle aanvragers (68 jaar bij één eigenaar die ook de enige bewoner is)",
+   "maxBedrag": "€ 250.000 (minimaal € 20.000)",
+   "rentevast": "Levenslang vast",
+   "verhuis": "Nee: aflossen binnen 12 maanden na vertrek",
+   "overlijden": "Eerste overlijden: lening loopt door. Langstlevende: aflossen binnen 12 maanden, zonder vergoeding.",
+   "rang": "Mag blijven",
+   "rangToel": "Mag blijven tot € 80.000 (2e hypotheek toegestaan); de andere geldverstrekker moet instemmen en de hoofdsom telt voor 130% mee",
+   "gestoptSinds": "",
+   "website": "https://www.onderlingenederland.nl/wonen/overwaarde-opnemen/zilverhuis-hypotheek",
+   "websiteAdv": "https://www.onderlingenederland.nl/adviseur/informatie-voor-de-hypotheekadviseur",
+   "tool": "https://www.onderlingenederland.nl/wonen/overwaarde-opnemen/zilverhuis-hypotheek",
+   "regels": {
+    "aow": false,
+    "minL": 72,
+    "minLalleen": 68,
+    "maxL": null
+   },
+   "facet": {
+    "rente": "bijschrijven",
+    "opname": [
+     "maandelijks"
+    ],
+    "rentevast": [
+     "levenslang"
+    ],
+    "rang": "2e",
+    "verhuis": "nee",
+    "restschuld": "ja",
+    "aankoop": "nee",
+    "verhogen": "nee",
+    "ltv": "65",
+    "minbedrag": "laag",
+    "maxbedrag": "300"
+   },
+   "erfpacht": "Alleen van de overheid; particuliere erfpacht niet",
+   "boetevrij": "10% van de actuele schuld per jaar; altijd bij verkoop en overlijden",
+   "aflosvorm": "Aflossingsvrij",
+   "aankoop": "Nee: alleen overwaarde opnemen",
+   "verhogen": "Nee (maandelijkse uitkering verlagen of stopzetten kan)",
+   "nieuwePartner": "Kan niet worden toegevoegd; huisgenoten kunnen de lening niet overnemen",
+   "zorg": "Aflossen binnen 12 maanden na vertrek",
+   "maxLtv": "60% van de marktwaarde (inclusief bijgeschreven rente; het opneembare bedrag hangt af van leeftijd en looptijd)",
+   "renteToel": "Bijgeschreven per maand; zelf betalen kan niet",
+   "inkomenstoets": "Nee: het bedrag volgt uit leeftijd en marktwaarde (wel een toets als een bestaande hypotheek blijft staan)"
+  },
+  {
+   "id": "socio",
+   "cat": "B",
+   "status": "actief",
+   "aanbieder": "SocioHypotheek",
+   "product": "SocioHypotheek",
+   "opname": "Bedrag ineens",
+   "restschuld": "Garantie onder voorwaarden",
+   "bijzonder": "Je bewoont de woning zelf en bent volledig eigenaar. Maximaal twee aanvragers. Een uitgebreide opstalverzekering is verplicht.",
+   "passend": "Je bent 57 jaar of ouder, hebt weinig of geen hypotheek en wilt eenmalig geld opnemen zonder maandlast",
+   "nietPassend": "Je zoekt een maandelijkse aanvulling, je wilt nog verhuizen of je wilt iets nalaten. Stap je jong in, dan loopt de schuld tientallen jaren op en loop je na 15 jaar renterisico.",
+   "docs": [
+    {
+     "t": "Productwijzer SocioHypotheek 22-4-2026 (pdf)",
+     "u": "https://www.sociohypotheek.nl/assets/files/22042026-productwijzer-sociohypotheek-1.pdf"
+    },
+    {
+     "t": "Algemene voorwaarden versie maart 2026 (pdf)",
+     "u": "https://www.sociohypotheek.nl/assets/files/260301-algemene-voorwaarden-versie-maart.pdf"
+    },
+    {
+     "t": "Risicowijzer 22-4-2026 (pdf)",
+     "u": "https://www.sociohypotheek.nl/assets/files/22042026-risicowijzer-sociohypotheek-compressed.pdf"
+    },
+    {
+     "t": "Informatiebrochure (pdf)",
+     "u": "https://www.sociohypotheek.nl/assets/files/informatiebrochure-sociohypotheek-2.pdf"
+    },
+    {
+     "t": "Ontruimingsverklaring (pdf)",
+     "u": "https://www.sociohypotheek.nl/assets/files/20210608-ontruimingsverklaring-smart.pdf"
+    },
+    {
+     "t": "Adviseursportaal downloads",
+     "u": "https://www.sociohypotheek.nl/adviseursportaal/downloads/"
+    }
+   ],
+   "minLeeftijd": "57 jaar, alle aanvragers",
+   "maxBedrag": "€ 750.000 bruto (minimaal € 25.000 netto)",
+   "rentevast": "15 jaar vast (daarna telkens 15 jaar)",
+   "verhuis": "Nee: aflossen bij verkoop",
+   "overlijden": "Eerste overlijden: lening loopt door. Langstlevende: aflossen, termijn niet bekend.",
+   "rang": "Mag blijven",
+   "rangToel": "Mag blijven (2e hypotheek toegestaan); de andere geldverstrekker moet instemmen en het leenbedrag is dan lager",
+   "gestoptSinds": "",
+   "website": "https://www.sociohypotheek.nl/",
+   "websiteAdv": "https://www.sociohypotheek.nl/adviseursportaal/downloads/",
+   "tool": "https://www.sociohypotheek.nl/overwaarde-berekenen/",
+   "regels": {
+    "aow": false,
+    "minL": 57,
+    "maxL": null
+   },
+   "facet": {
+    "rente": "bijschrijven",
+    "opname": [
+     "ineens"
+    ],
+    "rentevast": [
+     "15"
+    ],
+    "rang": "2e",
+    "verhuis": "nee",
+    "restschuld": "ja",
+    "aankoop": "nee",
+    "verhogen": "nee",
+    "ltv": "onbekend",
+    "minbedrag": "laag",
+    "maxbedrag": "meer"
+   },
+   "erfpacht": "Niet bekend",
+   "boetevrij": "10% van de actuele schuld per jaar; altijd bij verkoop en overlijden",
+   "aflosvorm": "Aflossingsvrij",
+   "aankoop": "Nee: alleen overwaarde opnemen",
+   "verhogen": "Nee",
+   "nieuwePartner": "Kan niet worden toegevoegd en kan de lening niet voortzetten (geldt ook voor een inwonend kind)",
+   "zorg": "Niet bekend",
+   "maxLtv": "Geen vast percentage (rekent met de WOZ-waarde en een modelwaardering)",
+   "renteToel": "Eerste periode vooraf ingehouden, daarna per jaar vooraf bijgeschreven; zelf betalen niet bekend",
+   "inkomenstoets": "Nee: het bedrag volgt uit leeftijd en marktwaarde (een inkomenstoets is wel wettelijk verplicht)"
+  },
+  {
+   "cat": "B",
+   "status": "gestopt",
+   "passend": "",
+   "nietPassend": "",
+   "id": "florius",
+   "aanbieder": "Florius",
+   "product": "Verzilver Hypotheek",
+   "gestoptSinds": "Niet meer verkrijgbaar sinds 13 juni 2026. Alleen nog voor bestaande klanten.",
+   "minLeeftijd": "60 jaar bij aanvraag",
+   "maxBedrag": "Niet bekend",
+   "rentevast": "Levenslang vast",
+   "rang": "Is ondergebracht bij Florius",
+   "rangToel": "Is ondergebracht bij Florius (alleen 1e hypotheek)",
+   "opname": "Bedrag ineens, maandelijkse uitkering of beide",
+   "restschuld": "Garantie onder voorwaarden (verkoop tegen getaxeerde marktwaarde, woning onderhouden en verzekerd, op tijd afgelost)",
+   "verhuis": "Nee: aflossen binnen 12 maanden na vertrek",
+   "overlijden": "Eerste overlijden: lening loopt door. Langstlevende: aflossen binnen 12 maanden.",
+   "bijzonder": "Heb je deze hypotheek al, dan blijven je voorwaarden en de begeleiding door Florius ongewijzigd",
+   "docs": [
+    {
+     "t": "Productpagina Florius Verzilver Hypotheek",
+     "u": "https://www.florius.nl/hypotheek/verzilver-hypotheek"
+    },
+    {
+     "t": "Nieuwsbericht: stop per 13 juni 2026",
+     "u": "https://www.florius.nl/adviseurs/nieuws/florius-stopt-per-13-juni-2026-met-de-verzilver-hypotheek-voor-nieuwe-klanten"
+    },
+    {
+     "t": "Productkaart versie 24-4-2023 (pdf)",
+     "u": "https://www.florius.nl/-/media/florius/files/verzilver/productkaart-florius-verzilver-hypotheek.pdf"
+    },
+    {
+     "t": "Voorwaarden Florius Verzilver Hypotheek (pdf)",
+     "u": "https://www.florius.nl/-/media/florius/files/formulieren/voorwaarden/verzilver-hyphotheek-voorwaarden.pdf"
+    }
+   ],
+   "website": "https://www.florius.nl/hypotheek/verzilver-hypotheek",
+   "websiteAdv": "https://www.florius.nl/adviseurs/nieuws/florius-stopt-per-13-juni-2026-met-de-verzilver-hypotheek-voor-nieuwe-klanten",
+   "tool": "",
+   "facet": {
+    "rente": [
+     "bijschrijven",
+     "betalen"
+    ],
+    "opname": [
+     "ineens",
+     "maandelijks"
+    ],
+    "rentevast": [
+     "levenslang"
+    ],
+    "rang": "1e",
+    "verhuis": "nee",
+    "restschuld": "ja",
+    "verhogen": "nee"
+   },
+   "erfpacht": "Niet van toepassing",
+   "boetevrij": "Extra aflossen kan; percentage niet bekend",
+   "minLft": 60,
+   "aflosvorm": "Aflossingsvrij",
+   "aankoop": "Niet van toepassing",
+   "verhogen": "Nee (extra opname binnen de bestaande limiet kan)",
+   "nieuwePartner": "Kan niet worden toegevoegd",
+   "zorg": "Aflossen binnen 12 maanden na vertrek",
+   "maxLtv": "Niet bekend",
+   "renteToel": "Bijgeschreven per maand; zelf betalen kan deels",
+   "inkomenstoets": "Nee: het bedrag volgt niet uit het inkomen"
+  }
+ ],
+ "bronnen": [
+  {
+   "t": "a.s.r.: productpagina Levensrente hypotheek (geraadpleegd 22-11-2026)",
+   "u": "https://www.asr.nl/hypotheek/levensrente-hypotheek"
+  },
+  {
+   "t": "a.s.r.: Hypotheekgids mei 2026, hoofdstuk 1 tot en met 6 (geraadpleegd 21-11-2026)",
+   "u": "https://downloads.asr.nl/pdf/53880.pdf"
+  },
+  {
+   "t": "MUNT: productpagina Levenslang Zeker Hypotheek (geraadpleegd 22-11-2026)",
+   "u": "https://www.munthypotheken.nl/levenslang-zeker-hypotheek/"
+  },
+  {
+   "t": "MUNT: voorwaarden Levenslang Zeker Hypotheek (geraadpleegd 21-11-2026)",
+   "u": "https://www.munthypotheken.nl/site/assets/files/39953/voorwaarden_levenslang_zeker_hypotheek.pdf"
+  },
+  {
+   "t": "MUNT: vragen en antwoorden Levenslang Zeker Hypotheek (geraadpleegd 21-11-2026)",
+   "u": "https://www.munthypotheken.nl/site/assets/files/39953/q_a_levenslang_zeker_hypotheek-1.pdf"
+  },
+  {
+   "t": "MUNT: rekentool Levenslang Zeker Hypotheek, voor adviseurs (ingevuld 22-11-2026)",
+   "u": "https://www.munthypotheken.nl/downloads/tools/rekentool-levenslang-zeker-hypotheek/"
+  },
+  {
+   "t": "Vandaag Hypotheken: website (geraadpleegd 22-11-2026)",
+   "u": "https://www.vandaaghypotheken.nl/"
+  },
+  {
+   "t": "Vandaag Hypotheken: pagina voor adviseurs (geraadpleegd 22-11-2026)",
+   "u": "https://www.vandaaghypotheken.nl/adviseurs/"
+  },
+  {
+   "t": "Vandaag Hypotheken: Hypotheekgids mei 2026 (geraadpleegd 22-11-2026)",
+   "u": "https://www.vandaaghypotheken.nl/uploads/hypotheekgids-vandaag-hypotheken-mei-2026.pdf"
+  },
+  {
+   "t": "Vandaag Hypotheken: productkaart juli 2025 (geraadpleegd 21-11-2026)",
+   "u": "https://www.vandaaghypotheken.nl/uploads/productkaart-vh-juli-2025-1.pdf"
+  },
+  {
+   "t": "Vandaag Hypotheken: calculator (ingevuld 22-11-2026)",
+   "u": "https://www.vandaaghypotheken.nl/calculator/"
+  },
+  {
+   "t": "Vandaag Hypotheken: calculator voor adviseurs, achter inlog (opgegeven 22-11-2026, niet uit te lezen)",
+   "u": "https://adviseur.vandaaghypotheken.nl/login"
+  },
+  {
+   "t": "ABN AMRO: productpagina Overwaarde Hypotheek (geraadpleegd 22-11-2026)",
+   "u": "https://www.abnamro.nl/nl/prive/hypotheken/overwaarde/overwaarde-hypotheek.html"
+  },
+  {
+   "t": "ABN AMRO: kenmerken Overwaarde Hypotheek (geraadpleegd 22-11-2026)",
+   "u": "https://www.abnamro.nl/nl/prive/hypotheken/overwaarde/overwaarde-hypotheek-kenmerken.html"
+  },
+  {
+   "t": "ABN AMRO: overwaardecheck (ingevuld 22-11-2026)",
+   "u": "https://www.abnamro.nl/nl/prive/hypotheken/overwaarde/orientatietool.html"
+  },
+  {
+   "t": "ABN AMRO intermediair: Overwaarde Hypotheek (geraadpleegd 22-11-2026)",
+   "u": "https://intermediair.abnamro.nl/overwaarde-hypotheek"
+  },
+  {
+   "t": "ABN AMRO intermediair: wijzigingen tijdens de looptijd (geraadpleegd 22-11-2026)",
+   "u": "https://intermediair.abnamro.nl/overwaarde-hypotheek-wijzigingen-tijdens-looptijd"
+  },
+  {
+   "t": "Onderlinge Nederland: productpagina en rekentool ZilverHuis Hypotheek (ingevuld 22-11-2026)",
+   "u": "https://www.onderlingenederland.nl/wonen/overwaarde-opnemen/zilverhuis-hypotheek"
+  },
+  {
+   "t": "Onderlinge Nederland: informatie voor de hypotheekadviseur (geraadpleegd 22-11-2026)",
+   "u": "https://www.onderlingenederland.nl/adviseur/informatie-voor-de-hypotheekadviseur"
+  },
+  {
+   "t": "Onderlinge Nederland: productkaart ZilverHuis Hypotheek 12.2025 (geraadpleegd 21-11-2026)",
+   "u": "https://cms-backup.onderlingenederland.nl/api/assets/og-website/5f7efce9-bac6-4954-b12e-ce0ab4bb2fe7/productkaart-zilverhuis-hypotheek.pdf?version=0"
+  },
+  {
+   "t": "Onderlinge Nederland: brochure ZilverHuis Hypotheek 05.2026 (geraadpleegd 21-11-2026)",
+   "u": "https://cms-backup.onderlingenederland.nl/api/assets/og-website/b070ec11-19c0-41f2-90c5-3e70ab6e1e79/brochure-zhh-0526.pdf?version=0"
+  },
+  {
+   "t": "SocioHypotheek: website (geraadpleegd 22-11-2026)",
+   "u": "https://www.sociohypotheek.nl/"
+  },
+  {
+   "t": "SocioHypotheek: adviseursportaal, downloads (geraadpleegd 22-11-2026)",
+   "u": "https://www.sociohypotheek.nl/adviseursportaal/downloads/"
+  },
+  {
+   "t": "SocioHypotheek: Productwijzer 22-4-2026 (geraadpleegd 22-11-2026)",
+   "u": "https://www.sociohypotheek.nl/assets/files/22042026-productwijzer-sociohypotheek-1.pdf"
+  },
+  {
+   "t": "SocioHypotheek: rekentool overwaarde berekenen (ingevuld 22-11-2026, uitkomst alleen na opgave van contactgegevens)",
+   "u": "https://www.sociohypotheek.nl/overwaarde-berekenen/"
+  },
+  {
+   "t": "Florius: productpagina Verzilver Hypotheek (geraadpleegd 22-11-2026)",
+   "u": "https://www.florius.nl/hypotheek/verzilver-hypotheek"
+  },
+  {
+   "t": "Florius: bericht over het stoppen per 13 juni 2026 (geraadpleegd 22-11-2026)",
+   "u": "https://www.florius.nl/adviseurs/nieuws/florius-stopt-per-13-juni-2026-met-de-verzilver-hypotheek-voor-nieuwe-klanten"
+  }
+ ],
+ "open": [],
+ "gestopt": []
+}</script>
+<div id="sitenav" hidden></div>
+<header><div class="wrap">
+  <div class="label" data-m="label"></div>
+  <h1 data-m="titel"></h1>
+  <p data-m="subtitel"></p>
+  <div class="meta">Peildatum <b data-m="peildatum"></b> · versie <b data-m="versie"></b> · voorwaarden kunnen veranderen; de offerte en de voorwaarden van de aanbieder zijn leidend</div>
+</div></header>
+
+
+
+<main>
+<div class="balk" style="display:none">
+  <input type="search" id="zoek" placeholder="Zoek op aanbieder, product of kenmerk" aria-label="Zoeken">
+  <select id="fcat" aria-label="Categorie" hidden></select>
+  <select id="fstatus" aria-label="Status" hidden>
+    <option value="">Alle statussen</option><option value="actief">Actief</option><option value="gestopt">Niet meer verkrijgbaar</option>
+  </select>
+  <select id="febl" hidden><option value=""></option></select>
+  <button id="bweergave">Tabel</button>
+  <button id="bbewerk">Bewerken</button>
+  <button id="bdownload" class="primair">Download HTML</button>
+  <button id="bprint">Print</button>
+</div>
+  <div class="melding alleenbewerk" style="display:none" id="bewerkmelding">Bewerkmodus staat aan. Klik in een geel veld om tekst te wijzigen. Wijzigingen blijven alleen bewaard als je daarna op Download HTML klikt.</div>
+
+  <section id="cta" hidden></section>
+  <section id="selectie">
+    <h2>Aanbod overwaarde verzilveren</h2>
+    <p class="uitleg">Het volledige aanbod staat hieronder. Klik een optie uit om hypotheken met dat kenmerk weg te laten. Onder "Meer informatie" staan alle details per aanbieder. Met "Vergelijk" zet je er maximaal <span class="vd">drie</span><span class="vm">twee</span> naast elkaar.</p>
+    <div class="paneel indic" id="indic" hidden style="display:none">
+      <div class="indkop"><b>Hoeveel kun je opnemen?</b><span>Vul drie gegevens in. Bij elke hypotheek in de lijst verschijnt dan een indicatie.</span></div>
+      <label>Waarde van de woning (€)<input type="number" id="i_ww" min="0" step="5000" inputmode="numeric" placeholder="bijv. 450000"></label>
+      <label>Leeftijd jongste aanvrager<input type="number" id="i_lft" min="50" max="110" inputmode="numeric" placeholder="bijv. 70"></label>
+      <label>Bestaande hypotheek (€)<input type="number" id="i_bh" min="0" step="1000" inputmode="numeric" placeholder="0"></label>
+      <button type="button" id="i_wis" class="klein">Wissen</button>
+      <p class="indnoot">De indicatie volgt alleen uit de grenzen die de aanbieder aan woningwaarde, leeftijd en leenbedrag stelt. Inkomen, taxatie en de beoordeling door de geldverstrekker bepalen het werkelijke bedrag. Het is geen advies en geen aanbod.</p>
+    </div>
+    <div class="aanbodgrid">
+      <div class="fkolom"><button type="button" id="ftoggle" aria-expanded="false">Filters tonen</button>
+      <aside class="paneel facetten" id="facetten"></aside></div>
+      <div>
+        <div class="telbalk"><b id="aantal"></b><button id="f_reset" class="klein">Alle filters wissen</button></div>
+        <div id="aanbod"></div>
+      </div>
+    </div>
+    <details class="verfijn" hidden style="display:none"><summary>Verfijnen met klantgegevens: toets op leeftijd, bedrag, woningwaarde en wensen</summary>
+    <p class="uitleg" style="margin-top:8px">Vul de klantsituatie in. Elke actieve propositie krijgt dan in de lijst hierboven een uitslag met onderbouwing: past, past met aandachtspunten of valt af. Het advies en de motivering blijven van de adviseur.</p>
+    <div class="paneel selform">
+      <fieldset><legend>1. Aanvragers</legend>
+        <label>Aantal aanvragers<select id="s_n"><option value="1">1</option><option value="2" selected>2</option></select></label>
+        <label>Leeftijd aanvrager 1<input type="number" id="s_l1" min="18" max="110" placeholder="jaar"></label>
+        <label class="chk"><input type="checkbox" id="s_a1"> Aanvrager 1 heeft AOW-leeftijd bereikt</label>
+        <label class="p2">Leeftijd aanvrager 2<input type="number" id="s_l2" min="18" max="110" placeholder="jaar"></label>
+        <label class="chk p2"><input type="checkbox" id="s_a2"> Aanvrager 2 heeft AOW-leeftijd bereikt</label>
+      </fieldset>
+      <fieldset><legend>2. Woning en bestaande hypotheek</legend>
+        <label>Marktwaarde woning (€)<input type="number" id="s_ww" min="0" step="1000"></label>
+        <label>Bestaande hypotheek (€)<input type="number" id="s_bh" min="0" step="1000" value="0"></label>
+        <label>Bestaande hypotheek loopt bij<select id="s_bw"><option value="geen">Geen hypotheek</option><option value="abn">ABN AMRO</option><option value="anders">Andere geldverstrekker</option></select></label>
+        <label>Klant wil bestaande hypotheek behouden<select id="s_bb"><option value="nvt">Niet van belang</option><option value="ja">Ja, bijvoorbeeld vanwege de rente</option></select></label>
+      </fieldset>
+      <fieldset><legend>3. Behoefte</legend>
+        <label>Gewenst bedrag ineens, netto (€)<input type="number" id="s_gb" min="0" step="1000"></label>
+        <label>Opnamevorm<select id="s_ov"><option value="ineens">Bedrag ineens</option><option value="maandelijks">Maandelijkse aanvulling</option><option value="beide">Combinatie</option></select></label>
+        <label class="mnd">Gewenst maandbedrag (€)<input type="number" id="s_mb" min="0" step="50"></label>
+        <label class="mnd">Duur maandelijkse aanvulling (jaren)<input type="number" id="s_dj" min="1" max="30" step="1"></label>
+        <label>Bestedingsdoel<select id="s_doel"><option value="verbouwen">Woning verbouwen of aanpassen</option><option value="verduurzamen">Woning verduurzamen</option><option value="pensioen">Comfortabelere pensioensituatie</option><option value="kinderen">Kinderen financieel helpen</option><option value="aankoop">Grote aankoop of onvoorziene uitgave</option><option value="anders">Anders of nog niet zeker</option><option value="beleggen">Beleggen of inbreng in onderneming</option></select></label>
+        <label>Geschatte kosten advies, taxatie, notaris (€)<input type="number" id="s_kosten" min="0" step="250" value="0"></label>
+      </fieldset>
+      <fieldset><legend>4. Wensen en draagkracht</legend>
+        <label>Kan en wil de klant maandelijks rente betalen?<select id="s_ml"><option value="">Kies</option><option value="ja">Ja</option><option value="nee">Nee</option></select></label>
+        <label>Verhuizen binnen circa 10 jaar reëel?<select id="s_vh"><option value="">Kies</option><option value="nee">Nee</option><option value="ja">Ja of onzeker</option></select></label>
+        <label>Bescherming tegen restschuld belangrijk?<select id="s_rs"><option value="">Kies</option><option value="ja">Ja</option><option value="nee">Nee</option></select></label>
+        <label>Rente levenslang vast gewenst?<select id="s_lv"><option value="">Kies</option><option value="ja">Ja</option><option value="nee">Nee</option></select></label>
+      </fieldset>
+      <fieldset><legend>5. Inkomen en uitkomst rekentools</legend>
+        <label>Bruto pensioeninkomen huishouden per jaar (€)<input type="number" id="s_ink" min="0" step="500"></label>
+        <label class="chk"><input type="checkbox" id="s_loon"> Deel van het inkomen komt uit loondienst, onderneming of verhuur</label>
+        <label>Maximale opname volgens overwaardecheck ABN AMRO (€)<input type="number" id="s_tabn" min="0" step="1000"></label>
+        <label>Maximale opname volgens rekentool Onderlinge (€)<input type="number" id="s_tond" min="0" step="1000"></label>
+      </fieldset>
+      <div class="selknoppen"><label class="chk"><input type="checkbox" id="s_filter"> Laat proposities die afvallen op klantgegevens uit de lijst, tabel en kaarten weg</label><button id="s_reset">Selectie wissen</button><button id="s_dossier" class="primair">Onderbouwing voor dossier</button></div>
+    </div>
+    <div id="s_samenvatting" class="melding" style="margin-top:14px"></div>
+    <textarea id="s_tekst" hidden rows="14" style="width:100%;margin-top:12px;font:13px/1.45 Consolas,monospace;padding:10px;border:1px solid var(--lijn);border-radius:8px"></textarea>
+    </details>
+  </section>
+
+  <section id="tabelweergave" hidden>
+    <h2>Naast elkaar</h2>
+    <div id="mxbalk"></div>
+    <div class="tabelwrap" id="mxwrap" tabindex="0"><table id="matrix"></table></div>
+  </section>
+
+  <section hidden style="display:none!important">
+    <div class="tegels" id="tegels"></div>
+    <div class="paneel kern">
+      <h2>Hoofdzaken</h2>
+      <ul id="kern"></ul>
+      <button class="klein alleenbewerk" data-add="kern">+ punt</button>
+    </div>
+  </section>
+
+  <section>
+    <details class="ctxklap" id="ctxklap"><summary><h2 id="ctxkop">Marktcontext: waarom deze proposities</h2></summary>
+    <p class="uitleg" id="ctxintro"></p>
+    <div class="paneel kern" style="margin-top:14px"><p id="ctxconclusie" style="margin:0 0 8px"></p><p id="ctxnb" style="margin:0;color:var(--grijs)"></p></div>
+      </details>
+  </section>
+
+  <div id="kaartweergave"></div>
+
+
+  <section>
+    <h2>Niet meer verkrijgbaar</h2>
+    <p class="uitleg">Deze namen komen in vergelijkingen nog voor, maar zijn voor nieuwe klanten gesloten. Relevant voor beheer van bestaande klanten.</p>
+    <div class="paneel gestoptlijst" id="gestopt"></div>
+    <button class="klein alleenbewerk" data-add="gestopt" style="margin-top:8px">+ regel</button>
+  </section>
+
+  <section hidden style="display:none!important">
+    <h2 id="openkop">Open punten en te verifiëren</h2>
+    <div class="paneel"><ul id="open"></ul><button class="klein alleenbewerk" data-add="open">+ punt</button></div>
+  </section>
+
+  <section>
+    <details class="ctxklap" id="bronklap"><summary><h2>Bronnen <span id="bronaantal" class="bronn"></span></h2></summary>
+    <div class="paneel"><ul id="bronnen"></ul></div>
+    </details>
+  </section>
+<div class="voetnoot"><span data-m="footer"></span><div id="contactvoet" hidden></div></div>
+</main>
+<footer>
+<div class="wrap">
+<div class="foot-grid">
+<div class="foot-brand">
+<a href="https://www.hypothecairplanner.nl/themas/verzilveren-overwaarde-opnemen" class="brand"><b>NVHP</b></a>
+<p>Vergelijkingstool bij het NVHP-thema Verzilveren. Data onderhouden door Dennes Roes (Erkend Hypothecair Planner, BijMij Hypotheek &amp; Advies), thema-eigenaar namens de NVHP.</p>
+</div>
+<div class="foot-col">
+<h4>Thema</h4>
+<a href="https://www.hypothecairplanner.nl/themas/verzilveren-overwaarde-opnemen">&larr; Terug naar het NVHP-thema Verzilveren</a>
+<a href="https://www.hypothecairplanner.nl/adviseur/themas">Alle thema's van de NVHP</a>
+</div>
+<div class="foot-col">
+<h4>Thema-eigenaar</h4>
+<p>Dennes Roes &middot; BijMij Hypotheek &amp; Advies</p>
+<a href="mailto:bijmijfd@gmail.com">bijmijfd@gmail.com</a>
+</div>
+</div>
+<div class="foot-bottom">
+<div>&copy; <span id="year"></span> NVHP &middot; Nederlandse Vereniging van Hypothecair Planners</div>
+</div>
+</div>
+</footer>
+<div id="vglbalk" hidden></div>
+
+<script>
+(function(){
+  var D = JSON.parse(document.getElementById('data').textContent);
+  var PUB=!!(D.meta&&D.meta.publiek);if(D.meta.titelTab)document.title=D.meta.titelTab;if(PUB)document.body.classList.add('pub');
+  var VELDEN = [['leeftijd','Toelichting leeftijd'],['maximum','Toelichting maximum'],['opname','Geld vrij'],['rente','Rente of prijs'],['rangToel','Bestaande hypotheek'],['rekenregel','Geld vrij: rekenregel maximum'],['brutoNetto','Geld vrij: van bruto naar netto'],['factoren','Geld vrij: bepalende factoren'],['duurMaand','Duur maandelijkse uitkering'],['rentekorting','Rentekorting'],['restschuld','Restschuld'],['verhuis','Verhuisregeling'],['overlijden','Overlijden aanvrager'],['einde','Einde lening'],['taxatie','Soort taxatie'],['minWW','Minimale marktwaarde'],['erfpacht','Erfpacht'],['offerte','Geldigheid offerte'],['boetevrij','Boetevrij aflossen'],['digitaal','Digitaal tekenen'],['inkomenTelt','Inkomen dat meetelt']];
+  var STATUS = {actief:'Actief',verifieren:'Te verifiëren',gestopt:'Niet meer verkrijgbaar'};
+  var bewerk = false, tabel = true;
+  function $(s,r){return (r||document).querySelector(s)}
+  function el(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e}
+  function veld(obj,key,tag,cls){var e=el(tag||'span',cls,obj[key]||'');e.setAttribute('data-f',key);e.contentEditable=bewerk?'plaintext-only':'false';e.addEventListener('input',function(){obj[key]=e.textContent});return e}
+  function urlveld(p,key,tag){if(!bewerk&&!p[key]&&key==='tool')return el(tag||'span',null,'Geen');if(bewerk||!p[key])return veld(p,key,tag||'span');var s=el(tag||'span');var a=link(p[key],p[key].replace(/^https?:\/\/(www\.)?/,'').replace(/\/$/,''));a.className='wlink';s.appendChild(a);return s}
+  function link(u,t){var a=el('a',null,t);a.href=u;a.target='_blank';a.rel='noopener';return a}
+  var SEL={};
+  var FAC=[['aanbod','Aanbod',[['actief','Voor nieuwe klanten'],['gestopt','Voor bestaande klanten']]],['rente','Rente: betalen of bijschrijven',[['betalen','Betalen'],['bijschrijven','Bijschrijven']]],['rentevast','Rentevastperiode',[['10','10 jaar'],['15','15 jaar'],['20','20 jaar'],['levenslang','Levenslang vast'],['onbekend','Niet bekend']]],['aflosvorm','Aflosvorm',[['aflossingsvrij','Aflossingsvrij'],['annuitair','Annuïteiten'],['lineair','Lineair']]],['opname','Geld vrij',[['ineens','Bedrag ineens'],['maandelijks','Maandelijkse uitkering']]],['rang','Bestaande hypotheek',[['1e','Wordt afgelost of overgesloten'],['2e','Mag blijven']]],['aankoop','Ook voor aankoop of oversluiten',[['ja','Ja: aankoop en oversluiten'],['nee','Nee: alleen overwaarde opnemen']]],['verhogen','Later verhogen',[['ja','Ja'],['nee','Nee']]],['verhuis','Verhuisregeling',[['ja','Ja'],['nee','Nee'],['onbekend','Niet bekend']]],['restschuld','Restschuld',[['ja','Garantie onder voorwaarden'],['nee','Geen garantie']]],['tool','Rekentool voor de consument',[['ja','Aanwezig'],['nee','Niet aanwezig']]],['desktop','Desktoptaxatie',[['ja','Mogelijk'],['nee','Niet mogelijk'],['onbekend','Niet bekend']]]];
+  FAC.splice(1,0,['aanbieder','Aanbieder',(function(){var z={},o=[];D.proposities.forEach(function(p){if(!z[p.aanbieder]){z[p.aanbieder]=1;o.push([p.aanbieder,p.aanbieder])}});return o})()]);
+  function mlKey(p){var r=p.regels||{};if(r.aow||p.minLft===67)return 'aow';if(p.minLft)return String(p.minLft);if(r.minL)return r.minL+(r.minLalleen?'/'+r.minLalleen:'');return ''}
+  (function(){var z={},o=[];D.proposities.forEach(function(p){var k=mlKey(p);if(k&&!z[k]){z[k]=1;var d=k.split('/');o.push([k,k==='aow'?'Vanaf AOW-leeftijd':'Vanaf '+d[0]+' jaar'+(d[1]?' ('+d[1]+' bij één eigenaar)':''),k==='aow'?67:parseInt(d[0],10)])}});o.sort(function(a,b){return a[2]-b[2]});FAC.splice(1,0,['minlft','Min. leeftijd',o])})();
+  FAC.push(['ltv','Max. op basis van marktwaarde',[['50','Tot 50%'],['65','Tot 60 of 65%'],['70','Tot 70%'],['onbekend','Geen vast percentage']]],['minbedrag','Min. hypotheekbedrag',[['laag','Vanaf € 20.000 of € 25.000'],['midden','Vanaf € 35.000'],['hoog','Vanaf € 50.000 of meer'],['onbekend','Niet bekend']]],['maxbedrag','Max. hypotheekbedrag',[['300','Tot € 300.000'],['500','Tot € 500.000'],['meer','Meer dan € 500.000']]]);
+  (function(){var orde=['aanbod','minlft','rang','ltv','minbedrag','maxbedrag','opname','aankoop','verhogen','rente','rentevast','verhuis','restschuld','aanbieder'];FAC=FAC.filter(function(f){return orde.indexOf(f[0])>=0}).sort(function(a,b){return orde.indexOf(a[0])-orde.indexOf(b[0])})})();
+  var FST={};FAC.forEach(function(f){FST[f[0]]={};f[2].forEach(function(o){FST[f[0]][o[0]]=true})});
+  if(PUB&&FST.aanbod)FST.aanbod.gestopt=false;
+  function fwaarden(p,k){if(k==='aanbod')return [p.status==='gestopt'?'gestopt':'actief'];if(k==='eblinqx')return [p.eblinqx==='ja'?'ja':'nee'];if(k==='tool')return [p.tool?'ja':'nee'];if(k==='aanbieder')return [p.aanbieder];if(k==='zekerheid')return p.zekerheid?[p.zekerheid]:[];if(k==='minlft'){var mk=mlKey(p);return mk?[mk]:[]}var v=(p.facet||{})[k];return v==null?[]:(Array.isArray(v)?v:[v])}
+  var LFT=0;function minLft(p){var r=p.regels||{};if(p.minLft)return p.minLft;if(r.aow)return 67;return r.minLalleen||r.minL||0}
+  var IGNA=false;
+  function facetPast(p){if(LFT){var m=minLft(p);if(m&&LFT<m)return false}return FAC.every(function(f){if(IGNA&&f[0]==='aanbod')return true;var w=fwaarden(p,f[0]);if(!w.length)return true;return w.some(function(x){return FST[f[0]][x]!==false})})}
+  var FMEER=false,FHOOFD={aanbod:1,minlft:1,rente:1,rentevast:1,aflosvorm:1,nhg:1,opname:1,rang:1};
+  function facetPastZonder(p,uit){return FAC.every(function(f){if(f[0]===uit)return true;var w=fwaarden(p,f[0]);if(!w.length)return true;return w.some(function(x){return FST[f[0]][x]!==false})})}
+  function tellingen(){var q=$('#zoek').value.trim().toLowerCase();document.querySelectorAll('#facetten [data-tel]').forEach(function(sp){var a=sp.getAttribute('data-tel').split('|');var n=D.proposities.filter(function(p){return fwaarden(p,a[0]).indexOf(a[1])>=0&&facetPastZonder(p,a[0])&&(!q||zoektekst(p).indexOf(q)>=0)}).length;sp.textContent=String(n);sp.closest('label').classList.toggle('nul',n===0)})}
+  function facetten(){var box0=$('#facetten');box0.innerHTML='';var hoofd=el('div'),meer=el('details','meerfilters');meer.open=FMEER;meer.addEventListener('toggle',function(){FMEER=meer.open});meer.appendChild(el('summary',null,'Meer filters'));box0.appendChild(hoofd);FAC.forEach(function(f){var box=hoofd;if(f[0]==='eblinqx')return;var opts=f[2].filter(function(o){return D.proposities.some(function(p){return fwaarden(p,f[0]).indexOf(o[0])>=0})});if(opts.length<2)return;var d=el('div','facet');d.appendChild(el('h4',null,f[1]));opts.forEach(function(o){var l=el('label');var c=el('input');c.type='checkbox';c.checked=FST[f[0]][o[0]]!==false;c.setAttribute('data-facet',f[0]+':'+o[0]);c.onchange=function(){FST[f[0]][o[0]]=c.checked;aanbod();kaarten();tabelr()};l.appendChild(c);l.appendChild(document.createTextNode(o[1]));var ns=el('span','n','');ns.setAttribute('data-tel',f[0]+'|'+o[0]);l.appendChild(ns);d.appendChild(l)});box.appendChild(d);})}
+  function aanbod(){var box=$('#aanbod');if(!box)return;if(typeof tellingen==='function')tellingen();box.innerHTML='';var lijst=D.proposities.filter(past);
+    var orde={past:0,letop:1,af:2};lijst=lijst.map(function(p,i){return {p:p,i:i,u:SEL[p.id]||null}}).sort(function(a,b){var ga=a.p.status==='gestopt'?1:0,gb=b.p.status==='gestopt'?1:0;if(ga!==gb)return ga-gb;var sa=a.u?orde[a.u.status]:0,sb=b.u?orde[b.u.status]:0;return sa-sb||(a.u&&b.u?a.u.lo.length-b.u.lo.length:0)||a.i-b.i});
+    $('#aantal').textContent=lijst.length+' van '+D.proposities.length+(PUB?' hypotheken':' proposities');
+    if(!lijst.length){box.appendChild(el('div','leeg2',(PUB?'Geen hypotheek':'Geen propositie')+' voldoet aan deze combinatie van filters. Zet een optie weer aan.'));return}
+    var NAAM={past:'Past op de klantgegevens',letop:'Past, met aandachtspunten',af:'Valt af op klantgegevens'};
+    lijst.forEach(function(x){var p=x.p,u=x.u,f=p.facet||{};var r=el('div','rij '+p.cat+(p.status==='gestopt'?' uit':'')+(u?' t-'+u.status:''));
+      var c1=el('div');c1.appendChild(el('h3',null,p.aanbieder));c1.appendChild(el('div','sub',p.product));var pl=el('div','pillen');pl.appendChild(el('span','pil '+(p.status==='gestopt'?'gestopt':'actief'),p.status==='gestopt'?'Voor bestaande klanten':'Voor nieuwe klanten'));pl.appendChild(el('span','grp '+p.cat,'Rente '+rentevorm(p).toLowerCase()));if(p.voorbehoud)pl.appendChild(el('span','pil verifieren','Onder voorbehoud'));c1.appendChild(pl);if(u)c1.appendChild(el('div','uitslag '+u.status,NAAM[u.status]));r.appendChild(c1);
+      var c2=el('div','feiten');[['Min. leeftijd',p.minLeeftijd],['Bestaande hypotheek',p.rangToel],['Max. op basis van marktwaarde',p.maxLtv],['Max. hypotheekbedrag',p.maxBedrag],['Geld vrij',p.opname],['Rentevastperiode',p.rentevast],['Aflosvorm',p.aflosvorm],['Verhuisregeling',p.verhuis]].forEach(function(v){var d=el('div');d.appendChild(el('b',null,v[0]));d.appendChild(document.createTextNode(v[1]||''));c2.appendChild(d)});r.appendChild(c2);
+      var c3=el('div','acties');if(p.status==='gestopt')c3.appendChild(el('div',null,p.gestoptSinds||'Niet meer verkrijgbaar'));if(p.website)c3.appendChild(link(p.website,'Website product'));if(p.websiteAdv)c3.appendChild(link(p.websiteAdv,'Website voor adviseurs'));if(p.tool)c3.appendChild(link(p.tool,'Rekentool consument'));if(p.toolAdv)c3.appendChild(link(p.toolAdv,'Rekentool adviseur'));var vl=el('label','vglkies'),vc=el('input');vc.type='checkbox';vc.checked=VGL.indexOf(p.id)>=0;vc.disabled=!vc.checked&&VGL.length>=MAXV();if(vc.disabled){vl.classList.add('vol');vl.title='Maximaal '+(MAXV()===2?'twee':'drie')+' tegelijk. Haal er eerst een weg.'}vc.onchange=function(){kies(p.id,vc.checked)};vl.appendChild(vc);vl.appendChild(document.createTextNode(' Vergelijk'));c3.appendChild(vl);r.appendChild(c3);
+      if(u&&u.gv){var g=el('div','gv');g.appendChild(el('h4',null,'Geld vrij: berekening'));var tb=el('table');u.gv.forEach(function(x){var tr=el('tr',x[0]==='K'?'kop':'');if(x[0]==='K'){var c=el('td',null,x[1]);c.colSpan=2;c.style.fontWeight='700';c.style.textAlign='left';tr.appendChild(c)}else{tr.appendChild(el('td',null,x[0]));tr.appendChild(el('td',null,x[1]))}tb.appendChild(tr)});g.appendChild(tb);if(u.noot)g.appendChild(el('div','noot',u.noot));r.appendChild(g)}
+      if(u){var dt=el('details');if(u.status!=='af')dt.open=false;dt.appendChild(el('summary',null,'Onderbouwing ('+(u.ko.length?u.ko.length+' afvalreden'+(u.ko.length>1?'en':''):u.lo.length+' aandachtspunt'+(u.lo.length===1?'':'en'))+')'));[['ko','Valt af omdat'],['lo','Aandachtspunten voor het advies'],['ok','Voldoet aan'],['zelf','Nog zelf toetsen']].forEach(function(s){if(!u[s[0]].length)return;dt.appendChild(el('h4',null,s[1]));var ul=el('ul');u[s[0]].forEach(function(tx){ul.appendChild(el('li',null,tx))});dt.appendChild(ul)});r.appendChild(dt)}
+      var ib=indblok(p);if(ib)r.appendChild(ib);r.appendChild(meerinfo(p));box.appendChild(r)})}
+  function gv(id){var e=$('#'+id);return e?e.value:''}
+  function num(id){var v=parseFloat(gv(id));return isNaN(v)?null:v}
+  function eur(n){return '€ '+Math.round(n).toLocaleString('nl-NL')}
+  function invoer(){var n=parseInt(gv('s_n'),10)||1;return {n:n,l1:num('s_l1'),l2:n===2?num('s_l2'):null,a1:$('#s_a1').checked,a2:n===2?$('#s_a2').checked:null,ww:num('s_ww'),bh:num('s_bh')||0,bw:gv('s_bw'),bb:gv('s_bb'),gb:num('s_gb'),ov:gv('s_ov'),doel:gv('s_doel'),ml:gv('s_ml'),vh:gv('s_vh'),rs:gv('s_rs'),lv:gv('s_lv'),mb:num('s_mb'),dj:num('s_dj'),kosten:num('s_kosten')||0,ink:num('s_ink'),loon:$('#s_loon').checked,tabn:num('s_tabn'),tond:num('s_tond')}}
+  function ann(h,rj,n){var i=rj/12;return h*i/(1-Math.pow(1+i,-n))}
+  function verloop(een,rEen,mnd,dM,rM,jaren,freq){var a=een,b=0;if(freq==='jaarvooraf')return een*Math.pow(1+rEen,jaren);for(var m=1;m<=jaren*12;m++){if(m<=dM)b+=mnd;a*=1+rEen/12;b*=1+rM/12}return a+b}
+  function toets(p,I){var r=p.regels,ko=[],lo=[],ok=[],zelf=[];if(!r)return null;
+    var E=I.ov==='maandelijks'?0:(I.gb||0),M=(I.ov==='ineens'||I.mb==null||I.dj==null)?0:I.mb*12*I.dj,K=I.kosten||0,dM=I.ov==='ineens'?0:(I.dj||0)*12;
+    var T=I.ov==='ineens'?I.gb:(I.mb!=null&&I.dj!=null?(I.ov==='beide'?(I.gb!=null?E+M:null):M):null);
+    var I0=I;I=Object.assign({},I,{gb:T});
+    var lft=[I.l1,I.l2].filter(function(x){return x!=null});var jong=lft.length?Math.min.apply(null,lft):null,oud=lft.length?Math.max.apply(null,lft):null;
+    var bh=I.bw==='geen'?0:I.bh;
+    // leeftijd
+    if(r.aow){var allen=I.a1&&(I.n===1||I.a2);if(allen)ok.push('Alle aanvragers hebben de AOW-leeftijd bereikt.');else ko.push('Niet alle aanvragers hebben de AOW-leeftijd bereikt.')}
+    if(r.minL!=null){if(jong==null)zelf.push('Leeftijd niet ingevuld: minimumleeftijd '+r.minL+' jaar niet getoetst.');else{var mn=(I.n===1&&r.minLalleen)?r.minLalleen:r.minL;if(jong<mn)ko.push('Jongste aanvrager is '+jong+' jaar; minimum is '+mn+' jaar'+(I.n===2&&r.minLalleen?' voor beide partners':'')+'.');else{ok.push('Leeftijd voldoet aan het minimum van '+mn+' jaar.');if(I.n===1&&r.minLalleen&&jong<r.minL)lo.push('Leeftijd onder '+r.minL+' jaar: alleen als maatwerk bij één eigenaar en enige bewoner.')}}}
+    if(r.maxL!=null&&oud!=null){if(oud>r.maxL)ko.push('Oudste aanvrager is '+oud+' jaar; maximum bij aanvraag is '+r.maxL+' jaar.')}
+    // doel
+    if(r.nietDoel&&r.nietDoel.indexOf(I.doel)>=0)ko.push('Bestedingsdoel beleggen of inbreng in een onderneming is uitgesloten.');
+    // woningwaarde
+    if(I.ww!=null){if(r.wwMin&&I.ww<r.wwMin)ko.push('Woningwaarde onder het minimum van '+eur(r.wwMin)+'.');if(r.wwMax&&I.ww>r.wwMax)ko.push('Woningwaarde boven het maximum van '+eur(r.wwMax)+'.')}
+    // bestaande hypotheek
+    var lening=I.gb;
+    if(bh>0){
+      if(r.bestaande==='aflossen'){if(lening!=null)lening=I.gb+bh;(I.bb==='ja'?lo:ok).push(I.bb==='ja'?'Klant wil de bestaande hypotheek behouden, maar die moet hier worden afgelost. Let op de vergoeding.':'Bestaande hypotheek van '+eur(bh)+' wordt meegefinancierd en afgelost.')}
+      else if(r.bestaande==='abn'){if(I.bw==='anders')lo.push('Bestaande hypotheek moet naar ABN AMRO worden overgesloten; oversluitkosten moeten in redelijke verhouding staan tot de opname.'+(I.bb==='ja'?' Dit botst met de wens om de bestaande hypotheek te behouden.':''));else ok.push('Bestaande ABN AMRO-hypotheek kan blijven naast de Overwaarde Hypotheek.');if(r.bestaandeMax&&bh>r.bestaandeMax)ko.push('Reguliere hypotheek ernaast is '+eur(bh)+'; maximum is '+eur(r.bestaandeMax)+'.')}
+      else if(r.bestaande==='blijft'){if(r.bestaandeMax&&bh>r.bestaandeMax)ko.push('Bestaande hypotheek is '+eur(bh)+'; mag maximaal '+eur(r.bestaandeMax)+' zijn om te blijven staan.');else ok.push('Bestaande hypotheek kan blijven staan (tweede hypotheek toegestaan).')}}
+    if(r.basis==='totaal'&&lening!=null)lening+=K;
+    // bedrag
+    if(I.gb==null)zelf.push(I0.ov==='ineens'?'Gewenst bedrag niet ingevuld: bedragsgrenzen niet getoetst.':'Maandbedrag en duur niet (volledig) ingevuld: bedragsgrenzen niet getoetst.');else{
+      var b=(r.basis==='totaal')?lening:I.gb,wat=(r.basis==='totaal')?'Lening':'Opname';
+      if(r.min&&b<r.min)ko.push(wat+' van '+eur(b)+' ligt onder het minimum van '+eur(r.min)+'.');
+      if(r.max&&b>r.max)ko.push(wat+' van '+eur(b)+' ligt boven het maximum van '+eur(r.max)+'.');
+      if(I.ww!=null&&r.ltv){var basisbedrag=r.basis==='totaal'?lening:(r.basis==='zilverhuis'?I.gb+1.3*bh:(r.freq==='jaarvooraf'?(I.gb+K)/(1-(r.rentePct||0)/100):I.gb)+bh);var pct=basisbedrag/I.ww*100;
+        if(pct>r.ltv)ko.push((r.basis==='zilverhuis'?'Opname plus 130% van de eerste hypotheek':'Totale schuld')+' is '+pct.toFixed(1).replace('.',',')+'% van de woningwaarde; maximum is '+r.ltv+'%.');
+        else{ok.push('Verhouding tot de woningwaarde: '+pct.toFixed(1).replace('.',',')+'% (maximum '+r.ltv+'%).');if(r.ltvAv&&pct>r.ltvAv)lo.push('Boven '+r.ltvAv+'% van de woningwaarde: dat deel ('+eur(basisbedrag-I.ww*r.ltvAv/100)+') moet annuïtair of lineair worden afgelost in maximaal 30 jaar.')}}}
+    // opnamevorm
+    if(I.ov==='maandelijks'&&r.opname.indexOf('maandelijks')<0)ko.push('Maandelijkse opname is niet mogelijk; alleen een bedrag ineens.');
+    if(I.ov==='ineens'&&r.opname.indexOf('ineens')<0){if(r.ineensMax&&I.gb!=null&&I.gb<=r.ineensMax)lo.push('Bedrag ineens kan alleen tot '+eur(r.ineensMax)+' en alleen in combinatie met een maandelijkse uitkering.');else ko.push('Bedrag ineens is niet mogelijk'+(r.ineensMax?' boven '+eur(r.ineensMax):'')+'; het product keert maandelijks uit.')}
+    if(I.ov==='beide'){if(r.opname.length<2&&!r.ineensMax)ko.push('Combinatie van ineens en maandelijks is niet mogelijk.');else if(r.ineensMax)lo.push('Bedrag ineens maximaal '+eur(r.ineensMax)+' naast de maandelijkse uitkering.')}
+    // maandlast
+    if(I.ml==='nee'&&r.rente==='betalen')ko.push('Klant kan of wil geen maandelijkse rente betalen; bij dit product is dat verplicht.');
+    if(I.ml==='ja'&&r.rente==='bijschrijven')lo.push('Klant kan rente betalen. Bijschrijven laat de schuld groeien met rente op rente en kost overwaarde en nalatenschap: motiveer waarom dit toch passend is.');
+    if(I.ml==='ja'&&r.rente==='betalen')ok.push('Klant kan en wil rente betalen: schuld blijft gelijk.');
+    if(I.ml==='nee'&&r.rente==='bijschrijven')ok.push('Geen maandlast: rente wordt bijgeschreven.');
+    if(!I.ml)zelf.push('Vraag over maandlast niet beantwoord.');
+    // wensen
+    if(I.vh==='ja'){if(r.verhuis)ok.push('Verhuisregeling aanwezig: rente kan mee naar een volgende woning.');else lo.push('Geen verhuisregeling: bij verhuizing moet de lening worden afgelost'+(r.rente==='bijschrijven'?', terwijl de overwaarde door bijschrijving is geslonken.':'.'))}
+    if(I.rs==='ja'){if(r.restschuld==='nee')lo.push('Geen restschuldgarantie: een tekort na verkoop is voor de klant of de erfgenamen.');else ok.push('Restschuldbescherming onder voorwaarden (onderhoud, verkoop tegen marktwaarde, tijdig aflossen).')}
+    if(I.lv==='ja'){if(r.levenslang)ok.push('Rente staat levenslang vast.');else lo.push('Rente staat niet levenslang vast: renterisico na afloop van de rentevaste periode.')}
+    if(!r.officieel)lo.push('Criteria van dit product zijn niet officieel getoetst.');
+    if(!PUB&&p.eblinqx!=='ja')lo.push('Product staat nog niet in het adviessysteem.');
+    if(r.toets)zelf.push(r.toets);
+    if(I0.ov==='beide'&&r.ineensMax&&E>r.ineensMax)ko.push('Bedrag ineens van '+eur(E)+' is hoger dan het maximum van '+eur(r.ineensMax)+' naast de maandelijkse uitkering.');
+    if(dM>0&&r.opname.indexOf('maandelijks')>=0){if(r.duurMax&&dM>r.duurMax)ko.push('Duur van '+(dM/12)+' jaar is langer dan het maximum van '+(r.duurMax/12)+' jaar.');if(r.duurMin&&dM<r.duurMin)ko.push('Duur is korter dan het minimum van '+r.duurMin+' maanden.')}
+    if(r.alleenLevenslang&&I0.loon)lo.push('Inkomen uit loondienst, onderneming of verhuur telt niet mee: alleen levenslang inkomen (AOW, pensioen, levenslange lijfrente).');
+    if(r.toolVeld){var tv=I0[r.toolVeld];if(tv==null)zelf.push('Maximale opname is niet openbaar: neem de uitkomst van de rekentool van de aanbieder over in blok 5.');else if(T!=null){if(T>tv)ko.push('Gewenste opname van '+eur(T)+' is hoger dan de uitkomst van de rekentool ('+eur(tv)+').');else ok.push('Gewenste opname past binnen de uitkomst van de rekentool ('+eur(tv)+').')}}
+    var gvr=null,noot='';
+    if(I.ww!=null&&T!=null&&T>0){gvr=[];var rr=(r.rentePct||0)/100,pc=function(x){return x.toFixed(2).replace('.',',')+'%'};
+      if(r.rente==='betalen'){var maxB=Math.min(I.ww*r.ltv/100,r.max||1e12),av=r.ltvAv?Math.min(lening,I.ww*r.ltvAv/100):lening,afl=lening-av,rl=av*rr/12,al=afl>0?ann(afl,rr,360):0;
+        gvr.push(['Maximale lening volgens rekenregel',eur(maxB)],['Maximaal netto vrij (na bestaande hypotheek en kosten)',eur(Math.max(0,maxB-bh-K))],['K','Bij het gewenste bedrag',''],['Netto vrij besteedbaar',eur(T)],['Af te lossen bestaande hypotheek',eur(bh)],['Kosten',eur(K)],['Benodigde lening',eur(lening)],['Rentelast per maand ('+pc(r.rentePct)+' over '+eur(av)+' aflossingsvrij)',eur(rl)]);
+        if(afl>0)gvr.push(['Rente en aflossing per maand over '+eur(afl)+' (annuïtair, 30 jaar)',eur(al)],['Totale bruto maandlast',eur(rl+al)]);
+        if(I0.ink)gvr.push(['Bruto jaarlast als deel van het bruto inkomen',((rl+al)*12/I0.ink*100).toFixed(1).replace('.',',')+'%']);
+        gvr.push(['K','Verloop bij gelijkblijvende woningwaarde','']);[10,15,20].forEach(function(j){gvr.push(['Betaalde rente na '+j+' jaar (aflossingsvrij deel)',eur(av*rr*j)])});gvr.push(['Schuld op het aflossingsvrije deel blijft',eur(av)],[afl>0?'Resterende overwaarde nadat het annuïtaire deel is afgelost':'Resterende overwaarde',eur(I.ww-av)]);
+        noot='Rentestand is een momentopname. De inkomenstoets van de geldverstrekker is niet meegerekend'+(p.id==='vandaag'?'; de LTI-uitkomst kan het maximum verlagen.':'.')}
+      else{var bruto=T,rv=0;if(r.freq==='jaarvooraf'){bruto=(T+K)/(1-rr);rv=bruto*rr}
+        if(PUB&&!r.officieel){gvr=null;zelf.push('Geen berekening getoond: rente en rekenregel van dit product zijn niet officieel getoetst.')}else{
+        var maxO=r.toolVeld?I0[r.toolVeld]:(r.ltv?Math.min(I.ww*r.ltv/100-bh,r.max||1e12):null);
+        gvr.push(['Maximale opname',maxO==null?'Via rekentool aanbieder':eur(Math.max(0,maxO))]);
+        if(r.freq==='jaarvooraf'){gvr.push(['K','Bij het gewenste bedrag',''],['Netto op de rekening',eur(T)],['Kosten uit de uitbetaling',eur(K)],['Rente eerste jaar, vooraf ingehouden ('+pc(r.rentePct)+')',eur(rv)],['Benodigde bruto lening',eur(bruto)])}
+        else{gvr.push(['K','Bij het gewenste bedrag',''],['Bedrag ineens',eur(E)]);if(M>0)gvr.push(['Maandbedrag × duur ('+eur(I0.mb)+' × '+dM+' maanden)',eur(M)]);gvr.push(['Totale opname',eur(T)])}
+        var rE=(r.renteEenmalig||r.rentePct||0)/100;gvr.push(['K','Schuldverloop bij gelijkblijvende woningwaarde','']);
+        [10,15,20].forEach(function(j){var s=r.freq==='jaarvooraf'?verloop(bruto,rr,0,0,rr,j,'jaarvooraf'):verloop(E,rE,I0.mb||0,dM,rr,j,'maand');var rest=I.ww-s-(r.bestaande==='blijft'||r.bestaande==='abn'?bh:0);gvr.push(['Schuld na '+j+' jaar',eur(s)],['Resterende overwaarde na '+j+' jaar',eur(rest)])});
+        noot='Indicatief, gerekend met '+pc(r.rentePct)+(r.renteEenmalig?' (maandelijks) en '+pc(r.renteEenmalig)+' (eenmalig)':'')+', '+(r.freq==='jaarvooraf'?'jaarlijks vooraf bijgeschreven':'maandelijks bijgeschreven')+'. '+(r.levenslang?'':'De rente staat niet levenslang vast; na de rentevaste periode kan het verloop afwijken. ')+(r.officieel?'':'Rente en rekenregel zijn niet officieel getoetst.')}}}
+    return {status:ko.length?'af':(lo.length?'letop':'past'),ko:ko,lo:lo,ok:ok,zelf:zelf,gv:gvr,noot:noot}}
+  function selectie(){SEL={};if(PUB||$('.verfijn').hidden){if(typeof aanbod==='function')aanbod();return}var I=invoer();document.querySelectorAll('.p2').forEach(function(e){e.style.display=I.n===2?'':'none'});document.querySelectorAll('.mnd').forEach(function(e){e.style.display=I.ov==='ineens'?'none':''});
+    var act=D.proposities.filter(function(p){return p.status==='actief'&&p.regels});var res=act.map(function(p){var u=toets(p,I);SEL[p.id]=u;return {p:p,u:u}});
+    var orde={past:0,letop:1,af:2};res.sort(function(a,b){return orde[a.u.status]-orde[b.u.status]||a.u.lo.length-b.u.lo.length||a.u.ko.length-b.u.ko.length});
+    var ingevuld=I.l1!=null&&I.ww!=null;var sm=$('#s_samenvatting');
+    if(!ingevuld){sm.textContent='Vul minimaal de leeftijd van aanvrager 1 en de woningwaarde in om de selectie te starten.';SEL={};return null}
+    var c={past:0,letop:0,af:0};res.forEach(function(x){c[x.u.status]++});
+    sm.textContent='Uitkomst: '+c.past+' zonder aandachtspunten, '+c.letop+' met aandachtspunten, '+c.af+' vallen af. Volgorde: minste aandachtspunten eerst. Gesloten producten ('+D.proposities.filter(function(p){return p.status==='gestopt'}).map(function(p){return p.aanbieder}).join(', ')+') zijn niet meegenomen.';
+    return {I:I,res:res}}
+  function dossier(){var o=selectie();var ta=$('#s_tekst');ta.hidden=false;if(!o){ta.value='Selectie is nog niet volledig ingevuld.';return}
+    var I=o.I,L=[];L.push('VOORSELECTIE OVERWAARDE VERZILVEREN ('+new Date().toLocaleDateString('nl-NL')+')');L.push('Bron: marktoverzicht seniorenproposities, versie '+D.meta.versie+', peildatum '+D.meta.peildatum+'.');L.push('');L.push('KLANTSITUATIE');
+    L.push('- Aanvragers: '+I.n+'; leeftijd '+I.l1+(I.n===2?' en '+(I.l2==null?'onbekend':I.l2):'')+' jaar; AOW bereikt: '+(I.a1?'ja':'nee')+(I.n===2?' en '+(I.a2?'ja':'nee'):''));
+    L.push('- Woningwaarde: '+eur(I.ww)+'; bestaande hypotheek: '+(I.bw==='geen'?'geen':eur(I.bh)+' bij '+(I.bw==='abn'?'ABN AMRO':'andere geldverstrekker'))+'; behouden gewenst: '+(I.bb==='ja'?'ja':'niet van belang'));
+    L.push('- Bedrag ineens: '+(I.gb==null?'niet ingevuld':eur(I.gb))+'; maandbedrag: '+(I.mb==null?'geen':eur(I.mb)+' gedurende '+(I.dj||'?')+' jaar')+'; opnamevorm: '+I.ov+'; doel: '+I.doel+'; kosten: '+eur(I.kosten)+'; bruto pensioeninkomen: '+(I.ink==null?'niet ingevuld':eur(I.ink)));
+    L.push('- Maandelijks rente betalen: '+(I.ml||'niet beantwoord')+'; verhuizen reëel: '+(I.vh||'niet beantwoord')+'; restschuldbescherming belangrijk: '+(I.rs||'niet beantwoord')+'; rente levenslang vast gewenst: '+(I.lv||'niet beantwoord'));
+    L.push('');L.push('UITKOMST PER PROPOSITIE');var NAAM={past:'PAST',letop:'PAST MET AANDACHTSPUNTEN',af:'VALT AF'};
+    o.res.forEach(function(x){L.push('');L.push(x.p.aanbieder+' | '+x.p.product+' ('+(x.p.cat==='A'?'rente betalen':'rente bijschrijven')+'): '+NAAM[x.u.status]);x.u.ko.forEach(function(t){L.push('  Valt af: '+t)});x.u.lo.forEach(function(t){L.push('  Aandachtspunt: '+t)});x.u.ok.forEach(function(t){L.push('  Voldoet: '+t)});x.u.zelf.forEach(function(t){L.push('  Nog toetsen: '+t)});if(x.u.gv){L.push('  Geld vrij:');x.u.gv.forEach(function(g){L.push(g[0]==='K'?'   '+g[1]+':':'    '+g[0]+': '+g[1])});if(x.u.noot)L.push('    Noot: '+x.u.noot)}});
+    L.push('');L.push('Dit is een voorselectie op hoofdcriteria. Acceptatie, inkomenstoets en actuele voorwaarden van de geldverstrekker zijn leidend. De adviseur motiveert de uiteindelijke keuze en de afgevallen alternatieven in het adviesrapport.');
+    ta.value=L.join('\n');ta.focus();ta.select()}
+  function zoektekst(p){var t=[p.aanbieder,p.product,p.status==='gestopt'?'voor bestaande klanten niet meer verkrijgbaar':'voor nieuwe klanten',p.gestoptSinds,p.passend,p.nietPassend,p.bijzonder];GR.forEach(function(g){g[1].forEach(function(r){t.push(r[1]);t.push(r[0]==='_rente'?renteTekst(p):p[r[0]])})});return t.filter(Boolean).join(' | ').toLowerCase()}
+  function past(p){if(!facetPast(p))return false;if($('#s_filter')&&$('#s_filter').checked){var u=SEL[p.id];if(u&&u.status==='af')return false}
+    var q=$('#zoek').value.trim().toLowerCase(),c=$('#fcat').value,s=$('#fstatus').value;
+    var e=$('#febl').value;if(e&&p.eblinqx!==e)return false;if(c&&p.cat!==c)return false; if(s&&p.status!==s)return false;
+    if(q&&zoektekst(p).indexOf(q)<0)return false; return true;
+  }
+  function meta(){document.querySelectorAll('[data-m]').forEach(function(e){var k=e.getAttribute('data-m');e.textContent=D.meta[k]||'';e.setAttribute('data-l','1');e.contentEditable=bewerk?'plaintext-only':'false';e.oninput=function(){D.meta[k]=e.textContent}})}
+  function lijst(id,arr){var ul=$('#'+id);ul.innerHTML='';arr.forEach(function(t,i){var li=el('li');var sp=el('span',null,t);sp.setAttribute('data-l','1');sp.contentEditable=bewerk?'plaintext-only':'false';sp.addEventListener('input',function(){arr[i]=sp.textContent});li.appendChild(sp);if(bewerk){var b=el('button','klein gevaar',' × ');b.style.marginLeft='8px';b.onclick=function(){arr.splice(i,1);render()};li.appendChild(b)}ul.appendChild(li)})}
+  function tegels(){var t=$('#tegels');t.innerHTML='';var act=D.proposities.filter(function(p){return p.status==='actief'});
+    [[act.filter(function(p){return p.cat==='A'}).length,'actief, rente betalen'],[act.filter(function(p){return p.cat==='B'}).length,'actief, rente bijschrijven'],[D.proposities.filter(function(p){return p.status==='gestopt'}).length,'niet meer verkrijgbaar, wel bestaande klanten']].forEach(function(x){if(x[0]==null)return;var d=el('div','tegel');d.appendChild(el('b',null,String(x[0])));d.appendChild(el('span',null,x[1]));t.appendChild(d)})}
+  function kaart(p){
+    var k=el('article','kaart '+p.status);
+    k.appendChild(veld(p,'aanbieder','h3'));k.appendChild(veld(p,'product','div','product'));
+    var pl=el('div','pillen');pl.appendChild(el('span','pil '+p.status,STATUS[p.status]||p.status));k.appendChild(pl);if(p.status==='gestopt'||bewerk){var gs=veld(p,'gestoptSinds','div','uitband');k.appendChild(gs)}
+    var kc=el('div','kc');[['minLeeftijd','Min. leeftijd'],['maxLtv','Max. op basis van marktwaarde'],['maxBedrag','Max. hypotheekbedrag'],['rentevast','Rentevastperiode'],['rang','1e of 2e hypotheek']].forEach(function(v){var b=el('div','kcv'+(v[0]==='rentevast'||v[0]==='rang'?' breed':''));b.appendChild(el('b',null,v[1]));b.appendChild(veld(p,v[0],'span'));kc.appendChild(b)});var eb=el('div','ebl'+(p.eblinqx==='ja'?'':' nee'));var ed=el('dl');ed.appendChild(el('dt',null,'Geldverstrekker'));ed.appendChild(veld(p,'eblGv','dd'));ed.appendChild(el('dt',null,'Productlijn'));ed.appendChild(veld(p,'eblPl','dd'));eb.appendChild(ed);var wd=el('dl','wdl');wd.appendChild(el('dt',null,'Website product'));wd.appendChild(urlveld(p,'website','dd'));if(p.websiteAdv||bewerk){wd.appendChild(el('dt',null,'Voor adviseurs'));wd.appendChild(urlveld(p,'websiteAdv','dd'))}wd.appendChild(el('dt',null,'Rekentool'));var td2=el('dd');if(p.tool||bewerk){td2.appendChild(urlveld(p,'tool','span'));td2.appendChild(el('br'))}td2.appendChild(veld(p,'toolToel','span'));wd.appendChild(td2);k.appendChild(wd);k.appendChild(kc);var dl=el('dl');VELDEN.forEach(function(v){dl.appendChild(el('dt',null,v[1]));dl.appendChild(veld(p,v[0],'dd'))});k.appendChild(dl);
+    var det=el('details');if(bewerk)det.open=true;det.appendChild(el('summary',null,'Bijzonderheden, passendheid en bron'));
+    var dl2=el('dl');dl2.style.marginTop='8px';dl2.appendChild(el('dt',null,'Bijzonder'));dl2.appendChild(veld(p,'bijzonder','dd'));det.appendChild(dl2);
+    if(bewerk||p.passend||p.nietPassend){var tk=el('div','tweekolom');var w=el('div','vak wel');w.appendChild(el('b',null,'Passend bij'));w.appendChild(veld(p,'passend','span'));var n=el('div','vak niet');n.appendChild(el('b',null,'Niet passend bij'));n.appendChild(veld(p,'nietPassend','span'));tk.appendChild(w);tk.appendChild(n);det.appendChild(tk)}
+    var br=el('div','bron');br.appendChild(document.createTextNode('Bron: '));br.appendChild(veld(p,'bron','span'));if(p.url&&!bewerk){br.appendChild(document.createTextNode(' '));br.appendChild(link(p.url,'open bron'))}
+    if(bewerk){br.appendChild(document.createTextNode(' · URL: '));br.appendChild(veld(p,'url','span'))}
+    det.appendChild(br);k.appendChild(det);
+    p.acc=p.acc||[];p.docs=p.docs||[];
+    var da=el('details','acc');if(bewerk)da.open=true;da.appendChild(el('summary',null,'Officiële acceptatievoorwaarden ('+p.acc.length+')'));
+    var ab=el('div','bron');ab.appendChild(document.createTextNode('Brondocument: '));ab.appendChild(veld(p,'accBron','span'));da.appendChild(ab);
+    var dl3=el('dl');dl3.style.marginTop='8px';p.acc.forEach(function(r,i){var dt=veld(r,'k','dt');dl3.appendChild(dt);var dd=veld(r,'v','dd');if(bewerk){var x=el('button','klein gevaar',' × ');x.style.marginLeft='6px';x.contentEditable='false';x.onclick=function(){p.acc.splice(i,1);render()};dt.appendChild(x)}dl3.appendChild(dd)});da.appendChild(dl3);
+    if(bewerk){var pb=el('button','klein','+ voorwaarde');pb.style.marginTop='8px';pb.onclick=function(){p.acc.push({k:'Onderwerp',v:''});render()};da.appendChild(pb)}
+    if(p.docs.length||bewerk){var dh=el('div','docs');dh.appendChild(el('b',null,'Documenten geldverstrekker'));var ul=el('ul');p.docs.forEach(function(x,i){var li=el('li');if(bewerk){li.appendChild(veld(x,'t','span'));li.appendChild(document.createTextNode(' · '));li.appendChild(veld(x,'u','span'));var y=el('button','klein gevaar',' × ');y.style.marginLeft='6px';y.onclick=function(){p.docs.splice(i,1);render()};li.appendChild(y)}else li.appendChild(link(x.u,x.t));ul.appendChild(li)});dh.appendChild(ul);if(bewerk){var db=el('button','klein','+ document');db.onclick=function(){p.docs.push({t:'Titel',u:'https://'});render()};dh.appendChild(db)}da.appendChild(dh)}
+    k.appendChild(da);
+    if(bewerk){var bl=el('div','alleenbewerk blok');
+      function sel(key,opts){var s=el('select');opts.forEach(function(o){var op=el('option',null,o[1]);op.value=o[0];if(p[key]===o[0])op.selected=true;s.appendChild(op)});s.onchange=function(){p[key]=s.value;render()};return s}
+      bl.appendChild(sel('cat',D.categorieen.map(function(c){return [c.id,c.id+' '+c.naam]})));
+      bl.appendChild(sel('status',[['actief','Actief'],['gestopt','Niet meer verkrijgbaar'],['verifieren','Te verifiëren']]));
+      
+      var del=el('button','klein gevaar','Verwijderen');del.onclick=function(){if(del.dataset.zeker){D.proposities.splice(D.proposities.indexOf(p),1);render()}else{del.dataset.zeker='1';del.textContent='Zeker? Klik nogmaals'}};bl.appendChild(del);k.appendChild(bl)}
+    return k;
+  }
+  function kaarten(){var w=$('#kaartweergave');w.innerHTML='';
+    D.categorieen.forEach(function(c){var ps=D.proposities.filter(function(p){return p.cat===c.id&&past(p)});if(!ps.length&&!bewerk)return;if($('#fcat').value&&$('#fcat').value!==c.id)return;
+      var s=el('section');var h=el('h2');h.appendChild(el('span','code',c.id));h.appendChild(veld(c,'naam','span'));s.appendChild(h);s.appendChild(veld(c,'uitleg','p','uitleg'));
+      var g=el('div','kaarten');ps.forEach(function(p){g.appendChild(kaart(p))});s.appendChild(g);
+      if(bewerk){var b=el('button','klein','+ propositie in '+c.id);b.style.marginTop='10px';b.onclick=function(){D.proposities.push({id:'nieuw'+Date.now(),cat:c.id,status:'verifieren',zekerheid:'laag',aanbieder:'Nieuwe aanbieder',product:'Product',leeftijd:'',maximum:'',opname:'',rente:'',restschuld:'',einde:'',bijzonder:'',passend:'',nietPassend:'',bron:'',url:''});render()};s.appendChild(b)}
+      w.appendChild(s)});
+    if(!w.children.length)w.appendChild(el('p','leeg','Geen proposities gevonden met deze filters.'))}
+  var GR=[['Kom ik in aanmerking?',[['minLeeftijd','Min. leeftijd'],['rangToel','Bestaande hypotheek'],['erfpacht','Erfpacht']]],
+      ['Hoeveel kan ik lenen?',[['maxLtv','Max. op basis van marktwaarde'],['maxBedrag','Max. hypotheekbedrag'],['inkomenstoets','Inkomen bepaalt het maximum']]],
+      ['Hoe krijg ik het geld?',[['opname','Geld vrij'],['aankoop','Ook voor aankoop of oversluiten'],['verhogen','Later verhogen']]],
+      ['Wat betaal ik?',[['_rente','Rente: betalen of bijschrijven'],['rentevast','Rentevastperiode'],['aflosvorm','Aflosvorm'],['boetevrij','Boetevrij aflossen']]],
+      ['Wat als er iets verandert?',[['verhuis','Verhuisregeling'],['zorg','Verhuizing naar een zorginstelling'],['overlijden','Overlijden aanvrager'],['nieuwePartner','Nieuwe partner'],['restschuld','Restschuld']]]];
+  var VGL=[],MXP=0,SLEEP=null,MEER={},DICHT={},VERSCH=false,SMAL=window.matchMedia('(max-width:760px)');
+  function MAXV(){return SMAL.matches?2:3}
+  if(SMAL.addEventListener)SMAL.addEventListener('change',function(){if(VGL.length>MAXV())VGL=VGL.slice(0,MAXV());MXP=0;aanbod();tabelr();vglbalk()});
+  function eurK(x){return '€ '+(Math.floor(x/1000)*1000).toLocaleString('nl-NL')}
+  function indInv(){var w=parseFloat(gv('i_ww'))||0,l=parseInt(gv('i_lft'),10)||0,b=parseFloat(gv('i_bh'))||0;return (w>0&&l>0)?{ww:w,lft:l,bh:b}:null}
+  function indicatie(p,I){var r=p.regels;if(!I||!r||p.status==='gestopt')return null;var red=[],noot=[];
+    var mn=minLft(p);if(mn&&I.lft<mn)red.push('De minimale leeftijd is '+(r.aow?'de AOW-leeftijd':mn+' jaar')+'.');
+    if(r.minLalleen&&r.minL&&I.lft>=r.minLalleen&&I.lft<r.minL)noot.push('Onder '+r.minL+' jaar alleen mogelijk bij één eigenaar.');
+    if(r.maxL&&I.lft>r.maxL)red.push('De maximale leeftijd bij aanvraag is '+r.maxL+' jaar.');
+    if(r.wwMin&&I.ww<r.wwMin)red.push('De woningwaarde moet minimaal '+eur(r.wwMin)+' zijn.');
+    if(r.wwMax&&I.ww>r.wwMax)red.push('De woningwaarde mag maximaal '+eur(r.wwMax)+' zijn.');
+    if(r.bestaande==='blijft'&&r.bestaandeMax&&I.bh>r.bestaandeMax)red.push('Een bestaande hypotheek mag maximaal '+eur(r.bestaandeMax)+' zijn.');
+    if(red.length)return {kan:false,red:red};
+    var b=null,kop='Indicatie maximaal op te nemen';
+    if(r.basis==='totaal'){var cap=I.ww*(r.ltv||0)/100;if(r.max)cap=Math.min(cap,r.max);b=cap-I.bh;if(r.min&&cap<r.min)return {kan:false,red:['De lening moet minimaal '+eur(r.min)+' zijn.']};
+      if(I.bh>0)noot.push('Je bestaande hypotheek van '+eur(I.bh)+' wordt hiermee afgelost en is al afgetrokken.');
+      if(r.ltvAv&&cap>I.ww*r.ltvAv/100)noot.push('Het deel van de lening boven '+eur(I.ww*r.ltvAv/100)+' ('+r.ltvAv+'% van de woningwaarde) moet je aflossen.');
+      noot.push('Je inkomen moet de maandelijkse rente kunnen dragen.')}
+    else if(r.basis==='zilverhuis'){b=Math.min(I.ww*r.ltv/100-1.3*I.bh,r.max);kop='Indicatie bovengrens';noot.push('De bijgeschreven rente telt mee in de grens van '+r.ltv+'%. Het bedrag dat je kunt opnemen is daardoor lager; gebruik de rekentool van de aanbieder.');if(I.bh>0)noot.push('Je bestaande hypotheek mag blijven en telt voor 130% mee.')}
+    else if(r.basis==='opnameplus'){b=Math.min(I.ww*r.ltv/100,r.max||1e12)-I.bh;if(I.bh>0)noot.push('Je bestaande hypotheek mag blijven en is afgetrokken van de ruimte.')}
+    else{return {kan:true,tekst:eur(r.min)+' tot '+eur(r.max),kop:'Opname mogelijk tussen',noot:['De bank maakt de rekenregel niet openbaar. Het bedrag hangt af van je leeftijd en de overwaarde; gebruik de overwaardecheck van de aanbieder.'].concat(I.bh>0?['Een hypotheek bij een andere geldverstrekker moet je oversluiten.']:[])}}
+    if(b<=0)return {kan:false,red:['Na aftrek van je bestaande hypotheek blijft er geen ruimte over.']};
+    if(r.min&&r.basis!=='totaal'&&b<r.min)return {kan:false,red:['De ruimte is kleiner dan het minimum van '+eur(r.min)+'.']};
+    if(p.voorbehoud)noot.push('Onder voorbehoud: de grenzen van deze aanbieder zijn niet getoetst aan officiële stukken.');
+    return {kan:true,tekst:eurK(b),kop:kop,noot:noot}}
+  function indblok(p){var x=indicatie(p,indInv());if(!x)return null;var d=el('div','indres '+(x.kan?'kan':'kanniet'));if(x.kan){d.appendChild(el('span','ik',x.kop));d.appendChild(el('b',null,x.tekst));x.noot.forEach(function(n){d.appendChild(el('div','in',n))})}else{d.appendChild(el('span','ik','Niet mogelijk met deze gegevens'));x.red.forEach(function(n){d.appendChild(el('div','in',n))})}return d}
+  function rentevorm(p){var v=(p.facet||{}).rente;v=Array.isArray(v)?v:[v];var b=v.indexOf('betalen')>=0,s2=v.indexOf('bijschrijven')>=0;return b&&s2?'Betalen of bijschrijven':(b?'Betalen':'Bijschrijven')}
+  function renteTekst(p){return rentevorm(p)+(p.renteToel?'. '+p.renteToel:'')}
+  function kies(id,aan){var i=VGL.indexOf(id);if(aan&&i<0&&VGL.length<MAXV())VGL.push(id);if(!aan&&i>=0)VGL.splice(i,1);aanbod();tabelr();vglbalk()}
+  function vglbalk(){var b=$('#vglbalk');if(!b)return;b.innerHTML='';var ps=D.proposities.filter(function(p){return VGL.indexOf(p.id)>=0});b.hidden=!ps.length||!tabel;document.body.style.paddingBottom=b.hidden?'':'64px';if(!ps.length)return;
+    var t=el('div','vt');t.appendChild(el('b',null,'Vergelijken ('+ps.length+' van '+MAXV()+'): '));t.appendChild(document.createTextNode(ps.map(function(p){return p.aanbieder+(p.variant?' ('+p.variant+')':'')}).join(', ')));b.appendChild(t);
+    var k=el('button','vk',ps.length>1?'Bekijk vergelijking':'Kies er nog een bij');k.type='button';k.disabled=ps.length<2;k.onclick=function(){$('#tabelweergave').scrollIntoView({behavior:'smooth',block:'start'})};b.appendChild(k);
+    var w=el('button','vw','Wissen');w.type='button';w.onclick=function(){VGL=[];aanbod();tabelr();vglbalk()};b.appendChild(w)}
+  function meerinfo(p){var d=el('details','meer');d.open=!!MEER[p.id]||bewerk;d.addEventListener('toggle',function(){MEER[p.id]=d.open});d.appendChild(el('summary',null,'Meer informatie'));if(p.voorbehoud)d.appendChild(el('div','voorbehoud',p.voorbehoud));var w=el('div','meerin');
+    GR.forEach(function(g){var rijen=g[1].filter(function(r){if(r[0]==='_rente')return true;return r[0]!=='_banken'&&!(PUB&&(r[0]==='eblGv'||r[0]==='eblPl'))&&(bewerk||(p[r[0]]&&!(PUB&&/^Niet (bekend|van toepassing)\.?$/.test(p[r[0]]))))});if(!rijen.length)return;var blok=el('div','mblok');blok.appendChild(el('h4',null,g[0]));var dl=el('dl');rijen.forEach(function(r){dl.appendChild(el('dt',null,r[1]));if(r[0]==='_rente'){dl.appendChild(el('dd',null,renteTekst(p)));return}if(r[0]==='website'||r[0]==='websiteAdv'||r[0]==='tool'){var dd=el('dd');dd.appendChild(urlveld(p,r[0]));dl.appendChild(dd)}else dl.appendChild(veld(p,r[0],'dd'))});blok.appendChild(dl);w.appendChild(blok)});
+    if(bewerk||p.passend||p.nietPassend||p.bijzonder){var bl=el('div','mblok');bl.appendChild(el('h4',null,'Voor wie'));var dl2=el('dl');[['passend','Passend bij'],['nietPassend','Niet passend bij'],['bijzonder','Bijzonder']].forEach(function(r){if(!bewerk&&!p[r[0]])return;dl2.appendChild(el('dt',null,r[1]));dl2.appendChild(veld(p,r[0],'dd'))});bl.appendChild(dl2);w.appendChild(bl)}
+    if((p.acc||[]).length){var ba=el('div','mblok');ba.appendChild(el('h4',null,'Officiële acceptatievoorwaarden'));var dl3=el('dl');p.acc.forEach(function(r){dl3.appendChild(veld(r,'k','dt'));dl3.appendChild(veld(r,'v','dd'))});ba.appendChild(dl3);if(p.accBron){var ab=el('div','bron');ab.appendChild(document.createTextNode('Brondocument: '));ab.appendChild(veld(p,'accBron','span'));ba.appendChild(ab)}w.appendChild(ba)}
+    if((p.docs||[]).length){var bd=el('div','mblok');bd.appendChild(el('h4',null,'Documenten van de geldverstrekker'));var ul=el('ul');p.docs.forEach(function(x){var li=el('li');li.appendChild(link(x.u,x.t));ul.appendChild(li)});bd.appendChild(ul);w.appendChild(bd)}
+    d.appendChild(w);return d}
+  function tabelr(){var tb=$('#matrix'),bk=$('#mxbalk'),wrap=$('#mxwrap');tb.innerHTML='';bk.innerHTML='';var smal=SMAL.matches;tb.classList.toggle('smal',smal);
+    var RT={A:'BETALEN. De klant betaalt maandelijks rente. De schuld blijft gelijk of daalt.',B:'BIJSCHRIJVEN. Geen maandlast. De rente komt bij de schuld, die groeit met rente op rente.'};
+    if(PUB){RT.A='BETALEN. Je betaalt maandelijks rente. De schuld blijft gelijk of daalt.'}
+    var CN={};D.categorieen.forEach(function(c){CN[c.id]=c});
+    var alle=[];IGNA=true;[0,1].forEach(function(g){D.categorieen.forEach(function(c){D.proposities.forEach(function(p){if(p.cat===c.id&&((p.status==='gestopt')===(g===1))&&past(p))alle.push(p)})})});IGNA=false;
+    if(!alle.length){var r0=el('tr');r0.appendChild(el('td','leeg','Geen '+(PUB?'hypotheken':'proposities')+' gevonden met deze filters.'));tb.appendChild(r0);return}
+    var keuze=alle.filter(function(p){return VGL.indexOf(p.id)>=0}),eigen=keuze.length>0,ps,pags=[];
+    if(eigen)ps=keuze;else{var nieuwK=alle.filter(function(p){return p.status!=='gestopt'}),oud=alle.filter(function(p){return p.status==='gestopt'});(function(l){for(var i=0;i<l.length;i+=MAXV())pags.push(l.slice(i,i+MAXV()))})(nieuwK.concat(oud));if(MXP>=pags.length)MXP=pags.length-1;if(MXP<0)MXP=0;ps=pags[MXP]}
+    var op=el('div','mxopt');
+    if(eigen){op.appendChild(el('span','tel','Jouw keuze: '+ps.length+' van maximaal '+MAXV()));var ws=el('button','tekstknop','Toon weer alle hypotheken');ws.type='button';ws.onclick=function(){VGL=[];aanbod();tabelr();vglbalk()};op.appendChild(ws)}
+    else{var nav=el('div','mxnav');var vb=el('button','pijl','‹');vb.type='button';vb.id='mxvorige';vb.title='Vorige pagina';vb.setAttribute('aria-label','Vorige pagina');vb.disabled=MXP===0;vb.onclick=function(){MXP--;tabelr()};nav.appendChild(vb);
+      nav.appendChild(el('span','tel mxtel','Pagina '+(MXP+1)+' van '+pags.length));
+      var nb2=el('button','pijl','›');nb2.type='button';nb2.id='mxvolgende';nb2.title='Volgende pagina';nb2.setAttribute('aria-label','Volgende pagina');nb2.disabled=MXP>=pags.length-1;nb2.onclick=function(){MXP++;tabelr()};nav.appendChild(nb2);op.appendChild(nav)}
+    var lv=el('label');var cb=el('input');cb.type='checkbox';cb.id='mxversch';cb.checked=VERSCH;cb.onchange=function(){VERSCH=cb.checked;tabelr()};lv.appendChild(cb);lv.appendChild(document.createTextNode(' Alleen verschillen tonen'));
+    if(false){var sv=el('button','tekstknop','Standaardvolgorde');sv.type='button';sv.id='mxstandaard';sv.onclick=function(){delete D.meta.rijvolgorde;tabelr()};op.appendChild(sv)}
+    bk.appendChild(op);
+    var n=ps.length;tb.style.setProperty('--n',n);
+    function kl(p,i){return 'g'+p.cat+((i>0&&ps[i-1].cat!==p.cat)?' eerste':'')+(p.status==='gestopt'?' uit':'')}
+    var th=el('thead'),r1=el('tr');if(!smal)r1.appendChild(el('th','hoek','Kenmerk'));
+    ps.forEach(function(p,i){var h=el('th','kol '+kl(p,i));h.scope='col';var bd=el('div','kolx');var x=el('button',null,'×');x.type='button';x.title='Uit de tabel halen';x.setAttribute('aria-label',p.aanbieder+' uit de tabel halen');x.onclick=function(){kies(p.id,false)};if(eigen){bd.appendChild(x);h.appendChild(bd)}
+      if(p.status==='gestopt')h.appendChild(el('div','uitkop','Niet meer verkrijgbaar'));h.appendChild(el('div','kn',p.aanbieder));h.appendChild(el('div','kp',p.product));var pl=el('div');if(p.voorbehoud)pl.appendChild(el('span','pil verifieren','Onder voorbehoud'));h.appendChild(pl);r1.appendChild(h)});
+    th.appendChild(r1);tb.appendChild(th);
+    function gelijk(k){if(n<2)return false;if(k==='_banken')return true;var v=ps.map(function(p){return k==='_rente'?renteTekst(p):String(p[k]==null?'':p[k]).trim()});return v.every(function(x){return x===v[0]})}
+    var body=el('tbody'),getoond=0;
+    var ALLEK=[];GR.forEach(function(g){g[1].forEach(function(r){ALLEK.push(r)})});var KM={};ALLEK.forEach(function(r){KM[r[0]]=r});
+    var orde=[];ALLEK.forEach(function(r){if(orde.indexOf(r[0])<0)orde.push(r[0])});
+    function verplaats(k,naar,na){var o=orde.slice(),i=o.indexOf(k);if(i<0||k===naar)return;o.splice(i,1);var j=o.indexOf(naar);if(j<0)return;o.splice(j+(na?1:0),0,k);D.meta.rijvolgorde=o;tabelr()}
+    function stap(k,d){var zicht=rijen.map(function(r){return r[0]}),i=zicht.indexOf(k),j=i+d;if(j<0||j>=zicht.length)return;verplaats(k,zicht[j],d>0)}
+    function greep(k,naam){var g=el('span','greep');var h=el('span','hv','⠿');h.title='Sleep om de volgorde te veranderen';h.setAttribute('aria-hidden','true');g.appendChild(h);[['▲',-1,'omhoog'],['▼',1,'omlaag']].forEach(function(x){var b=el('button','stapk',x[0]);b.type='button';b.title=naam+' '+x[2];b.setAttribute('aria-label',naam+' '+x[2]);b.onclick=function(e){e.stopPropagation();stap(k,x[1])};g.appendChild(b)});return g}
+    function sleepbaar(tr,k){tr.setAttribute('data-k',k);var hv=tr.querySelector('.hv');if(hv){hv.addEventListener('mousedown',function(){tr.draggable=true});hv.addEventListener('mouseup',function(){tr.draggable=false})}
+      tr.addEventListener('dragstart',function(e){if(bewerk){e.preventDefault();return}SLEEP=k;tr.classList.add('sleept');try{e.dataTransfer.effectAllowed='move';e.dataTransfer.setData('text/plain',k)}catch(x){}});
+      tr.addEventListener('dragend',function(){SLEEP=null;tr.draggable=false;tb.querySelectorAll('.sleept,.dropboven,.droponder').forEach(function(x){x.classList.remove('sleept','dropboven','droponder')})});
+      tr.addEventListener('dragover',function(e){if(!SLEEP||SLEEP===k)return;e.preventDefault();var r=tr.getBoundingClientRect(),na=e.clientY>r.top+r.height/2;tb.querySelectorAll('.dropboven,.droponder').forEach(function(x){x.classList.remove('dropboven','droponder')});tr.classList.add(na?'droponder':'dropboven')});
+      tr.addEventListener('drop',function(e){if(!SLEEP||SLEEP===k)return;e.preventDefault();var r=tr.getBoundingClientRect();var bron=SLEEP;SLEEP=null;verplaats(bron,k,e.clientY>r.top+r.height/2)})}
+    var rijen=orde.map(function(k){return KM[k]}).filter(function(r){if(VERSCH&&!bewerk&&gelijk(r[0]))return false;return true});
+    (function(){
+      rijen.forEach(function(r){getoond++;var cls=r[0]==='_banken'?'bankrij':'';
+        if(smal){var lr=el('tr','mxlab'),lh=el('th');lh.colSpan=n;var ls=el('span',null,r[1]);lh.appendChild(ls);lr.appendChild(lh);body.appendChild(lr)}
+        var tr=el('tr',cls);if(!smal){var rh=el('th','rk');var rt=el('span','rkt');rt.appendChild(el('span','rkn',r[1]));rh.appendChild(rt);rh.scope='row';tr.appendChild(rh)}
+        if(r[0]==='_banken'){var td=el('td','banken');td.colSpan=n;var vast=el('div','bankvast');var gd=el('div','bankgrid');(D.context.banken||[]).forEach(function(b,i){var c=el('div','bank');c.appendChild(veld(b,'bank','b'));c.appendChild(veld(b,'nu','div'));var m=el('div','bmeta');m.appendChild(document.createTextNode('Was: '));m.appendChild(veld(b,'was','span'));m.appendChild(document.createTextNode(' · Per: '));m.appendChild(veld(b,'datum','span'));c.appendChild(m);c.appendChild(veld(b,'geldt','div','bmeta'));var br=el('div','bmeta');if(bewerk){br.appendChild(veld(b,'bron','span'));br.appendChild(document.createTextNode(' · '));br.appendChild(veld(b,'url','span'));var x=el('button','klein gevaar',' × ');x.onclick=function(){D.context.banken.splice(i,1);render()};br.appendChild(x)}else if(b.url)br.appendChild(link(b.url,b.bron));else br.textContent=b.bron;c.appendChild(br);gd.appendChild(c)});vast.appendChild(gd);if(bewerk){var nb=el('button','klein','+ bank');nb.onclick=function(){D.context.banken.push({bank:'Bank',nu:'',was:'',datum:'',geldt:'',bron:'',url:''});render()};vast.appendChild(nb)}td.appendChild(vast);tr.appendChild(td);body.appendChild(tr);return}
+        ps.forEach(function(p,i){var td=el('td',kl(p,i));if(r[0]==='_rente'){td.appendChild(document.createTextNode(renteTekst(p)))}else if(r[0]==='website'||r[0]==='websiteAdv'||r[0]==='tool')td.appendChild(urlveld(p,r[0]));else if(!bewerk&&!p[r[0]])td.appendChild(el('span','leegcel','Niet bekend'));else td.appendChild(veld(p,r[0],'span'));tr.appendChild(td)});body.appendChild(tr)})})();
+    if(!getoond&&VERSCH){var r8=el('tr'),t8=el('td','leeg','Geen verschillen tussen deze hypotheken.');t8.colSpan=n+(smal?0:1);r8.appendChild(t8);body.appendChild(r8)}
+    tb.appendChild(body);tb.style.setProperty('--kop',(th.offsetHeight||130)+'px')}
+  function ctx(){var C=D.context;var sk=$('#ctxklap');if(sk)sk.closest('section').hidden=!C;if(!C)return;
+    [['ctxintro','intro'],['ctxconclusie','conclusie'],['ctxnb','nb']].forEach(function(x){var e=$('#'+x[0]);e.innerHTML='';e.appendChild(veld(C,x[1],'span'))});
+}
+  function gestopt(){var g=$('#gestopt');g.innerHTML='';g.closest('section').hidden=!D.gestopt.length&&!bewerk;D.gestopt.forEach(function(x,i){var r=el('div','rij');var a=el('div');a.appendChild(veld(x,'naam','b'));var b=el('div');b.appendChild(el('span','pil gestopt','Gestopt'));b.appendChild(document.createTextNode(' '));b.appendChild(veld(x,'sinds','span'));var c=el('div');c.appendChild(veld(x,'toelichting','span'));c.appendChild(document.createTextNode(' '));var bs=el('span','bron');bs.appendChild(document.createTextNode('Bron: '));if(x.url&&!bewerk)bs.appendChild(link(x.url,x.bron));else bs.appendChild(veld(x,'bron','span'));c.appendChild(bs);
+    if(bewerk){var d=el('button','klein gevaar',' × ');d.style.marginLeft='8px';d.onclick=function(){D.gestopt.splice(i,1);render()};c.appendChild(d)}
+    r.appendChild(a);r.appendChild(b);r.appendChild(c);g.appendChild(r)})}
+  function bronnen(){var ul=$('#bronnen');ul.innerHTML='';var ba=$('#bronaantal');if(ba)ba.textContent='('+D.bronnen.length+')';D.bronnen.forEach(function(b){var li=el('li');if(b.u)li.appendChild(link(b.u,b.t));else li.textContent=b.t;ul.appendChild(li)})}
+  function render(){document.body.classList.toggle('bewerk',bewerk);$('#bewerkmelding').style.display=bewerk?'block':'none';meta();tegels();lijst('kern',D.kern);lijst('open',D.open);ctx();kaarten();tabelr();gestopt();bronnen();if(typeof aanbod==='function'&&$('#facetten').children.length){facetten();aanbod()}
+    if(PUB)tabel=true;$('#bweergave').hidden=PUB;vglbalk();$('#kaartweergave').hidden=tabel;$('#tabelweergave').hidden=!tabel;$('#bweergave').textContent=tabel?'Kaarten':'Tabel';$('#bbewerk').textContent=bewerk?'Bewerken uit':'Bewerken';$('#bbewerk').classList.toggle('aan',bewerk)}
+  var fc=$('#fcat');fc.appendChild(new Option('Alle categorieën',''));D.categorieen.forEach(function(c){fc.appendChild(new Option(c.id+'  '+c.naam,c.id))});
+  $('#zoek').addEventListener('input',function(){aanbod();kaarten();tabelr()});fc.onchange=function(){kaarten();tabelr()};$('#fstatus').onchange=function(){kaarten();tabelr()};$('#febl').onchange=function(){kaarten();tabelr()};
+  $('#bweergave').onclick=function(){tabel=!tabel;render()};
+  $('#bbewerk').onclick=function(){bewerk=!bewerk;render()};
+  $('#bprint').onclick=function(){window.print()};
+  ['i_ww','i_lft','i_bh'].forEach(function(id){$('#'+id).addEventListener('input',function(){aanbod()})});$('#i_wis').onclick=function(){['i_ww','i_lft','i_bh'].forEach(function(id){$('#'+id).value=''});aanbod()};
+  if(PUB){$('#ctxkop').textContent='Achtergrond: minder ruimte voor aflossingsvrij bij banken'}else{$('#ctxklap').open=true}
+  window.addEventListener('scroll',function(){var b=$('#vglbalk'),t=$('#tabelweergave');if(!b||!t||t.hidden)return;var r=t.getBoundingClientRect();b.classList.toggle('weg',r.top<window.innerHeight*0.6&&r.bottom>120)},{passive:true});
+  $('#ftoggle').onclick=function(){var o=$('#facetten').classList.toggle('open');this.textContent=o?'Filters verbergen':'Filters tonen';this.setAttribute('aria-expanded',o?'true':'false')};
+  document.querySelectorAll('[data-add]').forEach(function(b){b.onclick=function(){var k=b.getAttribute('data-add');if(k==='gestopt')D.gestopt.push({naam:'Naam',sinds:'datum',toelichting:'',bron:'',url:''});else D[k].push('Nieuw punt');render()}});
+  window.exportHtml=function(){var was=bewerk;bewerk=false;render();var c=document.documentElement.cloneNode(true);
+    ['#kaartweergave','#matrix','#mxbalk','#vglbalk','#ctxintro','#ctxconclusie','#ctxnb','#tegels','#kern','#open','#gestopt','#bronnen','#fcat'].forEach(function(s){var e=c.querySelector(s);if(e)e.innerHTML=''});
+    c.querySelectorAll('[data-m]').forEach(function(e){e.textContent='';e.removeAttribute('contenteditable');e.removeAttribute('data-l')});
+    c.querySelectorAll('#aanbod,#facetten,#aantal,#s_samenvatting,#sitenav,#cta').forEach(function(e){e.innerHTML=''});var ta=c.querySelector('#s_tekst');if(ta){ta.textContent='';ta.setAttribute('hidden','')}c.querySelector('body').className='';c.querySelector('#data').textContent=JSON.stringify(D,null,1).replace(/<\//g,'<\\/');
+    bewerk=was;render();return '<!DOCTYPE html>\n'+c.outerHTML};
+  $('#bdownload').onclick=function(){var blob=new Blob([window.exportHtml()],{type:'text/html;charset=utf-8'});var a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='Seniorenproposities_overwaarde_verzilveren.html';document.body.appendChild(a);a.click();a.remove()};
+  ['s_n','s_l1','s_l2','s_a1','s_a2','s_ww','s_bh','s_bw','s_bb','s_gb','s_ov','s_doel','s_ml','s_vh','s_rs','s_lv','s_filter','s_mb','s_dj','s_kosten','s_ink','s_loon','s_tabn','s_tond'].forEach(function(id){var e=$('#'+id);var f=function(){selectie();aanbod();kaarten();tabelr()};e.addEventListener('input',f);e.addEventListener('change',f)});
+  $('#s_reset').onclick=function(){document.querySelectorAll('.verfijn input[type=number]').forEach(function(e){e.value=(e.id==='s_bh'||e.id==='s_kosten')?'0':''});document.querySelectorAll('.verfijn input[type=checkbox]').forEach(function(e){e.checked=false});document.querySelectorAll('.verfijn select').forEach(function(e){e.selectedIndex=e.id==='s_n'?1:0});$('#s_tekst').hidden=true;selectie();aanbod();kaarten();tabelr()};
+  $('#f_reset').onclick=function(){FAC.forEach(function(f){f[2].forEach(function(o){FST[f[0]][o[0]]=true})});$('#zoek').value='';LFT=0;facetten();aanbod();kaarten();tabelr()};
+  $('#s_dossier').onclick=dossier;
+  if(PUB){['#bbewerk','#bdownload'].forEach(function(s){$(s).hidden=true});$('#openkop').closest('section').hidden=true;
+    var nv=$('#sitenav');nv.hidden=false;var wr=el('div','wrap nav');var merk=el('a','brand');merk.href=D.meta.site;merk.appendChild(el('b',null,'NVHP'));merk.appendChild(el('small',null,'Thema: Verzilveren'));wr.appendChild(merk);var mn=el('nav','menu');mn.id='menu';(D.meta.menu||[]).forEach(function(x){var a=link(x.u,x.t);a.target='';a.removeAttribute('rel');if(x.actief){a.className='actief';a.setAttribute('aria-current','page')}mn.appendChild(a)});wr.appendChild(mn);var tg=el('button','nav-toggle');tg.id='navToggle';tg.type='button';tg.setAttribute('aria-label','Menu openen');tg.setAttribute('aria-expanded','false');tg.setAttribute('aria-controls','menu');tg.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';tg.onclick=function(){var o=mn.classList.toggle('open');tg.setAttribute('aria-expanded',o?'true':'false')};wr.appendChild(tg);nv.appendChild(wr);var yr=$('#year');if(yr)yr.textContent=new Date().getFullYear();
+    var ct=$('#cta');ct.hidden=!D.meta.ctaKop;if(D.meta.ctaKop){var pc=el('div','paneel ctab');var tx=el('div');tx.appendChild(el('b',null,D.meta.ctaKop));tx.appendChild(el('div',null,D.meta.ctaTekst));pc.appendChild(tx);var kb=link(D.meta.ctaUrl,D.meta.ctaKnop);kb.className='navknop';kb.target='';pc.appendChild(kb);ct.appendChild(pc);}
+    var cv=$('#contactvoet');cv.hidden=false;cv.textContent=D.meta.contact;
+    $('.verfijn>summary').textContent='Vul je eigen situatie in: toets op leeftijd, bedrag, woningwaarde en wensen';$('.verfijn>p.uitleg').textContent='Vul je situatie in. Elke hypotheek die nog te krijgen is, krijgt dan in de lijst hierboven een uitslag met onderbouwing en een berekening van het geld dat vrijkomt. De gegevens blijven in je browser en worden nergens naartoe gestuurd. De uitkomst is een eerste selectie en geen advies.';$('#s_dossier').textContent='Overzicht om mee te nemen naar je adviseur';[['s_ml','Kun en wil je maandelijks rente betalen?'],['s_bb','Wil je de bestaande hypotheek behouden?']].forEach(function(x){var l=$('#'+x[0]).closest('label');if(l&&l.firstChild)l.firstChild.nodeValue=x[1]})}
+  render();selectie();facetten();aanbod();
+})();
+</script>
+</body>
+</html>
