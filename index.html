@@ -666,7 +666,9 @@ details.ctxklap>summary{list-style-position:inside}
 }
 body{font-family:'Ruda','Ginter','Inter','Helvetica Neue',sans-serif;font-weight:300}
 h1,h2,h3{font-family:'League Spartan',sans-serif;font-weight:500;color:var(--navy);letter-spacing:0}
-.brand{font-family:'League Spartan',sans-serif}
+.brand{font-family:'League Spartan',sans-serif;display:flex;align-items:center;gap:10px}
+.brandlogo{height:34px;width:auto;display:block}
+.brandlogo.foot{height:40px;background:#fff;padding:6px 10px;border-radius:6px}
 button,.vglkies,.chip,.mxpag{border-radius:4px}
 button.primair{background:var(--accent);border-color:var(--accent);color:#fff}
 button.primair:hover{background:#6bb492;border-color:#6bb492}
@@ -1614,7 +1616,7 @@ footer .foot-col h4{color:#9fd4bd}
 <div class="wrap">
 <div class="foot-grid">
 <div class="foot-brand">
-<a href="https://www.hypothecairplanner.nl/themas/verzilveren-overwaarde-opnemen" class="brand"><b>NVHP</b></a>
+<a href="https://www.hypothecairplanner.nl/themas/verzilveren-overwaarde-opnemen" class="brand"><img src="assets/nvhp-logo.png" alt="NVHP - Nederlandse Vereniging van Hypothecair Planners" class="brandlogo foot"></a>
 <p>Vergelijkingstool bij het NVHP-thema Verzilveren. Data onderhouden door Dennes Roes (Erkend Hypothecair Planner, BijMij Hypotheek &amp; Advies), thema-eigenaar namens de NVHP.</p>
 </div>
 <div class="foot-col">
@@ -1928,7 +1930,7 @@ footer .foot-col h4{color:#9fd4bd}
   $('#f_reset').onclick=function(){FAC.forEach(function(f){f[2].forEach(function(o){FST[f[0]][o[0]]=true})});$('#zoek').value='';LFT=0;facetten();aanbod();kaarten();tabelr()};
   $('#s_dossier').onclick=dossier;
   if(PUB){['#bbewerk','#bdownload'].forEach(function(s){$(s).hidden=true});$('#openkop').closest('section').hidden=true;
-    var nv=$('#sitenav');nv.hidden=false;var wr=el('div','wrap nav');var merk=el('a','brand');merk.href=D.meta.site;merk.appendChild(el('b',null,'NVHP'));merk.appendChild(el('small',null,'Thema: Verzilveren'));wr.appendChild(merk);var mn=el('nav','menu');mn.id='menu';(D.meta.menu||[]).forEach(function(x){var a=link(x.u,x.t);a.target='';a.removeAttribute('rel');if(x.actief){a.className='actief';a.setAttribute('aria-current','page')}mn.appendChild(a)});wr.appendChild(mn);var tg=el('button','nav-toggle');tg.id='navToggle';tg.type='button';tg.setAttribute('aria-label','Menu openen');tg.setAttribute('aria-expanded','false');tg.setAttribute('aria-controls','menu');tg.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';tg.onclick=function(){var o=mn.classList.toggle('open');tg.setAttribute('aria-expanded',o?'true':'false')};wr.appendChild(tg);nv.appendChild(wr);var yr=$('#year');if(yr)yr.textContent=new Date().getFullYear();
+    var nv=$('#sitenav');nv.hidden=false;var wr=el('div','wrap nav');var merk=el('a','brand');merk.href=D.meta.site;var logo=el('img');logo.src='assets/nvhp-logo.png';logo.alt='NVHP - Nederlandse Vereniging van Hypothecair Planners';logo.className='brandlogo';merk.appendChild(logo);merk.appendChild(el('small',null,'Thema: Verzilveren'));wr.appendChild(merk);var mn=el('nav','menu');mn.id='menu';(D.meta.menu||[]).forEach(function(x){var a=link(x.u,x.t);a.target='';a.removeAttribute('rel');if(x.actief){a.className='actief';a.setAttribute('aria-current','page')}mn.appendChild(a)});wr.appendChild(mn);var tg=el('button','nav-toggle');tg.id='navToggle';tg.type='button';tg.setAttribute('aria-label','Menu openen');tg.setAttribute('aria-expanded','false');tg.setAttribute('aria-controls','menu');tg.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';tg.onclick=function(){var o=mn.classList.toggle('open');tg.setAttribute('aria-expanded',o?'true':'false')};wr.appendChild(tg);nv.appendChild(wr);var yr=$('#year');if(yr)yr.textContent=new Date().getFullYear();
     var ct=$('#cta');ct.hidden=!D.meta.ctaKop;if(D.meta.ctaKop){var pc=el('div','paneel ctab');var tx=el('div');tx.appendChild(el('b',null,D.meta.ctaKop));tx.appendChild(el('div',null,D.meta.ctaTekst));pc.appendChild(tx);var kb=link(D.meta.ctaUrl,D.meta.ctaKnop);kb.className='navknop';kb.target='';pc.appendChild(kb);ct.appendChild(pc);}
     var cv=$('#contactvoet');cv.hidden=false;cv.textContent=D.meta.contact;
     $('.verfijn>summary').textContent='Vul je eigen situatie in: toets op leeftijd, bedrag, woningwaarde en wensen';$('.verfijn>p.uitleg').textContent='Vul je situatie in. Elke hypotheek die nog te krijgen is, krijgt dan in de lijst hierboven een uitslag met onderbouwing en een berekening van het geld dat vrijkomt. De gegevens blijven in je browser en worden nergens naartoe gestuurd. De uitkomst is een eerste selectie en geen advies.';$('#s_dossier').textContent='Overzicht om mee te nemen naar je adviseur';[['s_ml','Kun en wil je maandelijks rente betalen?'],['s_bb','Wil je de bestaande hypotheek behouden?']].forEach(function(x){var l=$('#'+x[0]).closest('label');if(l&&l.firstChild)l.firstChild.nodeValue=x[1]})}
