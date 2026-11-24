@@ -160,7 +160,12 @@ def main():
 .faqtekst ul{margin:6px 0 0;padding-left:20px}.faqtekst li{margin-bottom:4px}
 .faqtekst a,.voetadvies a{color:inherit;text-decoration:underline}
 .voetadvies{margin:0 0 14px;font-size:.9rem;opacity:.9}
-@media print{.adviesblok{border:1px solid #999}.adviesknop{display:none}}''', '</style>')
+@media print{.adviesblok{border:1px solid #999}.adviesknop{display:none}}
+/* iOS/WebKit: keuzelijsten worden zo breed als de langste optie; begrenzen en zijwaarts scrollen voorkomen */
+html,body{max-width:100%;overflow-x:clip}
+select{max-width:100%}
+.mxsort,.mxsort select{min-width:0!important;max-width:100%!important}
+@media(max-width:760px){.mxsort select{width:100%!important;flex:1 1 0!important;text-overflow:ellipsis}}''', '</style>')
 
     # ---- JSON-LD ----
     org = {'@type': 'Organization', '@id': NVHP + '#organisatie', 'name': 'NVHP – Nederlandse Vereniging van Hypothecair Planners',
