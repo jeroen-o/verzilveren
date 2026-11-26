@@ -78,6 +78,8 @@ def main():
     s = re.sub(r'<div class="voetnoot">.*?</div></div>\n?', '', s, count=1, flags=re.S)
     dfoot = re.search(r'<footer>.*?</footer>', donor, re.S).group(0)
     s = re.sub(r'<footer>.*?</footer>', lambda _: dfoot, s, count=1, flags=re.S)
+    if 'assets/embed.js' not in s:
+        fout('insluitscript (assets/embed.js) ontbreekt in de footer van de huidige index.html')
 
     # ---- JavaScript: menu met logo, contactregel ----
     dnav = re.search(r"^ *var nv=\$\('#sitenav'\).*$", donor, re.M)
