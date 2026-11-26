@@ -55,7 +55,13 @@ def main():
     m = re.search(r'(<script[^>]*id="data"[^>]*>)(.*?)(</script>)', s, re.S)
     D = json.loads(m.group(2))
     meta, P = D['meta'], D['proposities']
-    actief = [p for p in P if p.get('status') != 'gestopt']
+    def status(p):
+        if p.get('status') == 'gestopt':
+            return 'Niet meer verkrijgbaar'
+        if p.get('verwacht'):
+            return 'Nog niet verkrijgbaar'
+        return 'Verkrijgbaar'
+    actief = [p for p in P if status(p) == 'Verkrijgbaar']
     gestopt = [p for p in P if p.get('status') == 'gestopt']
     cat = {c['id']: c for c in D.get('categorieen', [])}
     datum = iso(meta['peildatum'])
@@ -91,7 +97,7 @@ def main():
     # ---- FAQ (zichtbaar) ----
     def lijst(veld):
         return '<ul>' + ''.join(
-            f"<li><b>{e(naam(p))}</b>{' (niet meer verkrijgbaar)' if p.get('status') == 'gestopt' else ''}: {e(p.get(veld) or 'niet bekend')}</li>"
+            f"<li><b>{e(naam(p))}</b>{'' if status(p) == 'Verkrijgbaar' else ' (' + status(p).lower() + ')'}: {e(p.get(veld) or 'niet bekend')}</li>"
             for p in P) + '</ul>'
 
     faq = [
@@ -126,7 +132,7 @@ def main():
 
     # ---- productoverzicht voor zoekmachines zonder JavaScript ----
     rijen = ''.join(
-        f"<tr><td>{e(p['aanbieder'])}</td><td>{e(p['product'])}</td><td>{'Niet meer verkrijgbaar' if p.get('status') == 'gestopt' else 'Verkrijgbaar'}</td>"
+        f"<tr><td>{e(p['aanbieder'])}</td><td>{e(p['product'])}</td><td>{status(p)}</td>"
         f"<td>{e(p.get('minLeeftijd'))}</td><td>{e(p.get('maxLtv'))}</td><td>{e(p.get('maxBedrag'))}</td><td>{e(p.get('rentevast'))}</td><td>{e(p.get('opname'))}</td></tr>"
         for p in P)
     noscript = ('<noscript><section><h2>Overzicht verzilverhypotheken (peildatum ' + e(meta['peildatum']) + ')</h2>'
@@ -163,6 +169,7 @@ def main():
 @media print{.adviesblok{border:1px solid #999}.adviesknop{display:none}}
 /* iOS/WebKit: keuzelijsten worden zo breed als de langste optie; begrenzen en zijwaarts scrollen voorkomen */
 html,body{max-width:100%;overflow-x:clip}
+.aflrij>div{column-gap:12px}
 select{max-width:100%}
 .mxsort,.mxsort select{min-width:0!important;max-width:100%!important}
 @media(max-width:760px){.mxsort select{width:100%!important;flex:1 1 0!important;text-overflow:ellipsis}}''', '</style>')
@@ -233,7 +240,7 @@ select{max-width:100%}
     llms += [f"- **{c['naam']}**: {c['uitleg']}" for c in cat.values()]
     llms += ['', '## Aanbod']
     for p in P:
-        st = ' (niet meer verkrijgbaar voor nieuwe klanten)' if p.get('status') == 'gestopt' else ''
+        st = '' if status(p) == 'Verkrijgbaar' else ' (' + status(p).lower() + ')'
         llms.append(f"- **{naam(p)}**{st}: minimumleeftijd {p.get('minLeeftijd')}; maximum {p.get('maxLtv')}; "
                     f"maximaal bedrag {p.get('maxBedrag')}; rentevast {p.get('rentevast')}; geld vrij: {p.get('opname')}; "
                     f"restschuld: {p.get('restschuld')}." + (f" {p['website']}" if p.get('website') else ''))
